@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
     <div>这是子组件</div>
-    <div>{{$store.getters.myAge}}</div>
     <button @click="handleAdd">点击增加</button>
     <button @click="handleminus">点击减少</button>
 

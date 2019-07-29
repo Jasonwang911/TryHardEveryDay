@@ -1,5 +1,5 @@
 /* eslint-disable */
-import Vue from "vue"; // vue的构造函数
+// import Vue from "vue"; // vue的构造函数
 
 const forEach = (obj, callback) => {
   Object.keys(obj).forEach(key => {
@@ -143,22 +143,21 @@ class Store {
 
 // vue 的渲染顺序，深度优先， 先渲染父组件，再渲染子组件
 const install = _Vue => {
-  Vue = _Vue;
-  // 在每个组件中都注册一个this.$store的对象
+  let Vue = _Vue;
+  // console.log(Vue);
   Vue.mixin({
     beforeCreate() {
-      // 在组件创建之前
-      console.log(this.$options.name);
-      // 需要判别是父组件还是子组件，如果是子组件，应该把父组件的store增加给子组件
       if (this.$options && this.$options.store) {
-        // 父组件
+        // 根组件
         this.$store = this.$options.store;
       } else {
-        // 子组件
-        this.$store = this.$parent && this.$parent.$store;
+        this.$store = this.$parent.$store;
       }
     }
   });
 };
 
-export default install;
+export default {
+  Store,
+  install
+};

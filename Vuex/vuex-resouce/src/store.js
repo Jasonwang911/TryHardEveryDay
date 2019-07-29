@@ -1,13 +1,14 @@
 import Vue from "vue";
-import Vuex from "./vuex/index";
+import Vuex from "./vuex/myVuex";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    age: 10
+    age: 20
   },
   getters: {
+    // date 的 computed
     myAge(state) {
       return state.age + 10;
     }
@@ -16,14 +17,14 @@ export default new Vuex.Store({
     syncAdd(state, payload) {
       state.age += payload;
     },
-    syncMinus(state, payload) {
+    syncMinuts(state, payload) {
       state.age -= payload;
     }
   },
-  adtions: {
+  actions: {
     asyncMinus({ commit }, payload) {
       setTimeout(() => {
-        commit("syncMinus", payload);
+        commit("syncMinuts", payload);
       }, 1000);
     }
   }
