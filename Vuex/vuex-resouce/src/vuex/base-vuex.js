@@ -16,30 +16,35 @@ class Store {
         state: options.state
       }
     });
-    // getters
+    // getters 拿到new Store的时候传入的getters
     let getters = options.getters || {};
+    // 创建 Store 的 getters 属性
     this.getters = {};
-    forEach(getters, (getterName, value) => {
+    forEach(getters, (getterName, fn) => {
       Object.defineProperty(this.getters, getterName, {
         get: () => {
-          return value(this.state);
+          return fn(this.state);
         }
       });
     });
     // mutations
     let mutations = options.mutations || {};
     this.mutations = {};
-    forEach(mutations, (mutationName, value) => {
+    forEach(mutations, (mutationName, fn) => {
       this.mutations[mutationName] = payload => {
-        value(this.state, payload);
+        // 修正this的指向，在mutations中使用this指向store
+        // fn(this.state, payload);
+        fn.call(this, this.state, payload);
       };
     });
     // actions
     let actions = options.actions || {};
     this.actions = {};
-    forEach(actions, (actionName, value) => {
+    forEach(actions, (actionName, fn) => {
       this.actions[actionName] = payload => {
-        value(this, payload);
+        // 修正this的实例
+        fn.call(this, this, payload);
+        // fn(this, payload);
       };
     });
   }

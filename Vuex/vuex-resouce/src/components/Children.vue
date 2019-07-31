@@ -3,7 +3,7 @@
     <div>这是子组件</div>
     <button @click="handleAdd">点击增加</button>
     <button @click="handleminus">点击减少</button>
-
+    <!-- <div>{{this.$store.a.x}}</div> -->
   </div>
 </template>
 
