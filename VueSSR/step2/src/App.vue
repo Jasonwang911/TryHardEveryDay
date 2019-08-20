@@ -1,5 +1,6 @@
 <template>
- <div>
+ <div id="app">
+   <!-- id 是客户端激活 -->
    <div>我是App.vue, {{msg}}</div>
    <bar />
    <foo />
