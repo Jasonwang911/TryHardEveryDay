@@ -4,7 +4,9 @@
     <div>
       父组件钱数 {{mny}}
     </div>
-    <son1 :value="mny" @input="change" />
+    <!-- v-model是   :value="value" @input="(value) => this.value = value"  的语法糖 -->
+    <son1 :value="mny" @input="value => this.mny = value" />
+    <son1 v-model="mny" />
   </div>
 </template>
 
@@ -20,11 +22,6 @@ export default {
   },
   components: {
     Son1,
-  },
-  methods: {
-    change(value) {
-      this.mny += value;
-    },
   },
 };
 </script>

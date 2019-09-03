@@ -7,12 +7,12 @@
 <script>
 export default {
   name: 'Grandson2',
-  data(){
+  data() {
     return {
-    }
+    };
   },
-  components:{},
-  mounted(){},
-  methods:{},
-}
+  components: {},
+  mounted() {},
+  methods: {},
+};
 </script>

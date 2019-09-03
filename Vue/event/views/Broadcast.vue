@@ -1,16 +1,15 @@
 <template>
   <div>
-    <h4>v-module传值</h4>
     <parent />
   </div>
 </template>
 
 <script>
-import Parent from '../components/Module/Parent'
+import Parent from '../components/Broadcast/Parent'
 
 export default {
-  name: 'Module',
-  components: {
+  name: 'Broadcast',
+  components:{
     Parent
   }
 }

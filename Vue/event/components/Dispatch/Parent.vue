@@ -4,7 +4,7 @@
     <div>
       父组件钱数 {{mny}}
     </div>
-    <son1 :value="mny" @input="change" />
+    <son1 :value="mny" @input="value => this.mny += value" />
   </div>
 </template>
 
@@ -12,7 +12,7 @@
 import Son1 from './Son1';
 
 export default {
-  name: 'Parent',
+  name: 'ParentCom',
   data() {
     return {
       mny: 100,
@@ -20,11 +20,6 @@ export default {
   },
   components: {
     Son1,
-  },
-  methods: {
-    change(value) {
-      this.mny += value;
-    },
   },
 };
 </script>

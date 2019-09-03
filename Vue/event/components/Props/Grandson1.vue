@@ -11,17 +11,17 @@
 </template>
 
 <script>
-import Son2 from './Son2'
+import Son2 from './Son2.vue';
 
 export default {
   name: 'Grandson1',
-  data(){
+  data() {
     return {
-      money: 100
-    }
+      money: 100,
+    };
   },
-  components:{
-    Son2
-  }
-}
+  components: {
+    Son2,
+  },
+};
 </script>

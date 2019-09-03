@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h4>Son2组件</h4>
+    <h4>Son1组件</h4>
     <div>
-      子组件中的金钱： {{value}}
+      父组件传的值： {{value}}
     </div>
     <div>
       <button @click="handleEmit">点击修改</button>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'Son2',
+  name: 'Son1',
   props: {
     value: {
       type: Number,
@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     handleEmit() {
-      this.$emit('input:value', 200);
+      this.$emit('input', this.value + 100);
     },
   },
 };

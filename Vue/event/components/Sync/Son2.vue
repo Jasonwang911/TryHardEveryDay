@@ -16,13 +16,13 @@ export default {
   props: {
     value: {
       type: Number,
-      default: 1
-    }
+      default: 1,
+    },
   },
-  methods:{
+  methods: {
     handleEmit() {
-      this.$emit('input:value', 200)
-    }
+      this.$emit('input:value', 200);
+    },
   },
-}
+};
 </script>

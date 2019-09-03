@@ -4,24 +4,24 @@
     <div>
       父组件钱数 {{mny}}
     </div>
-    <!-- sync是   :value="value" @update:value="(value) => this.value += value"  的语法糖 -->
-    <son1 :value="mny" @update:value="(value) => this.mny += value" />
+    <!-- sync是   :value="value" @update:value="(value) => this.value = value"  的语法糖 -->
+    <son1 :value="mny" @update:value="(value) => this.mny = value" />
     <son1 :value.sync="mny" />
   </div>
 </template>
 
 <script>
-import Son1 from './Son1'
+import Son1 from './Son1';
 
 export default {
   name: 'Parent',
-  data(){
+  data() {
     return {
-      mny: 100
-    }
+      mny: 100,
+    };
   },
-  components:{
-    Son1
-  }
-}
+  components: {
+    Son1,
+  },
+};
 </script>
