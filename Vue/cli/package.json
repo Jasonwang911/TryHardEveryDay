@@ -1,6 +1,6 @@
 {
   "name": "cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "jason-cli link",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "commander": "^3.0.1",
     "eslint": "^6.3.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2"

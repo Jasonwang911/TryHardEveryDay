@@ -1,4 +1,5 @@
-@vue/cli-server-
+@vue/cli-server-global vue的一个快速原型工具，可以实现不安装脚手架即可初始化项目
+使用 vue serve 即可启动项目
 
 ### 依赖
 
