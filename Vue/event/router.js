@@ -42,6 +42,30 @@ export const routes = [
     component: () => import(/* webpackChunkName: "Broadcast" */ './views/Broadcast'),
     meta: { title: '$Broadcast传值' },
   },
+  {
+    path: '/$attrs',
+    name: '$attrs',
+    component: () => import(/* webpackChunkName: "Attrs" */ './views/Attrs'),
+    meta: { title: '$Attrs传值' },
+  },
+  {
+    path: '/provide',
+    name: 'provide',
+    component: () => import(/* webpackChunkName: "Provide" */ './views/Provide'),
+    meta: { title: 'Provide传值' },
+  },
+  {
+    path: '/ref',
+    name: 'ref',
+    component: () => import(/* webpackChunkName: "Ref" */ './views/Ref'),
+    meta: { title: 'Ref传值' },
+  },
+  {
+    path: '/event-bus',
+    name: 'eventBus',
+    component: () => import(/* webpackChunkName: "EventBus" */ './views/EventBus'),
+    meta: { title: 'EventBus传值' },
+  }
 ];
 
 const router = new Router({

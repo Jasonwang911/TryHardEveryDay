@@ -1,5 +1,4 @@
-@vue/cli-server-global vue的一个快速原型工具，可以实现不安装脚手架即可初始化项目
-使用 vue serve 即可启动项目
+@vue/cli-server-
 
 ### 依赖
 
@@ -13,12 +12,18 @@ Vue: 单项数据流
 
 1. 单层级
    :value="mny" @update:value="(value)=>mny=value"  
-   :value.sync="mny"  
-   :value="mny" @input="mny=>this.mny=mny" ===> v-module="mny"
+   :value.sync="mny"      sync是   :value="value" @update:value="(value) => this.value = value"  的语法糖  
+   v-model="money"        v-model是   :value="value" @input="(value) => this.value = value"  的语法糖
+
+   v-model 具有局限性，属性绑定只能使用value, .sync 可以指定属性绑定的名称
+ 
 
 2. 多层级  
-   $parent  $chilren  
-   \$dispatch
+   $parent     父组件  
+   $chilren    子组件
+   $dispatch   向上通知，只会通知当前组件的父组件  循环获取父组件，并向上触发事件，直到没有父组件为止   
+   $broadcast  向下广播
+
 
 ```
 Vue.prototype.$dispatch = function (eventName, value) {
@@ -29,8 +34,6 @@ Vue.prototype.$dispatch = function (eventName, value) {
   }
 }
 ```
-
-\$broadcase
 
 ```
 Vue.prototype.$broadcast = function(eventName, value) {
@@ -43,11 +46,32 @@ Vue.prototype.$broadcast = function(eventName, value) {
       }
     })
   }
+  broadcast(this.$children)
 }
 ```
 
-$attrs 所有的属性   $listeners 所有的监听属性  
-inheritAttrs: false 不显示左右的传入的属性
+$attrs 上级传过来的所有的属性    
+inheritAttrs: false 不显示上级传入的属性，属性就不会挂在dom节点上   
+$listeners 所有的监听属性    
+v-bind="$attrs"  把所有属性都传给子集  v-on="$listeners"  把所有方法都传递给子集   
+v-bind="{name: 'jason', age: 18, address: '保定'}"   属性会被展开   
+
+注入数据： 类似react中的context  可以把父组件直接注入进去   
+```
+// 父级组将自己暴漏出去
+provide() {
+  return { parent: this}
+}
+
+// 子组件注入 这样子组件就有了一个 this.parent 的实例,这样就能拿到父组件的实例，建议一般业务项目中不适用，会造成数据混乱，类库中使用比较方便
+inject: ['parent']
+```
+
+ref 可以用到dom元素上，获取的是dom节点   
+ref 放到组件上，获取的是当前的组件  this.$refs.son.say()  父组件可以直接拿到子组件的实例然后直接调用组组件的方法
+
+eventBus 定义到了全局上，一个组件发射了事件，所有同名的事件都会触发   将 $bus.$on $bus.$emit 方法暴漏到Vue实例上，这样在任何实例上都能触发这两个方法  
+组件的挂在顺序：  父组件 => 子组件   由于组件挂在是有顺序的，所以在使用eventBus 需要注意发布和触发事件的顺序，必要的时候需要使用 this,$nextTick()   
 
 ## render 函数之 JSX 应用
 
@@ -106,4 +130,22 @@ karma 为前端自动化测试提供了跨浏览器测试的能力，mocha 是�
 
 6. 模拟方法 sinon mock 方法
 
-##
+### 编写一个脚手架   
+脚手架的核心功能就是创建项目初始文件，编写脚手架是为了应付  
+- 业务类型多
+- 多次造轮子，项目升级等问题 
+- 公司代码规范,无法统一 
+
+#### 脚手架必备模块
+- commander      参数解析 --help的实现就是借助了它
+- inquirer       交互式命令行工具，有他就可以实现命令行的选择功能
+- download-git-repo  在git中下载模板  
+- chalk   粉笔帮我们在控制台中画出各种各样的颜色
+- metalsmith  读取所有文件,实现模板渲染  
+- consolidate  统一模板引擎  
+
+### 使用eslint 
+```
+npm install eslint husky --save-dev # eslint是负责代码校验工作,husky提供了git钩子功能
+npx eslint --init # 初始化eslint配置文件
+```

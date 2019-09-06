@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Son2组件</h1>
-    <div>绑定了say方法</div>
+    <h4>Son2组件</h4>
+    {{JSON.stringify($attrs)}}
   </div>
 </template>
 

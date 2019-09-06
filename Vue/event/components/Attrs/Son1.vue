@@ -1,8 +1,7 @@
 <template>
   <div>
     <h4>Son1组件</h4>
-    <div>没有绑定say方法</div>
-    <son2 @handleSay="handleSay" />
+    <son2 v-bind="$attrs" v-on="$listeners" />
   </div>
 </template>
 
@@ -11,13 +10,9 @@ import Son2 from './Son2.vue';
 
 export default {
   name: 'Son1',
+  inheritAttrs: false,
   components: {
     Son2,
-  },
-  methods: {
-    handleSay() {
-      console.log('say')
-    }
   }
 };
 </script>

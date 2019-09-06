@@ -1,8 +1,7 @@
 <template>
   <div>
     <h4>Parent组件</h4>
-    <div>没有绑定say方法</div>
-    <son1 />
+    <son1 ref="son" />
   </div>
 </template>
 
@@ -14,8 +13,14 @@ export default {
   components: {
     Son1,
   },
+  data() {
+    return {
+      money: 100,
+      smock: true
+    }
+  },
   mounted() {
-    this.$broadcast('handleSay');
+    this.$refs.son.say()
   }
 };
 </script>
