@@ -3,6 +3,7 @@
 ### 依赖
 
 sudo npm install -g @vue/cli-service-global  
+sudo npm uninstall -g @vue/cli-service-global 
 可以不用任何依赖初始化一个 vue 项目  
 运行 vue 文件： vue serve App.vue
 

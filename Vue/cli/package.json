@@ -1,7 +1,7 @@
 {
-  "name": "cli",
-  "version": "1.0.1",
-  "description": "jason-cli link",
+  "name": "jason-cli",
+  "version": "0.0.2",
+  "description": "jason-cli",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,13 +9,23 @@
   "bin": {
     "jason-cli": "./bin/www"
   },
-  "keywords": [],
-  "author": "",
+  "author": "jason",
   "license": "ISC",
   "devDependencies": {
-    "commander": "^3.0.1",
-    "eslint": "^6.3.0",
+    "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "chalk": "^2.4.2",
+    "commander": "^3.0.2",
+    "consolidate": "^0.15.1",
+    "download-git-repo": "^3.0.2",
+    "ejs": "^2.7.1",
+    "inquirer": "^7.0.0",
+    "metalsmith": "^2.3.0",
+    "ncp": "^2.0.0",
+    "ora": "^4.0.2"
   }
 }
