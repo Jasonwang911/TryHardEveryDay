@@ -1,0 +1,27 @@
+{
+  "name": "micro-font",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:dev": "rollup -c",
+    "watch": "SERVE=true rollup -c -w"
+  },
+  "browserlist": [
+    "ie >= 11",
+    "last 10 Safari major versions",
+    "last 10 Chrome major versions",
+    "last 10 Firefox major versions",
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "rollup": "^1.27.8",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.0.1"
+  }
+}
