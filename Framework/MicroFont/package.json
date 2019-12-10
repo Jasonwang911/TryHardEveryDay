@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build:dev": "rollup -c",
-    "watch": "SERVE=true rollup -c -w"
+    "watch": "cross-env SERVE=true rollup -c -w"
   },
   "browserlist": [
     "ie >= 11",
@@ -23,5 +23,8 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-serve": "^1.0.1"
+  },
+  "dependencies": {
+    "cross-env": "^6.0.3"
   }
 }

@@ -8,7 +8,7 @@ yarn init -y
 
 2. 安装依赖
 ```
-yarn add @babel/core @babel/plugin-syntax-dynamic-import @babel/preset-env rollup rollup-plugin-babel rollup-plugin-commonjs rollup-plugin-node-resolve rollup-plugin-serve -D
+yarn add @babel/core @babel/plugin-syntax-dynamic-import @babel/preset-env rollup rollup-plugin-babel rollup-plugin-commonjs  rollup-plugin-node-resolve rollup-plugin-serve corss-env -D
 ```
 模块名称	说明    
 @babel/core	  babel编译器的核心库，负责所有babel预设和插件的加载及执行   
@@ -374,10 +374,24 @@ let el = ReactDom.findNode(reactInstance)
 ReactDom.unmountComponentAtNode(el)  
 ```
 
+#### BDD 行为驱动开发： 先确定系统的行为，再开发，先确定接口，再开发接口
 
+
+##### package.json中设置环境的三种方式
+```
+{
+  "scripts": {
+    "dev1": "export WEBPACK_ENV=production && npx webpack -p",  ## mac
+    "dev1": "set WEBPACK_ENV=production && npx webpack -p", ## windows
+    "dev2": "cross-env CURRENT_ENV=development webpack-dev-server --inline --progress", ## 兼容所有平台
+  }
+}
+```
 
 #### 版本号的规范
 1.0.0   
 大版本： 颠覆性升级  major    
 正常迭代： minor   
 小版本修复问题: patch-extra   
+
+#### treeshark  条件   esmodule
