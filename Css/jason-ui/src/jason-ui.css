@@ -1,0 +1,10 @@
+/**
+ * @name: jason-wang
+ * @msg: CSS入口文件
+ */
+
+ /* css reset */
+ @import './reset.css';
+
+ /* 公共样式 */
+ @import './common.css';
