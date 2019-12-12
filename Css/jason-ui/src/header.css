@@ -1,0 +1,18 @@
+/**
+ * @name: 
+ * @test: test font
+ * @msg: 
+ * @param {type} 
+ * @return: 
+ */
+
+ .tt-header{
+   position: fixed;
+   box-sizing: border-box;
+   width: 100%;
+   max-width: 640px;
+   height: 2.3rem;
+   top: 0;
+   z-index: 200;
+   border-bottom: 1px solid #ddd;
+ }

@@ -1,0 +1,15 @@
+/**
+ * @name: jason-wang
+ * @msg: 导航栏样式
+ */
+/* 底部导航栏 */
+.tt-navbar{
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  max-width: 640px;
+  height: 2.5rem;
+  border-top: 1px solid #ddd;
+  z-index: 200;
+}
