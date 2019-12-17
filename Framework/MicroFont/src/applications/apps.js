@@ -1,4 +1,10 @@
-import { NOT_LOADED } from './apps.helper'
+/*
+ * @Author: Jason wang
+ * @Date: 2019-12-05 10:13:13
+ * @Descripttion: 
+ * @version: 
+ */
+import { NOT_LOADED, noSkip, noLoadError, isntLoaded, shouldBeActivity } from './apps.helper'
 import { invoke } from '../navigations/invoke'
 
 let APPS = []
@@ -35,4 +41,10 @@ export function registerApplication(appName, loadFunction, activityWhen, customP
   })
   console.log(APPS)
   invoke()
+}
+
+
+export function getAppsToload() {
+  // 判断需要被加载(load)的App： 没有被跳过，没有加载错误，没有被加载过，需要被加载
+  return APPS.filter(noSkip).filter(noLoadError).filter(isntLoaded).filter(shouldBeActivity)
 }
