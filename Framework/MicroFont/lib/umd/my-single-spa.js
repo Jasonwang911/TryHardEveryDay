@@ -4,17 +4,16 @@
   (global = global || self, factory(global.mySingleSpa = {}));
 }(this, (function (exports) { 'use strict';
 
-  /*
-   * @Author: Jason wang
-   * @Date: 2019-12-05 11:06:07
-   * @Descripttion: 
-   * @version: 
-   */
-  const NOT_LOADED = 'NOT_LOADED';
-  const LOAD_SOURCE_CODE = 'LOAD_SOURCE_CODE'; // 加载源代码
+  // 未加载
+  const NOT_LOADED = 'NOT_LOADED'; // 加载app代码中
 
-  const SKIP_BECAUSE_BROKEN = 'SKIP_BECAUSE_BROKEN';
-  const LOAD_ERROR = 'LOAD_ERROR';
+  const LOAD_RESOURCE_CODE = 'LOAD_RESOURCE_CODE'; // 加载成功，但未启动
+
+  const NOT_BOOTSTRAPPED = 'NOT_BOOTSTRAPPED'; // 启动中
+
+  const SKIP_BECAUSE_BROKEN = 'SKIP_BECAUSE_BROKEN'; // 加载时遇到致命错误
+
+  const LOAD_ERROR = 'LOAD_ERROR'; // 更新service中
   function noSkip(app) {
     return app.status !== SKIP_BECAUSE_BROKEN;
   }
@@ -41,12 +40,6 @@
    */
   function start() {}
 
-  /*
-   * @Author: Jason wang
-   * @Date: 2019-12-17 14:08:40
-   * @Descripttion: 
-   * @version: 
-   */
   // 判断是不是Promise
   function smellLikeAPromise(promise) {
     if (promise instanceof Promise) {
@@ -87,6 +80,39 @@
       }
     });
   }
+  function getProps(app) {
+    return {
+      name: app.name,
+      ...app.customProps
+    };
+  }
+
+  /*
+   * @Author: Jason wang
+   * @Date: 2019-12-18 13:31:54
+   * @Descripttion: 超时处理
+   */
+  const TIMEOUTS = {
+    bootstrap: {
+      milliseconds: 3000,
+      // 超时的时间
+      rejectWhenTimeout: false // 超时后是否拒绝   
+
+    },
+    mount: {
+      milliseconds: 3000,
+      rejectWhenTimeout: false
+    },
+    unmount: {
+      milliseconds: 3000,
+      rejectWhenTimeout: false
+    }
+  };
+  function ensureAppTimeout(timeouts = {}) {
+    return { ...TIMEOUTS,
+      ...timeouts
+    };
+  }
 
   function toLoadPromise(app) {
     if (app.status !== NOT_LOADED) {
@@ -94,11 +120,12 @@
     } // 修改状态为加载源代码
 
 
-    app.status = LOAD_SOURCE_CODE; // 加载app 
+    app.status = LOAD_RESOURCE_CODE; // 加载app  getProps() 是获取app相关的描述信息
 
-    let loadPromise = app.loadFuntion();
+    let loadPromise = app.loadFunction(getProps(app));
 
     if (!smellLikeAPromise(loadPromise)) {
+      app.status = SKIP_BECAUSE_BROKEN;
       return Promise.reject(new Error('app.loadFuntion not a promise'));
     }
 
@@ -108,7 +135,9 @@
       } // 生命周期  验证生命周期有没有，是不是函数   bootstrap mount unmount 
 
 
-      let errors = [][('unmount')].forEach(lifecycle => {
+      let errors = [];
+      let lifecycleArr = ['bootstrap', 'mount', 'unmount'];
+      lifecycleArr.forEach(lifecycle => {
         if (!appConfig[lifecycle]) {
           errors.push(`lifecycle: ${lifecycle} must be exists`);
         }
@@ -118,12 +147,21 @@
         app.status = SKIP_BECAUSE_BROKEN;
         console.log(errors);
         return;
-      } // 处理生命周期和超时   需要做reduce处理
+      } // 修改状态为 not 
 
+
+      app.status = NOT_BOOTSTRAPPED; // 处理生命周期和超时   需要做reduce处理
 
       app.bootstrap = flattenLifecycleArray(appConfig.bootstrap, `app: ${app.name} bootstrap`);
       app.mount = flattenLifecycleArray(appConfig.mount, `app: ${app.name} mount`);
-      app.unmount = flattenLifecycleArray(appConfig.unmount, `app: ${app.name} unmount`);
+      app.unmount = flattenLifecycleArray(appConfig.unmount, `app: ${app.name} unmount`); // 超时处理
+
+      app.timeouts = ensureAppTimeout(appConfig.timeouts);
+      console.log(app);
+      return app;
+    }).catch(e => {
+      app.status = LOAD_ERROR;
+      console.log('====>', e);
     });
   }
 
@@ -144,13 +182,17 @@
     appChangesUnderway = true;
 
     {
-      // 加载app
+      // 加载app 并不执行，相当于预加载
       loadApps();
     }
 
     function loadApps() {
       // 获取需要被加载的app
-      getAppsToload().map(toLoadPromise); // console.log(getAppsToload())
+      getAppsToload().map(toLoadPromise).then(() => {
+        console.log(1);
+      }); // getAppsToload().map(app => {
+      //   return toLoadPromise(app)
+      // })
     }
   }
 
@@ -170,7 +212,7 @@
   *   return Promis
   */
 
-  function registerApplication(appName, loadFunction, activityWhen, customProps) {
+  function registerApplication(appName, loadFunction, activityWhen, customProps = {}) {
     if (!appName || typeof appName !== 'string') {
       throw new Error('appName must be a non-empty string');
     }
@@ -202,7 +244,7 @@
   function getAppsToload() {
     // 判断需要被加载(load)的App： 没有被跳过，没有加载错误，没有被加载过，需要被加载
     return APPS.filter(noSkip).filter(noLoadError).filter(isntLoaded).filter(shouldBeActivity);
-  }
+  } // 卸载app
 
   exports.registerApplication = registerApplication;
   exports.start = start;

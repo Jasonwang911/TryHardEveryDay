@@ -1,10 +1,3 @@
-/*
- * @Author: Jason wang
- * @Date: 2019-12-17 14:08:40
- * @Descripttion: 
- * @version: 
- */
-
 // 判断是不是Promise
 export function smellLikeAPromise(promise) {
   if(promise instanceof Promise) {
@@ -40,4 +33,11 @@ export function flattenLifecycleArray(lifecycle, description) {
       }
     }
   })
+}
+
+export function getProps(app) {
+  return {
+    name: app.name,
+    ...app.customProps
+  }
 }

@@ -4,7 +4,7 @@
  * @Descripttion: 
  * @version: 
  */
-import { NOT_LOADED, noSkip, noLoadError, isntLoaded, shouldBeActivity } from './apps.helper'
+import { NOT_LOADED, noSkip, noLoadError, isntLoaded, shouldBeActivity, isActive, isntActive, isLoaded } from './apps.helper'
 import { invoke } from '../navigations/invoke'
 
 let APPS = []
@@ -17,7 +17,7 @@ let APPS = []
 *   @param  {Object} customProps  自定义配置
 *   return Promis
 */
-export function registerApplication(appName, loadFunction, activityWhen, customProps) {
+export function registerApplication(appName, loadFunction, activityWhen, customProps={}) {
   if(!appName || typeof appName !== 'string') {
     throw new Error('appName must be a non-empty string')
   }
@@ -47,4 +47,15 @@ export function registerApplication(appName, loadFunction, activityWhen, customP
 export function getAppsToload() {
   // 判断需要被加载(load)的App： 没有被跳过，没有加载错误，没有被加载过，需要被加载
   return APPS.filter(noSkip).filter(noLoadError).filter(isntLoaded).filter(shouldBeActivity)
+}
+
+// 卸载app
+export function getAppsToUnmount() {
+  return APPS.filter(noSkip).filler(isActive).filter(shouldBeActivity)
+}
+
+// mount app
+export function getAppsToMount() {
+  // 没有中断  已经加载过的   没有被mount的  应该被mount的
+  return APPS.filter(noSkip).filter(isLoaded).filter(isntActive).filter(shouldBeActivity)
 }
