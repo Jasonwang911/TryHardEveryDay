@@ -150,3 +150,11 @@ karma 为前端自动化测试提供了跨浏览器测试的能力，mocha 是�
 npm install eslint husky --save-dev # eslint是负责代码校验工作,husky提供了git钩子功能
 npx eslint --init # 初始化eslint配置文件
 ```
+#### 组件设计原则
+1. 单一职责   要求组件有一个且只有一个变更的原因，这样组件的修改隔离并且受控。单一职责原则限制了组件的大小，使其集中在一件事情上。集中在一件事情上的组件便于编码、修改、重用和测试。   
+
+## Vue2.0如何实现响应式原理（数据变化可以更新视图）
+Object.defineProperty  可以重新定义属性，给属性增加 getter 和 setter 
+判断是否是对象   typeof tatget !== 'object' || target == null 
+问题： 1.属性不存在，新增的属性不会被拦截观察； 2.不能拦截观察数组，需要对数组上的方法进行重写 push shift unshift pop push reverse   
+函数劫持，把函数进行重写，内部继续调用老方法
