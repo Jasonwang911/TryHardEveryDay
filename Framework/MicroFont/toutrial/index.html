@@ -13,6 +13,11 @@
   <title>微前端-微内核</title>
 </head>
 <body>
+
+  <a href="#/home">加载appA</a>
+  <a href="#/index">加载appB</a>
+  <div id="app"></div>
+  
   
   <script src="../lib/umd/my-single-spa.js"></script>
   <script>
@@ -22,18 +27,38 @@
     mySingleSpa.registerApplication(
       'appA', 
       (props) => {
+        let ctx = {
+          contaioner: null
+        }
         let app = {
-          bootstrap: [() => Promise.resolve()],
-          mount: [() => Promise.resolve()],
-          unmount: [() => Promise.resolve()]
+          bootstrap: function() {
+            return Promise.resolve().then(() => {
+              console.log('hello bootstrapping')
+              ctx.contaioner = document.querySelector('#app')
+            })
+          },
+          mount: function() {
+            return Promise.resolve().then(() => {
+              console.log('hello mounting')
+              ctx.contaioner.innerHTML = 'Hello, Micro Font!'
+            })
+          },
+          unmount: function() {
+            return Promise.resolve().then(() => {
+              console.log('hello unmounting')
+              ctx.contaioner.innerHTML = ''
+            })
+          }
         }
         return Promise.resolve(app)
       }, 
       function(location) {
-        // return location.hash === '#/home'
-        return true
+        return location.hash === '#/home'
+        // return true
       }
     )
+
+    mySingleSpa.start()
   })(window)
   </script>
 </body>

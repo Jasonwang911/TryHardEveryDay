@@ -19,7 +19,7 @@ let APPS = []
 */
 export function registerApplication(appName, loadFunction, activityWhen, customProps={}) {
   if(!appName || typeof appName !== 'string') {
-    throw new Error('appName must be a non-empty string')
+    throw new Error('appName must be a no-empty string')
   }
   if(!loadFunction) {
     throw new Error('loadFunction must be a function or object')
@@ -51,11 +51,16 @@ export function getAppsToload() {
 
 // 卸载app
 export function getAppsToUnmount() {
-  return APPS.filter(noSkip).filler(isActive).filter(shouldBeActivity)
+  return APPS.filter(noSkip).filter(isActive).filter(shouldBeActivity)
 }
 
 // mount app
 export function getAppsToMount() {
-  // 没有中断  已经加载过的   没有被mount的  应该被mount的
+  // 没有中断  已经加载过的(isLoaded)   没有被mount的(isntActive)  应该被mount的(shouldBeActivity)
   return APPS.filter(noSkip).filter(isLoaded).filter(isntActive).filter(shouldBeActivity)
+}
+
+// 获取当前已经被挂载的app
+export function getMountedApps() {
+  return APPS.filter(app => isActive(app))
 }

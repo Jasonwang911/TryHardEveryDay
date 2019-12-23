@@ -13,8 +13,13 @@ export function toBootstrapPromise(app) {
   }
   // 变更状态为启动中
   app.status = BOOTSTRAPPING
-
-  return reasonableTime(app.bootstrap(getProps(app)), `app: ${app.name} bootstrapping`, app.timeouts.bootstrap).then(() => {
+  // 超时处理
+  return reasonableTime(
+    app.bootstrap(getProps(app)), 
+    `app: ${app.name} bootstrapping`, 
+    app.timeouts.bootstrap
+  ).then(() => {
+    // 更新状态为 没有被挂在
     app.status = NOT_MOUNTED
     return app
   }).catch(e => {

@@ -1,3 +1,9 @@
+/*
+ * @Author: Jason wang
+ * @Date: 2019-12-17 14:02:58
+ * @Descripttion: 
+ * @version: 
+ */
 import { NOT_LOADED, LOAD_RESOURCE_CODE, SKIP_BECAUSE_BROKEN, LOAD_ERROR, NOT_BOOTSTRAPPED } from "../applications/apps.helper";
 import { smellLikeAPromise, flattenLifecycleArray, getProps } from './helper'
 import { ensureAppTimeout } from '../applications/timeout'
@@ -13,11 +19,11 @@ export function toLoadPromise(app) {
   let loadPromise = app.loadFunction(getProps(app))
   if(!smellLikeAPromise(loadPromise)) {
     app.status = SKIP_BECAUSE_BROKEN
-    return Promise.reject(new Error('app.loadFuntion not a promise'))
+    return Promise.reject(new Error('loadFuntion must return a Promise or thanable object'))
   }
-  loadPromise.then(appConfig => {
+  return loadPromise.then(appConfig => {
     if(typeof appConfig !== 'object') {
-      throw new Error('')
+      throw new Error('appConfig must be object')
     }
     // 生命周期  验证生命周期有没有，是不是函数   bootstrap mount unmount 
     let errors = []
@@ -40,7 +46,7 @@ export function toLoadPromise(app) {
     app.unmount = flattenLifecycleArray(appConfig.unmount, `app: ${app.name} unmount`)
     // 超时处理
     app.timeouts = ensureAppTimeout(appConfig.timeouts)
-    console.log(app)
+    // console.log(app)
     return app
   }).catch(e => {
     app.status = LOAD_ERROR

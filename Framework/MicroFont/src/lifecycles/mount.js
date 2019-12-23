@@ -22,7 +22,7 @@ export function toMountPromise(app) {
     return app
   }).catch(e => {
     // 如果app挂在失败，那么立即执行unmount操作
-    app.status = SKIP_BECAUSE_BROKEN
+    app.status = MOUNTED
     // toUnmountPromise
     toUnmountPromise(app)
     console.log(e)

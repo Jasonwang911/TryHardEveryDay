@@ -1,3 +1,8 @@
+/*
+ * @Author: Jason wang
+ * @Date: 2019-12-17 14:08:40
+ * @Descripttion: 判断是否是promise和生命周期
+ */
 // 判断是不是Promise
 export function smellLikeAPromise(promise) {
   if(promise instanceof Promise) {
@@ -14,10 +19,10 @@ export function flattenLifecycleArray(lifecycle, description) {
     // 空对象
     lifecycle = [() => Promise.resolve()]
   }
-  return new Promise((resolve,reject) => {
+  return props =>  new Promise((resolve,reject) => {
     waitForPromise(0)
-    function waitForPromise() {
-      let fn = lifecycle[index]()
+    function waitForPromise(index) {
+      let fn = lifecycle[index](props)
       if(!smellLikeAPromise(fn)) {
         reject(new Error(`${description} has error`))
       }else {
