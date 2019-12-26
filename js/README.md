@@ -59,3 +59,61 @@ console.log('hello world' instanceof PrimitiveString) // true
 Symbol.hasInstance 其实就是一个能让我们自定义 instanceof 行为的东西，以上代码等同于 typeof 'hello world' === 'string'，所以结果自然是 true 了。这其实也侧面反映了一个问题， instanceof 也不是百分之百可信的
 [实现一个 instanceof]
 
+## 闭包  
+
+
+## React 事务---典型的AOP面向切片和高阶函数
+在原有的函数的基础上可以增加一些方法,提供了一个preform方法，这个方法可以传入任意函数为参数，并对传入的方法进项包装，以便在传入方法调用前和调用后执行一些逻辑  
+```
+initialize  preform(anyMethod)  close   
+```
+
+## 柯理化参数 
+如果一个函数的参数只有一个，返回的函数的参数还是一个，以此类推，所有返回的函数的参数都是一个
+```
+function fn(a, b, c) {
+  return a+b+c
+}
+// 转换成以下函数
+function fn(a) {
+  return function(b) {
+    return function(c) {
+      return a+b+c
+    }
+  }
+}
+```
+
+## 反柯理化
+```
+function fn(a) {
+  return function(b) {
+    return function(c) {
+      return a+b+c
+    }
+  }
+}
+// 转换成以下函数
+function fn(a, b, c) {
+  return a+b+c
+}
+```
+
+## 偏函数
+函数返回一个函数，函数的参数的个数不确定
+```
+function fn(a,b) {
+  return function(c) {
+
+  }
+}
+```
+
+## 发布订阅模式（一堆多的关系）  
+订阅： 先准备好回调，时间到达便执行   [fn1, fn2, fn3]
+发布： 依次执行
+
+
+# 错误捕获
+1. 只有同步才能使用try catch捕获错误，异步不能使用try catch捕获错误
+2. 异步使用错误事件进行捕获
