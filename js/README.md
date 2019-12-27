@@ -110,8 +110,86 @@ function fn(a,b) {
 ```
 
 ## 发布订阅模式（一堆多的关系）  
-订阅： 先准备好回调，时间到达便执行   [fn1, fn2, fn3]
-发布： 依次执行
+订阅（emit）： 先准备好回调，时间到达便执行   [fn1, fn2, fn3]
+发布（on）： 依次执行
+```
+class Events{
+  constructor() {
+    this.stack = []
+  }
+  on(callback) {
+    this.stack.push(callback)
+  }
+  emit() {
+    this.stack.forEach(callback => callback())
+  }
+}
+```
+vuex redux 都是基于发布订阅的
+
+## 观察者模式  
+观察者模式是基于发布订阅模式的，vue使用的观察者模式
+观察者： 
+被观察者：
+把 观察者 放到 被观察者 中， 把父母放到宝宝内部，宝宝不开心了就会通知父母
+
+```
+// 被观察者
+class Subject{
+  constructor() {
+    this.stack = []
+    this.state = '开心'
+  }
+  // 接收观察者
+  attach(observer) {
+    this.stack.push(observer)
+  }
+  // 更新状态
+  setState(newState) {
+    this.state = newState
+    this.stack.forEach(o => o.update(newState))
+  }
+}
+
+ // 观察者
+class Observer{
+  constructor(name) {
+    this.name = name
+  }
+  update(newState) {
+    console.log(`${this.name}: 宝宝现在${newState}`)
+  }
+}
+
+let father = new Observer('爸爸')
+let mother = new Observer('妈妈')
+
+let baby = new Subject('宝宝')
+console.log(`宝宝开始的状态: ${baby.state}`)
+baby.attach(father)
+baby.attach(mother)
+
+baby.setState('不开心')
+```
+
+区别： 
+1. 发布订阅模式的发布和订阅两者没有直接关系，观察者模式的被观察者调度了观察者
+
+## Promise 
+1. Promise 解决的问题
+- 回调嵌套/回调地狱
+- 统一处理错误捕获
+- 多个异步并发同步的处理 Promise.all
+
+2. Promise遵循 Promise A+ 规范
+- Promise的三个状态: pending fulfilled rejected
+- Promise类会立即执行（excutor 执行器），执行完成后变成 pending 状态，根据用户调用resolve或者reject变成fulfilled或者rejected
+- Promise如果变为 fulfilled，不能转化为其他状态，成功的时候会有一个值value
+- Promise如果变为 rejected，也不能转换为其他状态，失败的时候也会有一个值reason
+- 每个Promise实例上都有一个then方法,then方法包含两个参数，onFulfilled, onRejected 都是函数  
+  
+- promise 有多个状态，如果成功会让成功的函数依次执行，如果失败会让失败的函数依次执行---发布订阅模式
+- then 的链式调用   finnaly all race  和promise的测试库
 
 
 # 错误捕获
