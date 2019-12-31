@@ -9,6 +9,7 @@ import { toLoadPromise } from '../lifecycles/load'
 import { toBootstrapPromise } from '../lifecycles/bootstrap'
 import { toMountPromise } from '../lifecycles/mount'
 import { toUnmountPromise } from '../lifecycles/unmount'
+import { callCapturedEvents } from '../navigations/hijackLocation'
 
 // 拿到所有得app
 let appChangesUnderway = false
@@ -16,13 +17,14 @@ let appChangesUnderway = false
 let changesQueue = []
 
 //  pendings 是上一次循环得 changesQueue，finish中调用invoke传入
-export function invoke(pendings = []) {
+export function invoke(pendings = [], eventArgs) {
   // 判断系统是否启动
   if(appChangesUnderway) {
     return new Promise((resolve, reject) => {
       changesQueue.push({
         success: resolve,
-        failure: reject
+        failure: reject,
+        eventArgs
       })
     })
   }
@@ -37,10 +39,12 @@ export function invoke(pendings = []) {
   function loadApps() {
     // 获取需要被加载的app
     return Promise.all(getAppsToload().map(toLoadPromise)).then((apps) => {
+      callAllCapturedEvents()
       console.log(apps)
       // 加载完成调finish
       return finish()
     }).catch(e => {
+      callAllCapturedEvents()
       console.log(e)
     })
     // getAppsToload().map(app => {
@@ -67,15 +71,16 @@ export function invoke(pendings = []) {
     let mountApps = getAppsToMount()
     // 去重
     mountApps = mountApps.filter(app => loadApps.indexOf(app) === -1)
-    mountApps = mountApps.map(function (app) {
+    mountApps = mountApps.map( (app) => {
       // 拿到已经加载过并且没有mount的app
       return toBootstrapPromise(app).then(() => unmountPromise).then(() => toMountPromise(app))
     })
 
     // unmountPromise
     return unmountPromise.then(() => {
+      callAllCapturedEvents()
       let allPromises = loadApps.concat(mountApps)
-    // 统一去挂载
+      // 统一去挂载
       return Promise.all(allPromises).then(() => {
         return finish()
       }, e => {
@@ -83,6 +88,7 @@ export function invoke(pendings = []) {
         throw e;
       })
     }, e => {
+      callAllCapturedEvents()
       console.log(e)
     })
 
@@ -109,6 +115,19 @@ export function invoke(pendings = []) {
     }
 
     return returnValue
+  }
+
+  // 判断掉ivoke()的时候有没有事件参数，如果有表示发生路有变化，需要拦截路由
+  function callAllCapturedEvents() {
+    pendings && pendings.length && pendings.filter(item => {
+      return !!item.eventArgs
+    }).forEach(event => {
+      // eventsQueue.length > 0 说明：路由发生改变，需要广播给下游的vue-router 或者 react-router
+      callCapturedEvents(event)
+    })
+    
+    // 第一次进入调用invoke的时候包含事件
+    eventArgs && callCapturedEvents(eventArgs)
   }
 
 }

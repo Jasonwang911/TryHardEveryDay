@@ -17,7 +17,7 @@
   <a href="#/home">加载appA</a>
   <a href="#/index">加载appB</a>
   <div id="app"></div>
-  
+
   
   <script src="../lib/umd/my-single-spa.js"></script>
   <script>
@@ -28,25 +28,25 @@
       'appA', 
       (props) => {
         let ctx = {
-          contaioner: null
+          contenter: null
         }
         let app = {
           bootstrap: function() {
             return Promise.resolve().then(() => {
               console.log('hello bootstrapping')
-              ctx.contaioner = document.querySelector('#app')
+              ctx.contenter = document.querySelector('#app')
             })
           },
           mount: function() {
             return Promise.resolve().then(() => {
               console.log('hello mounting')
-              ctx.contaioner.innerHTML = 'Hello, Micro Font!'
+              ctx.contenter.innerHTML = 'Hello, Micro Font!'
             })
           },
           unmount: function() {
             return Promise.resolve().then(() => {
               console.log('hello unmounting')
-              ctx.contaioner.innerHTML = ''
+              ctx.contenter.innerHTML = ''
             })
           }
         }

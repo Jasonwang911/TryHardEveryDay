@@ -40,7 +40,7 @@ export function registerApplication(appName, loadFunction, activityWhen, customP
     status: NOT_LOADED
   })
   console.log(APPS)
-  invoke()
+  return invoke()
 }
 
 

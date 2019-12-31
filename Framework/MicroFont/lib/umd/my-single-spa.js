@@ -309,6 +309,83 @@
     });
   }
 
+  /**
+   * @file
+   * Created by zhangyatao on 2019/10/21.
+   */
+  const HIJACK_EVENTS_NAME = /^(hashchange|popstate)$/i;
+  const EVENTS_POOL = {
+    hashchange: [],
+    popstate: []
+  };
+
+  function reroute() {
+    invoke([], arguments);
+  }
+
+  window.addEventListener('hashchange', reroute);
+  window.addEventListener('popstate', reroute); // 拦截所有注册的事件，以便确保这里的事件总是第一个执行
+
+  const originalAddEventListener = window.addEventListener;
+  const originalRemoveEventListener = window.removeEventListener;
+
+  window.addEventListener = function (eventName, handler, args) {
+    if (eventName && HIJACK_EVENTS_NAME.test(eventName) && typeof handler === 'function') {
+      EVENTS_POOL[eventName].indexOf(handler) === -1 && EVENTS_POOL[eventName].push(handler);
+    }
+
+    return originalAddEventListener.apply(this, arguments);
+  };
+
+  window.removeEventListener = function (eventName, handler) {
+    if (eventName && HIJACK_EVENTS_NAME.test(eventName) && typeof handler === 'function') {
+      let eventList = EVENTS_POOL[eventName];
+      eventList.indexOf(handler) > -1 && (EVENTS_POOL[eventName] = eventList.filter(fn => fn !== handler));
+    }
+
+    return originalRemoveEventListener.apply(this, arguments);
+  }; // 拦截history的方法，因为pushState和replaceState方法并不会触发onpopstate事件，所以我们即便在onpopstate时执行了reroute方法，也要在这里执行下reroute方法。
+
+
+  const originalHistoryPushState = window.history.pushState;
+  const originalHistoryReplaceState = window.history.replaceState;
+
+  window.history.pushState = function (state, title, url) {
+    let result = originalHistoryPushState.apply(this, arguments);
+    reroute(mockPopStateEvent(state));
+    return result;
+  };
+
+  window.history.replaceState = function (state, title, url) {
+    let result = originalHistoryReplaceState.apply(this, arguments);
+    reroute(mockPopStateEvent(state));
+    return result;
+  };
+
+  function mockPopStateEvent(state) {
+    return new PopStateEvent('popstate', {
+      state
+    });
+  }
+
+  function callCapturedEvents(eventArgs) {
+    if (!eventArgs) {
+      return;
+    }
+
+    if (Array.isArray(eventArgs)) {
+      eventArgs = eventArgs[0];
+    }
+
+    let name = eventArgs.type;
+
+    if (!HIJACK_EVENTS_NAME.test(name)) {
+      return;
+    }
+
+    EVENTS_POOL[name].forEach(handler => handler.apply(window, eventArgs));
+  }
+
   /*
    * @Author: Jason wang
    * @Date: 2019-12-05 13:35:09
@@ -319,13 +396,14 @@
 
   let changesQueue = []; //  pendings 是上一次循环得 changesQueue，finish中调用invoke传入
 
-  function invoke(pendings = []) {
+  function invoke(pendings = [], eventArgs) {
     // 判断系统是否启动
     if (appChangesUnderway) {
       return new Promise((resolve, reject) => {
         changesQueue.push({
           success: resolve,
-          failure: reject
+          failure: reject,
+          eventArgs
         });
       });
     }
@@ -343,10 +421,12 @@
     function loadApps() {
       // 获取需要被加载的app
       return Promise.all(getAppsToload().map(toLoadPromise)).then(apps => {
+        callAllCapturedEvents();
         console.log(apps); // 加载完成调finish
 
         return finish();
       }).catch(e => {
+        callAllCapturedEvents();
         console.log(e);
       }); // getAppsToload().map(app => {
       //   return toLoadPromise(app)
@@ -372,12 +452,13 @@
       let mountApps = getAppsToMount(); // 去重
 
       mountApps = mountApps.filter(app => loadApps.indexOf(app) === -1);
-      mountApps = mountApps.map(function (app) {
+      mountApps = mountApps.map(app => {
         // 拿到已经加载过并且没有mount的app
         return toBootstrapPromise(app).then(() => unmountPromise).then(() => toMountPromise(app));
       }); // unmountPromise
 
       return unmountPromise.then(() => {
+        callAllCapturedEvents();
         let allPromises = loadApps.concat(mountApps); // 统一去挂载
 
         return Promise.all(allPromises).then(() => {
@@ -387,6 +468,7 @@
           throw e;
         });
       }, e => {
+        callAllCapturedEvents();
         console.log(e);
       }); // 针对load和mount的app去重
     } // 事件队列里有值就一直循环 递归掉，如果没有值，就把当前事件队列返回回去
@@ -413,6 +495,18 @@
       }
 
       return returnValue;
+    } // 判断掉ivoke()的时候有没有事件参数，如果有表示发生路有变化，需要拦截路由
+
+
+    function callAllCapturedEvents() {
+      pendings && pendings.length && pendings.filter(item => {
+        return !!item.eventArgs;
+      }).forEach(event => {
+        // eventsQueue.length > 0 说明：路由发生改变，需要广播给下游的vue-router 或者 react-router
+        callCapturedEvents(event);
+      }); // 第一次进入调用invoke的时候包含事件
+
+      eventArgs && callCapturedEvents(eventArgs);
     }
   }
 
@@ -459,7 +553,7 @@
       status: NOT_LOADED
     });
     console.log(APPS);
-    invoke();
+    return invoke();
   }
   function getAppsToload() {
     // 判断需要被加载(load)的App： 没有被跳过，没有加载错误，没有被加载过，需要被加载

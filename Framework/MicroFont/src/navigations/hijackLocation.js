@@ -1,40 +1,74 @@
-/*
- * @Author: Jason wang
- * @Date: 2019-12-23 17:48:54
- * @Descripttion: 监听路由变化
+/**
+ * @file
+ * Created by zhangyatao on 2019/10/21.
  */
-import { invoke } from "./invoke";
 
-const HIJACK_EVENT_NAME = /^(hashchange|popstate)$/i
+'use strict';
+
+// onhashchange onpopstate history.pushState() history.replaceState()
+
+import {invoke} from "./invoke";
+
+const HIJACK_EVENTS_NAME = /^(hashchange|popstate)$/i;
 const EVENTS_POOL = {
-  hashchange: [],
-  popstate: []
-}
+    hashchange: [],
+    popstate: []
+};
 
 function reroute() {
-  invoke([], arguments)
+    invoke([], arguments);
 }
 
-window.addEventListener('hashchange', reroute)
-window.addEventListener('postate', reroute)
+window.addEventListener('hashchange', reroute);
+window.addEventListener('popstate', reroute);
 
-const originalAddEventListener = window.addEventListener
-const originalRemoveEventListener = window.removeEventListener
+// 拦截所有注册的事件，以便确保这里的事件总是第一个执行
+const originalAddEventListener = window.addEventListener;
+const originalRemoveEventListener = window.removeEventListener;
+window.addEventListener = function (eventName, handler, args) {
+    if (eventName && HIJACK_EVENTS_NAME.test(eventName) && typeof handler === 'function') {
+        EVENTS_POOL[eventName].indexOf(handler) === -1 && EVENTS_POOL[eventName].push(handler);
+    }
+    return originalAddEventListener.apply(this, arguments);
+};
 
-// 重写并监听浏览器事件  保证微前端的location是第一个执行的，然后再去调用各个微服务中的路由
-window.addEventListener = function(eventName, handle) {
-  if(eventName && HIJACK_EVENT_NAME.test(eventName)) {
-    EVENTS_POOL[eventName].indexOf(handle) === -1 && EVENTS_POOL[eventName].push(handle)
-  }else {
-    originalAddEventListener.apply(this, arguments)
-  }
+window.removeEventListener = function (eventName, handler) {
+    if (eventName && HIJACK_EVENTS_NAME.test(eventName) && typeof handler === 'function') {
+        let eventList = EVENTS_POOL[eventName];
+        eventList.indexOf(handler) > -1 && (EVENTS_POOL[eventName] = eventList.filter(fn => fn !== handler));
+    }
+    return originalRemoveEventListener.apply(this, arguments);
+};
+
+
+// 拦截history的方法，因为pushState和replaceState方法并不会触发onpopstate事件，所以我们即便在onpopstate时执行了reroute方法，也要在这里执行下reroute方法。
+const originalHistoryPushState = window.history.pushState;
+const originalHistoryReplaceState = window.history.replaceState;
+window.history.pushState = function (state, title, url) {
+    let result = originalHistoryPushState.apply(this, arguments);
+    reroute(mockPopStateEvent(state));
+    return result;
+};
+window.history.replaceState = function (state, title, url) {
+    let result = originalHistoryReplaceState.apply(this, arguments);
+    reroute(mockPopStateEvent(state));
+    return result;
+};
+
+function mockPopStateEvent(state) {
+    return new PopStateEvent('popstate', {state});
 }
 
-window.removeEventListener = function(eventName, handle) {
-  if(eventName && HIJACK_EVENT_NAME.test(eventName)) {
-    let events = EVENTS_POOL[eventName]
-    events.indexOf(handle) > -1 && (EVENTS_POOL[eventName] = events.filter(fn => fn !== handle))
-  }else {
-    originalRemoveEventListener.apply(this, arguments)
-  }
+export function callCapturedEvents(eventArgs) {
+    if (!eventArgs) {
+        return;
+    }
+    if (Array.isArray(eventArgs)) {
+        eventArgs = eventArgs[0];
+    }
+    let name = eventArgs.type;
+    if (!HIJACK_EVENTS_NAME.test(name)) {
+        return;
+    }
+    EVENTS_POOL[name].forEach(handler => handler.apply(window, eventArgs));
 }
