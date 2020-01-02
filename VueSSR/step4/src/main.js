@@ -16,5 +16,8 @@ export default () => {
     router,
     render: h => h(App)
   });
-  return { app, router };
+  return {
+    app,
+    router
+  };
 };
