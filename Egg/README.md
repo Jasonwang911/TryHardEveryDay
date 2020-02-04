@@ -1,3 +1,4 @@
+# 模板引擎的两个代表 ejs nunjucks
 ## nunjucks 模板引擎
 1. 基本语法
 ```
@@ -68,3 +69,11 @@
 <li>{{user.name}}</li>
 ```
 
+# mock数据
+1. mock数据写在json文件里（low)
+2. 利用charles(mac), Fiddler(windows)等代理工具，将url映射到本地文件
+3. 本地器Mock Server，即mockjs，有点麻烦每次修改了后还要重启服务  
+
+## mockjs 和 easy-mock
+
+# Egg.js  阿里开发，基于koa
