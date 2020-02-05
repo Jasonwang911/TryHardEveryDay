@@ -1,0 +1,43 @@
+2020-02-05 00:00:01,072 INFO 24480 [egg-logrotator] app logger reload: got log-reload message
+2020-02-05 00:00:35,943 INFO 24598 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-02-05 00:00:35,987 INFO 24598 [egg-multipart] stream mode enable
+2020-02-05 00:00:36,061 INFO 24598 [egg-static] starting static serve /public/ -> /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/public
+2020-02-05 00:00:36,063 INFO 24598 [egg-security] use csrf middleware
+2020-02-05 00:00:36,064 INFO 24598 [egg-security] use methodnoallow middleware
+2020-02-05 00:00:36,065 INFO 24598 [egg-security] use noopen middleware
+2020-02-05 00:00:36,065 INFO 24598 [egg-security] use nosniff middleware
+2020-02-05 00:00:36,066 INFO 24598 [egg-security] use xssProtection middleware
+2020-02-05 00:00:36,066 INFO 24598 [egg-security] use xframe middleware
+2020-02-05 00:00:36,067 INFO 24598 [egg-security] use dta middleware
+2020-02-05 00:00:36,067 INFO 24598 [egg-security] compose 7 middlewares into one security middleware
+2020-02-05 00:00:36,100 INFO 24598 [egg:core] dump config after load, 5ms
+2020-02-05 00:00:36,110 INFO 24598 [egg-watcher:application] watcher start success
+2020-02-05 00:00:36,115 INFO 24598 [egg:core] dump config after ready, 3ms
+2020-02-05 00:02:07,830 INFO 24598 [egg-view-nunjucks] loading templates from ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/view"]
+2020-02-05 00:22:41,202 WARN 24598 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-02-05 00:32:58,154 WARN 24598 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-02-05 00:42:54,089 WARN 24598 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-02-05 01:20:42,045 WARN 24598 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-02-05 01:20:42,045 WARN 24598 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-02-05 05:27:09,892 INFO 24598 [-/127.0.0.1/-/0ms SCHEDULE /__schedule?path=/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&immediate=false] [egg-multipart:CleanTmpdir] start clean tmpdir: "/var/folders/wn/dqcxzlr10816sc_p1zyvhnnh0000gn/T/egg-multipart-tmp/1.egg"
+2020-02-05 05:27:09,899 INFO 24598 [-/127.0.0.1/-/8ms SCHEDULE /__schedule?path=/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js&type=worker&cron=0%2030%204%20*%20*%20*&immediate=false] [egg-multipart:CleanTmpdir] end
+2020-02-05 09:46:24,253 WARN 24598 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-02-05 09:56:41,186 WARN 24598 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-02-05 09:58:40,045 WARN 24598 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-02-05 10:00:17,001 WARN 24598 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2020-02-05 10:00:17,001 WARN 24598 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-02-05 10:47:37,842 INFO 25882 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-02-05 10:47:37,892 INFO 25882 [egg-multipart] stream mode enable
+2020-02-05 10:47:37,985 INFO 25882 [egg-static] starting static serve /public/ -> /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/public
+2020-02-05 10:47:37,988 INFO 25882 [egg-security] use csrf middleware
+2020-02-05 10:47:37,989 INFO 25882 [egg-security] use methodnoallow middleware
+2020-02-05 10:47:37,990 INFO 25882 [egg-security] use noopen middleware
+2020-02-05 10:47:37,991 INFO 25882 [egg-security] use nosniff middleware
+2020-02-05 10:47:37,992 INFO 25882 [egg-security] use xssProtection middleware
+2020-02-05 10:47:37,993 INFO 25882 [egg-security] use xframe middleware
+2020-02-05 10:47:37,994 INFO 25882 [egg-security] use dta middleware
+2020-02-05 10:47:37,994 INFO 25882 [egg-security] compose 7 middlewares into one security middleware
+2020-02-05 10:47:38,037 INFO 25882 [egg:core] dump config after load, 9ms
+2020-02-05 10:47:38,056 INFO 25882 [egg-watcher:application] watcher start success
+2020-02-05 10:47:38,065 INFO 25882 [egg:core] dump config after ready, 8ms
+2020-02-05 10:47:43,815 INFO 25882 [egg-view-nunjucks] loading templates from ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/view"]

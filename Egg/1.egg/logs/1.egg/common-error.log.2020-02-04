@@ -1,0 +1,155 @@
+2020-02-04 11:14:59,579 ERROR 18154 [-/127.0.0.1/-/10ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/lib/application.js:266:15)
+    at Object.get cookies [as cookies] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/app/extend/context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/app/extend/context.js:86:33)
+    at Object.ensureCsrfSecret (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/app/extend/context.js:97:13)
+    at csrf (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+
+pid: 18154
+hostname: shendeMBP.lan
+
+2020-02-04 13:10:33,608 ERROR 18153 nodejs.ClusterClientNoResponseError: client no response in 431665ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 18153
+hostname: shendeMBP.lan
+
+2020-02-04 13:55:37,675 ERROR 18153 nodejs.ClusterClientNoResponseError: client no response in 68667ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 18153
+hostname: shendeMBP.lan
+
+2020-02-04 15:55:35,606 ERROR 21072 nodejs.ClusterClientNoResponseError: client no response in 70646ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 21072
+hostname: shendeMBP.lan
+
+2020-02-04 16:05:52,564 ERROR 21072 nodejs.ClusterClientNoResponseError: client no response in 576943ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 21072
+hostname: shendeMBP.lan
+
+2020-02-04 16:16:09,509 ERROR 21072 nodejs.ClusterClientNoResponseError: client no response in 576910ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 21072
+hostname: shendeMBP.lan
+
+2020-02-04 16:27:15,064 ERROR 21072 nodejs.ClusterClientNoResponseError: client no response in 576924ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 21072
+hostname: shendeMBP.lan
+
+2020-02-04 16:37:31,013 ERROR 21072 nodejs.ClusterClientNoResponseError: client no response in 575907ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 21072
+hostname: shendeMBP.lan
+
+2020-02-04 16:39:11,558 ERROR 21072 nodejs.ClusterClientNoResponseError: client no response in 60382ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 21072
+hostname: shendeMBP.lan
+
+2020-02-04 16:49:28,501 ERROR 21072 nodejs.ClusterClientNoResponseError: client no response in 576915ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 21072
+hostname: shendeMBP.lan
+
+2020-02-04 16:59:44,443 ERROR 21072 nodejs.ClusterClientNoResponseError: client no response in 575610ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 21072
+hostname: shendeMBP.lan
+
+2020-02-04 17:12:46,853 ERROR 21072 nodejs.ClusterClientNoResponseError: client no response in 654922ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 21072
+hostname: shendeMBP.lan
+
+2020-02-04 17:17:36,856 ERROR 21278 [-/127.0.0.1/-/97ms GET /news] nodejs.RangeError: Maximum call stack size exceeded
+    at String.replace (<anonymous>)
+    at Object.Handler.gen (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:217:38)
+    at Object.placeholder (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:566:45)
+    at Object.string (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:456:33)
+    at Object.Handler.gen (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:209:30)
+    at Object.placeholder (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:566:45)
+    at Object.string (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:456:33)
+    at Object.Handler.gen (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:209:30)
+    at Object.placeholder (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:566:45)
+    at Object.string (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:456:33)
+
+pid: 21278
+hostname: shendeMBP.lan
+
+2020-02-04 17:17:39,443 ERROR 21278 [-/127.0.0.1/-/85ms GET /news] nodejs.RangeError: Maximum call stack size exceeded
+    at String.replace (<anonymous>)
+    at Object.Handler.gen (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:217:38)
+    at Object.placeholder (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:566:45)
+    at Object.string (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:456:33)
+    at Object.Handler.gen (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:209:30)
+    at Object.placeholder (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:566:45)
+    at Object.string (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:456:33)
+    at Object.Handler.gen (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:209:30)
+    at Object.placeholder (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:566:45)
+    at Object.string (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mockjs/dist/mock.js:456:33)
+
+pid: 21278
+hostname: shendeMBP.lan
+

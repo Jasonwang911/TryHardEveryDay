@@ -1,0 +1,80 @@
+2020-02-05 00:22:41,203 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 124711ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 00:32:58,151 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 576923ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 00:42:54,090 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 575840ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 01:20:42,044 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 2227783ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 09:46:24,253 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 576460ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 09:56:41,186 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 576925ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 09:58:40,045 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 78843ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 10:00:17,001 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 76945ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+

@@ -1,5 +1,6 @@
 # 模板引擎的两个代表 ejs nunjucks
 ## nunjucks 模板引擎
+Egg中使用 egg-view-nunjucks
 1. 基本语法
 ```
 // 变量
@@ -77,3 +78,36 @@
 ## mockjs 和 easy-mock
 
 # Egg.js  阿里开发，基于koa
+
+MVC三层架构  Model模型层 View视图层 Controller控制器层  
+
+经典的模型： 控制器Controller => 服务层Service => 模型层Model
+
+1. 控制器的作用  
+- 接收参数  
+- 校验参数是否合法  
+- 向下调用服务处理业务  
+- 相应客户端数据  
+
+2. 服务层的作用
+- 处理业务逻辑
+- 进行业务计算
+- 调用模型层（数据库)进行处理
+
+3. 模型层的作用
+- 连接数据库
+- 对数据库进行操作
+
+## egg中间层请求
+```
+let result = await ctx.curl(url, {
+      methods: 'GET',
+      data: {
+        limit
+      },
+      dataType: 'json'
+    })
+```
+
+## 定时任务
+schedule 文件下放置定时任务

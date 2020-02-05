@@ -1,0 +1,84 @@
+2020-02-04 11:14:32,999 INFO 18153 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 62127004ms at 2020-02-05 04:30:00.003
+2020-02-04 11:14:32,999 INFO 18153 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 45927001ms at 2020-02-05 00:00:00.000
+2020-02-04 11:14:33,000 INFO 18153 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 45928001ms at 2020-02-05 00:00:01.001
+2020-02-04 11:14:32,894 INFO 18154 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 11:14:32,894 INFO 18154 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 11:14:32,894 INFO 18154 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 11:15:56,064 INFO 18172 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 11:15:56,064 INFO 18172 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 11:15:56,064 INFO 18172 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 11:16:13,631 INFO 18185 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 11:16:13,631 INFO 18185 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 11:16:13,631 INFO 18185 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 11:22:06,530 INFO 18209 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 11:22:06,530 INFO 18209 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 11:22:06,530 INFO 18209 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 13:17:44,486 INFO 19069 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 13:17:44,486 INFO 19069 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 13:17:44,486 INFO 19069 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 15:41:35,069 INFO 21072 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 46104935ms at 2020-02-05 04:30:00.003
+2020-02-04 15:41:35,069 INFO 21072 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 29904931ms at 2020-02-05 00:00:00.000
+2020-02-04 15:41:35,069 INFO 21072 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 29905931ms at 2020-02-05 00:00:01.000
+2020-02-04 15:41:34,888 INFO 21073 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 15:41:34,888 INFO 21073 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 15:41:34,888 INFO 21073 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 15:42:24,123 INFO 21084 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 15:42:24,123 INFO 21084 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 15:42:24,123 INFO 21084 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 17:13:44,364 INFO 21241 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 17:13:44,364 INFO 21241 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 17:13:44,364 INFO 21241 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 17:14:52,588 INFO 21258 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 17:14:52,588 INFO 21258 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 17:14:52,588 INFO 21258 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 17:17:33,299 INFO 21278 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 17:17:33,299 INFO 21278 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 17:17:33,299 INFO 21278 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 17:18:14,421 INFO 21293 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 17:18:14,421 INFO 21293 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 17:18:14,421 INFO 21293 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 17:18:46,787 INFO 21301 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 17:18:46,787 INFO 21301 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 17:18:46,787 INFO 21301 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 17:38:07,715 INFO 21377 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 17:38:07,715 INFO 21377 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 17:38:07,715 INFO 21377 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 23:55:53,775 INFO 24392 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 16446228ms at 2020-02-05 04:30:00.003
+2020-02-04 23:55:53,775 INFO 24392 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 246225ms at 2020-02-05 00:00:00.000
+2020-02-04 23:55:53,776 INFO 24392 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 247225ms at 2020-02-05 00:00:01.001
+2020-02-04 23:55:53,610 INFO 24393 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 23:55:53,610 INFO 24393 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 23:55:53,610 INFO 24393 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 23:56:24,249 INFO 24403 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 23:56:24,249 INFO 24403 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 23:56:24,249 INFO 24403 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 23:57:37,513 INFO 24424 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 23:57:37,513 INFO 24424 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 23:57:37,513 INFO 24424 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 23:58:00,704 INFO 24432 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 23:58:00,704 INFO 24432 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 23:58:00,704 INFO 24432 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 23:58:48,005 INFO 24452 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 23:58:48,005 INFO 24452 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 23:58:48,005 INFO 24452 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 23:58:48,716 INFO 24453 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 23:58:48,716 INFO 24453 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 23:58:48,716 INFO 24453 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 23:58:56,915 INFO 24462 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 23:58:56,915 INFO 24462 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 23:58:56,915 INFO 24462 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 23:59:02,463 INFO 24470 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 23:59:02,463 INFO 24470 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 23:59:02,463 INFO 24470 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 23:59:03,215 INFO 24471 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 23:59:03,215 INFO 24471 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 23:59:03,215 INFO 24471 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-04 23:59:45,802 INFO 24480 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-04 23:59:45,802 INFO 24480 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-04 23:59:45,802 INFO 24480 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 00:00:00,067 INFO 24392 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 86399936ms at 2020-02-06 00:00:00.003
+2020-02-05 00:00:00,065 INFO 24480 [Job#15808320000641580141177053081] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js executing by app
+2020-02-05 00:00:00,070 INFO 24480 [Job#15808320000641580141177053081] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js execute succeed, used 5ms
+2020-02-05 00:00:01,066 INFO 24480 [Job#15808320010651580151191794521] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js executing by app
+2020-02-05 00:00:01,071 INFO 24480 [Job#15808320010651580151191794521] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js execute succeed, used 5ms
+2020-02-05 00:00:01,069 INFO 24392 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 86399934ms at 2020-02-06 00:00:01.003

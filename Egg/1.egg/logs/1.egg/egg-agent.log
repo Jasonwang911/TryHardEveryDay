@@ -1,0 +1,95 @@
+2020-02-05 00:00:01,072 INFO 24392 [egg-logrotator] agent logger reload: got log-reload message
+2020-02-05 00:00:34,502 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/service/news.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26665138,"size":599,"blocks":8,"atimeMs":1580832034000,"mtimeMs":1580832034000,"ctimeMs":1580832034388.6633,"birthtimeMs":1580830967260.0747,"atime":"2020-02-04T16:00:34.000Z","mtime":"2020-02-04T16:00:34.000Z","ctime":"2020-02-04T16:00:34.389Z","birthtime":"2020-02-04T15:42:47.260Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 00:00:34,710 WARN 24392 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/service/news.js change
+2020-02-05 00:22:41,203 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 124711ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 00:32:58,152 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 576923ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 00:42:54,090 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 575840ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 01:20:42,045 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 2227783ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 09:46:24,253 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 576460ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 09:56:41,186 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 576925ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 09:58:40,046 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 78843ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 10:00:17,001 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 76945ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 24392
+hostname: shendeMBP.lan
+
+2020-02-05 10:47:35,897 WARN 24392 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/controller/news.js change
+2020-02-05 10:47:35,694 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/controller/news.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26629869,"size":455,"blocks":8,"atimeMs":1580831985786.1777,"mtimeMs":1580870855633.1548,"ctimeMs":1580870855633.1548,"birthtimeMs":1580784862023.8591,"atime":"2020-02-04T15:59:45.786Z","mtime":"2020-02-05T02:47:35.633Z","ctime":"2020-02-05T02:47:35.633Z","birthtime":"2020-02-04T02:54:22.024Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 10:47:38,161 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/view/news.html","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26646783,"size":976,"blocks":8,"atimeMs":1580808014234.0693,"mtimeMs":1580870858151.7888,"ctimeMs":1580870858151.7888,"birthtimeMs":1580799493627.7998,"atime":"2020-02-04T09:20:14.234Z","mtime":"2020-02-05T02:47:38.152Z","ctime":"2020-02-05T02:47:38.152Z","birthtime":"2020-02-04T06:58:13.628Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 10:47:38,213 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/view/news.html","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26646783,"size":976,"blocks":8,"atimeMs":1580808014234.0693,"mtimeMs":1580870858151.7888,"ctimeMs":1580870858151.7888,"birthtimeMs":1580799493627.7998,"atime":"2020-02-04T09:20:14.234Z","mtime":"2020-02-05T02:47:38.152Z","ctime":"2020-02-05T02:47:38.152Z","birthtime":"2020-02-04T06:58:13.628Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 10:48:17,247 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/view/news.html","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26646783,"size":996,"blocks":8,"atimeMs":1580870858913.1235,"mtimeMs":1580870897184.6836,"ctimeMs":1580870897184.6836,"birthtimeMs":1580799493627.7998,"atime":"2020-02-05T02:47:38.913Z","mtime":"2020-02-05T02:48:17.185Z","ctime":"2020-02-05T02:48:17.185Z","birthtime":"2020-02-04T06:58:13.628Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 10:58:36,753 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule","stat":{"dev":16777220,"mode":16877,"nlink":2,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678304,"size":64,"blocks":0,"atimeMs":1580871516701.586,"mtimeMs":1580871516701.586,"ctimeMs":1580871516701.586,"birthtimeMs":1580871516701.586,"atime":"2020-02-05T02:58:36.702Z","mtime":"2020-02-05T02:58:36.702Z","ctime":"2020-02-05T02:58:36.702Z","birthtime":"2020-02-05T02:58:36.702Z"},"remove":false,"isDirectory":true,"isFile":false}
+2020-02-05 10:59:33,902 WARN 24392 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js rename
+2020-02-05 10:59:33,698 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":0,"blocks":0,"atimeMs":1580871573609.6372,"mtimeMs":1580871573609.6372,"ctimeMs":1580871573609.6372,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T02:59:33.610Z","mtime":"2020-02-05T02:59:33.610Z","ctime":"2020-02-05T02:59:33.610Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 10:59:40,505 WARN 24392 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js rename
+2020-02-05 10:59:40,062 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":15,"blocks":8,"atimeMs":1580871573609.6372,"mtimeMs":1580871580050.1301,"ctimeMs":1580871580050.1301,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T02:59:33.610Z","mtime":"2020-02-05T02:59:40.050Z","ctime":"2020-02-05T02:59:40.050Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 10:59:40,113 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":15,"blocks":8,"atimeMs":1580871573609.6372,"mtimeMs":1580871580050.1301,"ctimeMs":1580871580050.1301,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T02:59:33.610Z","mtime":"2020-02-05T02:59:40.050Z","ctime":"2020-02-05T02:59:40.050Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 10:59:40,305 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":15,"blocks":8,"atimeMs":1580871580000,"mtimeMs":1580871580000,"ctimeMs":1580871580292.6562,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T02:59:40.000Z","mtime":"2020-02-05T02:59:40.000Z","ctime":"2020-02-05T02:59:40.293Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
