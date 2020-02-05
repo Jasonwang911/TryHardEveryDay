@@ -7,3 +7,276 @@
 2020-02-05 10:47:37,891 INFO 25882 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
 2020-02-05 10:47:37,891 INFO 25882 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
 2020-02-05 10:47:37,891 INFO 25882 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 11:32:34,463 INFO 26782 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 61045540ms at 2020-02-06 04:30:00.003
+2020-02-05 11:32:34,463 INFO 26782 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 44845537ms at 2020-02-06 00:00:00.000
+2020-02-05 11:32:34,464 INFO 26782 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 44846537ms at 2020-02-06 00:00:01.001
+2020-02-05 11:32:34,464 INFO 26782 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 11:37:34.464
+2020-02-05 11:32:34,283 INFO 26783 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 11:32:34,283 INFO 26783 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 11:32:34,284 INFO 26783 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 11:32:34,284 INFO 26783 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 11:33:09,228 INFO 26797 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 11:33:09,228 INFO 26797 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 11:33:09,228 INFO 26797 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 11:33:09,228 INFO 26797 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 11:33:38,278 INFO 26811 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 11:33:38,278 INFO 26811 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 11:33:38,278 INFO 26811 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 11:33:38,278 INFO 26811 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 11:34:20,208 INFO 26828 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 11:34:20,208 INFO 26828 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 11:34:20,208 INFO 26828 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 11:34:20,208 INFO 26828 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 11:34:40,495 INFO 26861 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 60919508ms at 2020-02-06 04:30:00.003
+2020-02-05 11:34:40,496 INFO 26861 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 44719504ms at 2020-02-06 00:00:00.000
+2020-02-05 11:34:40,496 INFO 26861 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 44720504ms at 2020-02-06 00:00:01.000
+2020-02-05 11:34:40,496 INFO 26861 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 11:39:40.496
+2020-02-05 11:34:40,397 INFO 26862 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 11:34:40,397 INFO 26862 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 11:34:40,397 INFO 26862 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 11:34:40,397 INFO 26862 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 11:39:40,503 INFO 26861 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 11:44:40.503
+2020-02-05 11:39:40,505 INFO 26862 [Job#15808739805021953216176735561] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 11:39:40,514 INFO 26862 [Job#15808739805021953216176735561] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 9ms
+2020-02-05 11:44:40,514 INFO 26861 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 11:49:40.514
+2020-02-05 11:44:40,515 INFO 26862 [Job#15808742805141956216284928262] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 11:44:40,519 INFO 26862 [Job#15808742805141956216284928262] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 4ms
+2020-02-05 11:49:40,519 INFO 26862 [Job#15808745805181959216326385023] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 11:49:40,524 INFO 26862 [Job#15808745805181959216326385023] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 5ms
+2020-02-05 11:49:40,519 INFO 26861 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 11:54:40.519
+2020-02-05 11:54:40,519 INFO 26862 [Job#15808748805181962216324566724] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 11:54:40,523 INFO 26862 [Job#15808748805181962216324566724] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 4ms
+2020-02-05 11:54:40,519 INFO 26861 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 11:59:40.519
+2020-02-05 11:59:31,574 INFO 26990 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 11:59:31,574 INFO 26990 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 11:59:31,574 INFO 26990 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 11:59:31,574 INFO 26990 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 11:59:40,525 INFO 26990 [Job#15808751805241965216375955565] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 11:59:40,544 INFO 26990 [Job#15808751805241965216375955565] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 17ms
+2020-02-05 11:59:40,524 INFO 26861 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:04:40.524
+2020-02-05 12:03:14,614 INFO 27152 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 59205395ms at 2020-02-06 04:30:00.009
+2020-02-05 12:03:14,615 INFO 27152 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 43005386ms at 2020-02-06 00:00:00.001
+2020-02-05 12:03:14,615 INFO 27152 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 43006385ms at 2020-02-06 00:00:01.000
+2020-02-05 12:03:14,615 INFO 27152 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:08:14.615
+2020-02-05 12:03:14,484 INFO 27153 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:03:14,484 INFO 27153 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:03:14,484 INFO 27153 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:03:14,484 INFO 27153 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:04:16,103 INFO 27255 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:04:16,103 INFO 27255 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:04:16,103 INFO 27255 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:04:16,103 INFO 27255 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:04:40,421 INFO 27413 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 59119582ms at 2020-02-06 04:30:00.003
+2020-02-05 12:04:40,421 INFO 27413 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 42919579ms at 2020-02-06 00:00:00.000
+2020-02-05 12:04:40,421 INFO 27413 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 42920579ms at 2020-02-06 00:00:01.000
+2020-02-05 12:04:40,421 INFO 27413 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:09:40.421
+2020-02-05 12:04:40,304 INFO 27414 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:04:40,304 INFO 27414 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:04:40,304 INFO 27414 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:04:40,304 INFO 27414 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:05:43,231 INFO 27459 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:05:43,231 INFO 27459 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:05:43,231 INFO 27459 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:05:43,231 INFO 27459 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:05:58,797 INFO 27496 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 59041206ms at 2020-02-06 04:30:00.003
+2020-02-05 12:05:58,797 INFO 27496 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 42841203ms at 2020-02-06 00:00:00.000
+2020-02-05 12:05:58,798 INFO 27496 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 42842203ms at 2020-02-06 00:00:01.001
+2020-02-05 12:05:58,798 INFO 27496 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:10:58.798
+2020-02-05 12:05:58,682 INFO 27497 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:05:58,682 INFO 27497 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:05:58,682 INFO 27497 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:05:58,682 INFO 27497 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:07:50,545 INFO 27542 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:07:50,545 INFO 27542 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:07:50,545 INFO 27542 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:07:50,545 INFO 27542 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:10:10,803 INFO 27689 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 58789200ms at 2020-02-06 04:30:00.003
+2020-02-05 12:10:10,803 INFO 27689 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 42589197ms at 2020-02-06 00:00:00.000
+2020-02-05 12:10:10,804 INFO 27689 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 42590197ms at 2020-02-06 00:00:01.001
+2020-02-05 12:10:10,804 INFO 27689 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:15:10.804
+2020-02-05 12:10:10,691 INFO 27690 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:10:10,692 INFO 27690 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:10:10,692 INFO 27690 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:10:10,692 INFO 27690 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:11:37,988 INFO 27729 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:11:37,988 INFO 27729 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:11:37,988 INFO 27729 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:11:37,988 INFO 27729 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:11:45,606 INFO 27757 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 58694397ms at 2020-02-06 04:30:00.003
+2020-02-05 12:11:45,607 INFO 27757 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 42494394ms at 2020-02-06 00:00:00.000
+2020-02-05 12:11:45,607 INFO 27757 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 42495393ms at 2020-02-06 00:00:01.000
+2020-02-05 12:11:45,608 INFO 27757 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:16:45.608
+2020-02-05 12:11:45,490 INFO 27758 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:11:45,490 INFO 27758 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:11:45,490 INFO 27758 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:11:45,490 INFO 27758 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:16:45,614 INFO 27757 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:21:45.614
+2020-02-05 12:16:45,615 INFO 27758 [Job#15808762056131975467253261661] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 12:16:45,623 INFO 27758 [Job#15808762056131975467253261661] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 7ms
+2020-02-05 12:21:45,618 INFO 27758 [Job#15808765056171978467289539662] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 12:21:45,621 INFO 27758 [Job#15808765056171978467289539662] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 12:21:45,617 INFO 27757 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:26:45.617
+2020-02-05 12:25:27,961 INFO 28211 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 57872042ms at 2020-02-06 04:30:00.003
+2020-02-05 12:25:27,962 INFO 28211 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 41672038ms at 2020-02-06 00:00:00.000
+2020-02-05 12:25:27,962 INFO 28211 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 41673038ms at 2020-02-06 00:00:01.000
+2020-02-05 12:25:27,962 INFO 28211 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:30:27.962
+2020-02-05 12:25:27,801 INFO 28212 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:25:27,801 INFO 28212 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:25:27,801 INFO 28212 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:25:27,801 INFO 28212 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:27:00,383 INFO 28236 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:27:00,383 INFO 28236 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:27:00,383 INFO 28236 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:27:00,383 INFO 28236 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:27:01,447 INFO 28237 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:27:01,447 INFO 28237 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:27:01,447 INFO 28237 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:27:01,447 INFO 28237 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:27:21,062 INFO 28249 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:27:21,062 INFO 28249 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:27:21,062 INFO 28249 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:27:21,062 INFO 28249 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:27:29,173 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 57750830ms at 2020-02-06 04:30:00.003
+2020-02-05 12:27:29,174 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 41550827ms at 2020-02-06 00:00:00.001
+2020-02-05 12:27:29,175 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 41551826ms at 2020-02-06 00:00:01.001
+2020-02-05 12:27:29,175 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:32:29.175
+2020-02-05 12:27:29,056 INFO 28286 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:27:29,056 INFO 28286 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:27:29,056 INFO 28286 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:27:29,056 INFO 28286 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:27:51,797 INFO 28325 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:27:51,797 INFO 28325 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:27:51,797 INFO 28325 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:27:51,797 INFO 28325 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:27:58,237 INFO 28342 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:27:58,237 INFO 28342 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:27:58,237 INFO 28342 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:27:58,238 INFO 28342 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:32:04,240 INFO 28358 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:32:04,240 INFO 28358 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:32:04,240 INFO 28358 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:32:04,240 INFO 28358 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:32:10,512 INFO 28368 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:32:10,512 INFO 28368 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:32:10,512 INFO 28368 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:32:10,512 INFO 28368 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:32:11,266 INFO 28370 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 12:32:11,266 INFO 28370 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 12:32:11,266 INFO 28370 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 12:32:11,266 INFO 28370 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 12:32:29,181 INFO 28370 [Job#15808771491791984902904666371] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 12:32:29,187 INFO 28370 [Job#15808771491791984902904666371] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 5ms
+2020-02-05 12:32:29,180 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:37:29.180
+2020-02-05 12:37:29,186 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:42:29.186
+2020-02-05 12:37:29,186 INFO 28370 [Job#15808774491851987902963973112] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 12:37:29,190 INFO 28370 [Job#15808774491851987902963973112] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 4ms
+2020-02-05 12:42:29,192 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:47:29.190
+2020-02-05 12:42:29,193 INFO 28370 [Job#15808777491891990903001942583] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 12:42:29,195 INFO 28370 [Job#15808777491891990903001942583] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 12:47:29,196 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:52:29.196
+2020-02-05 12:47:29,196 INFO 28370 [Job#15808780491951993903054588604] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 12:47:29,199 INFO 28370 [Job#15808780491951993903054588604] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 12:52:29,200 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 12:57:29.200
+2020-02-05 12:52:29,200 INFO 28370 [Job#15808783492001996903099492765] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 12:52:29,202 INFO 28370 [Job#15808783492001996903099492765] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 12:57:29,206 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:02:29.206
+2020-02-05 12:57:29,207 INFO 28370 [Job#15808786492061999903157287556] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 12:57:29,210 INFO 28370 [Job#15808786492061999903157287556] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 13:02:29,212 INFO 28370 [Job#15808789492112002903201801357] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 13:02:29,214 INFO 28370 [Job#15808789492112002903201801357] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 13:02:29,211 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:07:29.211
+2020-02-05 13:07:29,213 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:12:29.213
+2020-02-05 13:07:29,217 INFO 28370 [Job#15808792492132005903221365488] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 13:07:29,219 INFO 28370 [Job#15808792492132005903221365488] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 13:12:29,217 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:17:29.217
+2020-02-05 13:12:29,217 INFO 28370 [Job#15808795492172008903253088159] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 13:12:29,220 INFO 28370 [Job#15808795492172008903253088159] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 13:17:29,222 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:22:29.222
+2020-02-05 13:17:29,223 INFO 28370 [Job#158087984922220119033035728610] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 13:17:29,226 INFO 28370 [Job#158087984922220119033035728610] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 13:22:29,225 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:27:29.225
+2020-02-05 13:22:29,225 INFO 28370 [Job#158088014922420149033236384911] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 13:22:29,228 INFO 28370 [Job#158088014922420149033236384911] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 13:27:29,230 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:32:29.230
+2020-02-05 13:27:29,231 INFO 28370 [Job#158088044923020179033782446612] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 13:27:29,234 INFO 28370 [Job#158088044923020179033782446612] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 13:32:29,235 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:37:29.235
+2020-02-05 13:32:29,236 INFO 28370 [Job#158088074923520209034230328413] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 13:32:29,239 INFO 28370 [Job#158088074923520209034230328413] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 13:37:29,241 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:42:29.241
+2020-02-05 13:37:29,241 INFO 28370 [Job#158088104924120239034758257914] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 13:37:29,244 INFO 28370 [Job#158088104924120239034758257914] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 13:42:29,246 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:47:29.246
+2020-02-05 13:42:29,247 INFO 28370 [Job#158088134924620269035266785515] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 13:42:29,250 INFO 28370 [Job#158088134924620269035266785515] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 13:47:29,255 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 13:52:29.255
+2020-02-05 13:47:29,255 INFO 28370 [Job#158088164925520299036109226016] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 13:47:29,258 INFO 28370 [Job#158088164925520299036109226016] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 14:08:12,874 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 14:13:12.873
+2020-02-05 14:08:12,874 INFO 28370 [Job#158088289287320329036322079217] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 14:08:12,877 INFO 28370 [Job#158088289287320329036322079217] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 14:41:39,236 INFO 28370 [Job#158088489923520359037374489418] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 14:41:39,239 INFO 28370 [Job#158088489923520359037374489418] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 14:41:39,236 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 14:46:39.235
+2020-02-05 15:08:03,299 INFO 28370 [Job#158088648329920389037924018919] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:08:03,302 INFO 28370 [Job#158088648329920389037924018919] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 15:08:03,299 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 15:13:03.299
+2020-02-05 15:13:03,302 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 15:18:03.302
+2020-02-05 15:13:03,302 INFO 28370 [Job#158088678330220419038228949020] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:13:03,304 INFO 28370 [Job#158088678330220419038228949020] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 15:18:03,305 INFO 28370 [Job#158088708330420449038452029021] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:18:03,308 INFO 28370 [Job#158088708330420449038452029021] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 15:18:03,305 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 15:23:03.305
+2020-02-05 15:23:03,306 INFO 28370 [Job#158088738330520479038508368922] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:23:03,309 INFO 28370 [Job#158088738330520479038508368922] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 15:23:03,306 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 15:28:03.306
+2020-02-05 15:28:03,310 INFO 28370 [Job#158088768331020509038935722723] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:28:03,312 INFO 28370 [Job#158088768331020509038935722723] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 15:28:03,310 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 15:33:03.310
+2020-02-05 15:33:03,311 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 15:38:03.311
+2020-02-05 15:33:03,312 INFO 28370 [Job#158088798331120539039008111324] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:33:03,314 INFO 28370 [Job#158088798331120539039008111324] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 15:38:03,318 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 15:43:03.318
+2020-02-05 15:38:03,318 INFO 28370 [Job#158088828331720569039602832625] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:38:03,321 INFO 28370 [Job#158088828331720569039602832625] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 15:43:03,320 INFO 28370 [Job#158088858331920599039733008926] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:43:03,322 INFO 28370 [Job#158088858331920599039733008926] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 15:43:03,319 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 15:48:03.319
+2020-02-05 15:48:03,324 INFO 28370 [Job#158088888332120629039949975127] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:48:03,327 INFO 28370 [Job#158088888332120629039949975127] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 15:48:03,322 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 15:53:03.322
+2020-02-05 15:53:03,323 INFO 28370 [Job#158088918332220659039950271628] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:53:03,325 INFO 28370 [Job#158088918332220659039950271628] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 2ms
+2020-02-05 15:53:03,322 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 15:58:03.322
+2020-02-05 15:58:03,328 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 16:03:03.328
+2020-02-05 15:58:03,328 INFO 28370 [Job#158088948332720689040462057529] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 15:58:03,331 INFO 28370 [Job#158088948332720689040462057529] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 16:03:03,334 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 16:08:03.333
+2020-02-05 16:03:03,337 INFO 28370 [Job#158088978333220719040914236430] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 16:03:03,346 INFO 28370 [Job#158088978333220719040914236430] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 8ms
+2020-02-05 16:08:03,337 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 16:13:03.337
+2020-02-05 16:08:03,338 INFO 28370 [Job#158089008333720749041323539731] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 16:08:03,341 INFO 28370 [Job#158089008333720749041323539731] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 16:13:03,343 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 16:18:03.343
+2020-02-05 16:13:03,344 INFO 28370 [Job#158089038334020779041590248432] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 16:13:03,347 INFO 28370 [Job#158089038334020779041590248432] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 16:18:03,345 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 16:23:03.344
+2020-02-05 16:18:03,345 INFO 28370 [Job#158089068334420809042026677633] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 16:18:03,346 INFO 28370 [Job#158089068334420809042026677633] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 1ms
+2020-02-05 16:23:03,351 INFO 28370 [Job#158089098335020839042526164534] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 16:23:03,354 INFO 28370 [Job#158089098335020839042526164534] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 16:23:03,350 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 16:28:03.350
+2020-02-05 16:28:03,354 INFO 28285 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 16:33:03.354
+2020-02-05 16:28:03,354 INFO 28370 [Job#158089128335420869042881995535] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 16:28:03,358 INFO 28370 [Job#158089128335420869042881995535] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 3ms
+2020-02-05 16:28:38,829 INFO 31134 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 43281174ms at 2020-02-06 04:30:00.003
+2020-02-05 16:28:38,829 INFO 31134 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 27081171ms at 2020-02-06 00:00:00.000
+2020-02-05 16:28:38,829 INFO 31134 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 27082171ms at 2020-02-06 00:00:01.000
+2020-02-05 16:28:38,829 INFO 31134 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 16:33:38.829
+2020-02-05 16:28:38,646 INFO 31135 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-02-05 16:28:38,646 INFO 31135 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-02-05 16:28:38,646 INFO 31135 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-02-05 16:28:38,646 INFO 31135 [egg-schedule]: register schedule /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js
+2020-02-05 16:33:38,836 INFO 31134 [Timer] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js next time will execute after 300000ms at 2020-02-05 16:38:38.836
+2020-02-05 16:33:38,837 INFO 31135 [Job#15808916188352090259100177311] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js executing by app
+2020-02-05 16:33:38,843 INFO 31135 [Job#15808916188352090259100177311] /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js execute succeed, used 5ms

@@ -284,13 +284,17 @@
         "keepAlive": true,
         "freeSocketTimeout": 4000,
         "maxSockets": 9007199254740991,
-        "maxFreeSockets": 256
+        "maxFreeSockets": 256,
+        "timeout": 30000,
+        "socketActiveTTL": 0
       },
       "httpsAgent": {
         "keepAlive": true,
         "freeSocketTimeout": 4000,
         "maxSockets": 9007199254740991,
-        "maxFreeSockets": 256
+        "maxFreeSockets": 256,
+        "timeout": 30000,
+        "socketActiveTTL": 0
       }
     },
     "meta": {
@@ -325,6 +329,9 @@
     "onClientError": null,
     "news": {
       "url": "http://127.0.0.1:3000/news"
+    },
+    "cache": {
+      "url": "http://127.0.0.1:3000/cache"
     },
     "coreMiddlewares": "~config~coreMiddleware",
     "appMiddlewares": [],

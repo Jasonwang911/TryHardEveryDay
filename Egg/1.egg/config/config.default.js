@@ -16,5 +16,8 @@ module.exports = app => {
   config.news = {
     url: 'http://127.0.0.1:3000/news'
   }
+  config.cache = {
+    url: 'http://127.0.0.1:3000/cache'
+  }
   return config
 }

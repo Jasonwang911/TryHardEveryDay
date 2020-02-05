@@ -12,6 +12,9 @@
   "news": {
     "url": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js"
   },
+  "cache": {
+    "url": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js"
+  },
   "session": {
     "maxAge": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-session/config/config.default.js",
     "key": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-session/config/config.default.js",

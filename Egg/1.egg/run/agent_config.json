@@ -289,6 +289,9 @@
     "news": {
       "url": "http://127.0.0.1:3000/news"
     },
+    "cache": {
+      "url": "http://127.0.0.1:3000/cache"
+    },
     "coreMiddlewares": "~config~coreMiddleware",
     "appMiddlewares": [],
     "appMiddleware": "~config~appMiddlewares"

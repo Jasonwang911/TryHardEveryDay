@@ -23,7 +23,6 @@ class NewsService extends Service {
       data
     } = result.data
     if (code === 0) {
-      console.log('服务层返回结果了', data)
       return data
     } else {
       return {

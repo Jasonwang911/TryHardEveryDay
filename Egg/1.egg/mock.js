@@ -21,9 +21,10 @@ app.get('/news', function (req, res) {
   res.json(result)
 })
 
-app.get('/title', function (req, res) {
+app.get('/cache', function (req, res) {
+  res.header("Content-Type", "application/json; charset=utf-8")
   res.json({
-    title: '服务器返回的新闻标题'
+    title: '服务器返回的新闻标题' + Date.now()
   })
 })
 

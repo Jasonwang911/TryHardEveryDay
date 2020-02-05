@@ -12,9 +12,10 @@ class NewsController extends Controller {
     let limit = ctx.query ? ctx.query.limit : 5
     const list = await this.service.news.list(limit)
     console.log(list)
+    console.log('标题', this.app.cache.title)
     await ctx.render('news', {
       list,
-      title: '默认新闻列表'
+      title: this.app.cache ? this.app.cache.title : '暂无标题'
     })
   }
 }

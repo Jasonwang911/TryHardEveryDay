@@ -111,3 +111,43 @@ let result = await ctx.curl(url, {
 
 ## 定时任务
 schedule 文件下放置定时任务
+```
+const {Subscription} = require('egg')
+```
+```
+// 定时任务
+const {
+  Subscription
+} = require('egg')
+
+class UpdateCacheSubscription extends Subscription {
+  // 静态任务，返回一个配置
+  static get schedule() {
+    return {
+      // 间隔时间，每隔5分钟执行一次
+      interval: '5m',
+      // 计划任务将在哪些worker上执行, all指的是在所有的worker上执行
+      type: 'all'
+    }
+  }
+  // 任务定义
+  async subscribe() {
+    const result = await this.ctx.curl(this.config.cache.url, {
+      methods: 'GET',
+      dataType: 'json'
+    })
+    // app代表egg应用的实例
+    this.ctx.app.cache = result.data
+  }
+}
+
+module.exports = UpdateCacheSubscription
+```
+1. worker 
+- node是单线程，默认只使用一核，为了能充分利用CPU，使用node集群来提高性能，即根据核数，启动多个进程。一个核会启动一个worker
+
+##数据库
+1. mysql： egg-mysql
+config/plugin.js
+```
+```

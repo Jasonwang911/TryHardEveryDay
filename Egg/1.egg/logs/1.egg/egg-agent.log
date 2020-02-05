@@ -93,3 +93,236 @@ hostname: shendeMBP.lan
 2020-02-05 10:59:40,062 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":15,"blocks":8,"atimeMs":1580871573609.6372,"mtimeMs":1580871580050.1301,"ctimeMs":1580871580050.1301,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T02:59:33.610Z","mtime":"2020-02-05T02:59:40.050Z","ctime":"2020-02-05T02:59:40.050Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
 2020-02-05 10:59:40,113 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":15,"blocks":8,"atimeMs":1580871573609.6372,"mtimeMs":1580871580050.1301,"ctimeMs":1580871580050.1301,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T02:59:33.610Z","mtime":"2020-02-05T02:59:40.050Z","ctime":"2020-02-05T02:59:40.050Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
 2020-02-05 10:59:40,305 INFO 24392 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":15,"blocks":8,"atimeMs":1580871580000,"mtimeMs":1580871580000,"ctimeMs":1580871580292.6562,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T02:59:40.000Z","mtime":"2020-02-05T02:59:40.000Z","ctime":"2020-02-05T02:59:40.293Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 11:32:33,513 INFO 26782 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 11:32:33,529 INFO 26782 [egg:core] dump config after load, 7ms
+2020-02-05 11:32:33,575 INFO 26782 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 11:32:33,576 INFO 26782 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 11:32:33,576 INFO 26782 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 11:32:33,576 INFO 26782 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 11:32:33,576 INFO 26782 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 11:32:33,576 INFO 26782 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 11:32:33,576 INFO 26782 [egg-watcher:agent] watcher start success
+2020-02-05 11:32:33,596 INFO 26782 [egg:core] dump config after ready, 4ms
+2020-02-05 11:33:08,536 WARN 26782 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/controller/news.js change
+2020-02-05 11:33:08,330 INFO 26782 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/controller/news.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26629869,"size":495,"blocks":8,"atimeMs":1580871627598.7017,"mtimeMs":1580873588267.66,"ctimeMs":1580873588267.66,"birthtimeMs":1580784862023.8591,"atime":"2020-02-05T03:00:27.599Z","mtime":"2020-02-05T03:33:08.268Z","ctime":"2020-02-05T03:33:08.268Z","birthtime":"2020-02-04T02:54:22.024Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 11:33:37,471 WARN 26782 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/controller/news.js change
+2020-02-05 11:33:37,264 INFO 26782 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/controller/news.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26629869,"size":489,"blocks":8,"atimeMs":1580873590652.465,"mtimeMs":1580873617201.6104,"ctimeMs":1580873617201.6104,"birthtimeMs":1580784862023.8591,"atime":"2020-02-05T03:33:10.652Z","mtime":"2020-02-05T03:33:37.202Z","ctime":"2020-02-05T03:33:37.202Z","birthtime":"2020-02-04T02:54:22.024Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 11:34:19,381 WARN 26782 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/service/news.js change
+2020-02-05 11:34:19,179 INFO 26782 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/service/news.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26665138,"size":547,"blocks":8,"atimeMs":1580871627603.0706,"mtimeMs":1580873659117.7517,"ctimeMs":1580873659117.7517,"birthtimeMs":1580830967260.0747,"atime":"2020-02-05T03:00:27.603Z","mtime":"2020-02-05T03:34:19.118Z","ctime":"2020-02-05T03:34:19.118Z","birthtime":"2020-02-04T15:42:47.260Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 11:34:39,788 INFO 26861 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 11:34:39,801 INFO 26861 [egg:core] dump config after load, 3ms
+2020-02-05 11:34:39,832 INFO 26861 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 11:34:39,832 INFO 26861 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 11:34:39,832 INFO 26861 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 11:34:39,832 INFO 26861 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 11:34:39,832 INFO 26861 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 11:34:39,833 INFO 26861 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 11:34:39,833 INFO 26861 [egg-watcher:agent] watcher start success
+2020-02-05 11:34:39,844 INFO 26861 [egg:core] dump config after ready, 3ms
+2020-02-05 11:59:30,794 WARN 26861 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js change
+2020-02-05 11:59:30,589 INFO 26861 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26629751,"size":738,"blocks":8,"atimeMs":1580873534891.893,"mtimeMs":1580875170525.0618,"ctimeMs":1580875170525.0618,"birthtimeMs":1580784655934.6045,"atime":"2020-02-05T03:32:14.892Z","mtime":"2020-02-05T03:59:30.525Z","ctime":"2020-02-05T03:59:30.525Z","birthtime":"2020-02-04T02:50:55.935Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:03:13,874 INFO 27152 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 12:03:13,887 INFO 27152 [egg:core] dump config after load, 3ms
+2020-02-05 12:03:13,920 INFO 27152 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 12:03:13,920 INFO 27152 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 12:03:13,920 INFO 27152 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 12:03:13,920 INFO 27152 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 12:03:13,920 INFO 27152 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 12:03:13,920 INFO 27152 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 12:03:13,921 INFO 27152 [egg-watcher:agent] watcher start success
+2020-02-05 12:03:13,931 INFO 27152 [egg:core] dump config after ready, 3ms
+2020-02-05 12:04:15,476 INFO 27254 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 12:04:15,490 INFO 27254 [egg:core] dump config after load, 4ms
+2020-02-05 12:04:15,522 INFO 27254 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 12:04:15,522 INFO 27254 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 12:04:15,522 INFO 27254 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 12:04:15,522 INFO 27254 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 12:04:15,522 INFO 27254 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 12:04:15,522 INFO 27254 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 12:04:15,524 INFO 27254 [egg-watcher:agent] watcher start success
+2020-02-05 12:04:15,533 INFO 27254 [egg:core] dump config after ready, 3ms
+2020-02-05 12:04:39,697 INFO 27413 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 12:04:39,710 INFO 27413 [egg:core] dump config after load, 4ms
+2020-02-05 12:04:39,742 INFO 27413 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 12:04:39,742 INFO 27413 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 12:04:39,742 INFO 27413 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 12:04:39,742 INFO 27413 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 12:04:39,742 INFO 27413 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 12:04:39,742 INFO 27413 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 12:04:39,743 INFO 27413 [egg-watcher:agent] watcher start success
+2020-02-05 12:04:39,752 INFO 27413 [egg:core] dump config after ready, 3ms
+2020-02-05 12:05:42,535 WARN 27413 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js change
+2020-02-05 12:05:42,327 INFO 27413 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":679,"blocks":8,"atimeMs":1580873345988.839,"mtimeMs":1580875542265.3674,"ctimeMs":1580875542265.3674,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T03:29:05.989Z","mtime":"2020-02-05T04:05:42.265Z","ctime":"2020-02-05T04:05:42.265Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:05:58,062 INFO 27496 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 12:05:58,076 INFO 27496 [egg:core] dump config after load, 3ms
+2020-02-05 12:05:58,106 INFO 27496 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 12:05:58,106 INFO 27496 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 12:05:58,106 INFO 27496 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 12:05:58,106 INFO 27496 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 12:05:58,106 INFO 27496 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 12:05:58,106 INFO 27496 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 12:05:58,108 INFO 27496 [egg-watcher:agent] watcher start success
+2020-02-05 12:05:58,118 INFO 27496 [egg:core] dump config after ready, 4ms
+2020-02-05 12:07:49,761 WARN 27496 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/controller/news.js change
+2020-02-05 12:07:49,555 INFO 27496 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/controller/news.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26629869,"size":537,"blocks":8,"atimeMs":1580873618227.914,"mtimeMs":1580875669492.39,"ctimeMs":1580875669492.39,"birthtimeMs":1580784862023.8591,"atime":"2020-02-05T03:33:38.228Z","mtime":"2020-02-05T04:07:49.492Z","ctime":"2020-02-05T04:07:49.492Z","birthtime":"2020-02-04T02:54:22.024Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:10:10,079 INFO 27689 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 12:10:10,089 INFO 27689 [egg:core] dump config after load, 4ms
+2020-02-05 12:10:10,124 INFO 27689 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 12:10:10,124 INFO 27689 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 12:10:10,124 INFO 27689 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 12:10:10,124 INFO 27689 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 12:10:10,124 INFO 27689 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 12:10:10,124 INFO 27689 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 12:10:10,125 INFO 27689 [egg-watcher:agent] watcher start success
+2020-02-05 12:10:10,134 INFO 27689 [egg:core] dump config after ready, 3ms
+2020-02-05 12:11:37,135 WARN 27689 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js change
+2020-02-05 12:11:36,925 INFO 27689 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":739,"blocks":8,"atimeMs":1580875641237.6038,"mtimeMs":1580875896861.8516,"ctimeMs":1580875896861.8516,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T04:07:21.238Z","mtime":"2020-02-05T04:11:36.862Z","ctime":"2020-02-05T04:11:36.862Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:11:44,869 INFO 27757 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 12:11:44,883 INFO 27757 [egg:core] dump config after load, 4ms
+2020-02-05 12:11:44,915 INFO 27757 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 12:11:44,915 INFO 27757 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 12:11:44,915 INFO 27757 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 12:11:44,915 INFO 27757 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 12:11:44,916 INFO 27757 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 12:11:44,916 INFO 27757 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 12:11:44,917 INFO 27757 [egg-watcher:agent] watcher start success
+2020-02-05 12:11:44,926 INFO 27757 [egg:core] dump config after ready, 3ms
+2020-02-05 12:25:27,070 INFO 28211 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 12:25:27,081 INFO 28211 [egg:core] dump config after load, 5ms
+2020-02-05 12:25:27,133 INFO 28211 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 12:25:27,133 INFO 28211 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 12:25:27,133 INFO 28211 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 12:25:27,133 INFO 28211 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 12:25:27,133 INFO 28211 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 12:25:27,133 INFO 28211 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 12:25:27,135 INFO 28211 [egg-watcher:agent] watcher start success
+2020-02-05 12:25:27,144 INFO 28211 [egg:core] dump config after ready, 3ms
+2020-02-05 12:26:59,620 WARN 28211 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js change
+2020-02-05 12:26:59,931 WARN 28211 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js change
+2020-02-05 12:26:59,413 INFO 28211 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26629751,"size":738,"blocks":8,"atimeMs":1580875172664.6113,"mtimeMs":1580876819351.2068,"ctimeMs":1580876819351.2068,"birthtimeMs":1580784655934.6045,"atime":"2020-02-05T03:59:32.665Z","mtime":"2020-02-05T04:26:59.351Z","ctime":"2020-02-05T04:26:59.351Z","birthtime":"2020-02-04T02:50:55.935Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:26:59,725 INFO 28211 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26629751,"size":738,"blocks":8,"atimeMs":1580876819000,"mtimeMs":1580876819000,"ctimeMs":1580876819707.6406,"birthtimeMs":1580784655934.6045,"atime":"2020-02-05T04:26:59.000Z","mtime":"2020-02-05T04:26:59.000Z","ctime":"2020-02-05T04:26:59.708Z","birthtime":"2020-02-04T02:50:55.935Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:27:20,176 INFO 28211 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":739,"blocks":8,"atimeMs":1580876766598.8787,"mtimeMs":1580876840114.9902,"ctimeMs":1580876840114.9902,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T04:26:06.599Z","mtime":"2020-02-05T04:27:20.115Z","ctime":"2020-02-05T04:27:20.115Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:27:20,378 WARN 28211 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js change
+2020-02-05 12:27:28,419 INFO 28285 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 12:27:28,432 INFO 28285 [egg:core] dump config after load, 3ms
+2020-02-05 12:27:28,464 INFO 28285 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 12:27:28,464 INFO 28285 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 12:27:28,464 INFO 28285 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 12:27:28,464 INFO 28285 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 12:27:28,465 INFO 28285 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 12:27:28,465 INFO 28285 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 12:27:28,466 INFO 28285 [egg-watcher:agent] watcher start success
+2020-02-05 12:27:28,477 INFO 28285 [egg:core] dump config after ready, 4ms
+2020-02-05 12:27:50,979 WARN 28285 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js change
+2020-02-05 12:27:50,775 INFO 28285 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":739,"blocks":8,"atimeMs":1580876842239.6853,"mtimeMs":1580876870713.1821,"ctimeMs":1580876870713.1821,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T04:27:22.240Z","mtime":"2020-02-05T04:27:50.713Z","ctime":"2020-02-05T04:27:50.713Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:27:57,338 WARN 28285 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js change
+2020-02-05 12:27:56,906 INFO 28285 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":739,"blocks":8,"atimeMs":1580876871735.6016,"mtimeMs":1580876876894.2854,"ctimeMs":1580876876894.2854,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T04:27:51.736Z","mtime":"2020-02-05T04:27:56.894Z","ctime":"2020-02-05T04:27:56.894Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:27:56,956 INFO 28285 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":739,"blocks":8,"atimeMs":1580876871735.6016,"mtimeMs":1580876876894.2854,"ctimeMs":1580876876894.2854,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T04:27:51.736Z","mtime":"2020-02-05T04:27:56.894Z","ctime":"2020-02-05T04:27:56.894Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:27:57,136 INFO 28285 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":739,"blocks":8,"atimeMs":1580876877000,"mtimeMs":1580876877000,"ctimeMs":1580876877124.6187,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T04:27:57.000Z","mtime":"2020-02-05T04:27:57.000Z","ctime":"2020-02-05T04:27:57.125Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:32:03,455 WARN 28285 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js change
+2020-02-05 12:32:03,249 INFO 28285 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":684,"blocks":8,"atimeMs":1580876878151.751,"mtimeMs":1580877123187.911,"ctimeMs":1580877123187.911,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T04:27:58.152Z","mtime":"2020-02-05T04:32:03.188Z","ctime":"2020-02-05T04:32:03.188Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:32:09,766 WARN 28285 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js change
+2020-02-05 12:32:09,994 WARN 28285 [agent:development] reload worker because /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js change
+2020-02-05 12:32:09,513 INFO 28285 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":655,"blocks":8,"atimeMs":1580877126846.6794,"mtimeMs":1580877129501.988,"ctimeMs":1580877129501.988,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T04:32:06.847Z","mtime":"2020-02-05T04:32:09.502Z","ctime":"2020-02-05T04:32:09.502Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:32:09,564 INFO 28285 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":655,"blocks":8,"atimeMs":1580877126846.6794,"mtimeMs":1580877129501.988,"ctimeMs":1580877129501.988,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T04:32:06.847Z","mtime":"2020-02-05T04:32:09.502Z","ctime":"2020-02-05T04:32:09.502Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 12:32:09,792 INFO 28285 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/schedule/updatecache.js","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":26678380,"size":655,"blocks":8,"atimeMs":1580877129000,"mtimeMs":1580877129000,"ctimeMs":1580877129780.3384,"birthtimeMs":1580871573609.6372,"atime":"2020-02-05T04:32:09.000Z","mtime":"2020-02-05T04:32:09.000Z","ctime":"2020-02-05T04:32:09.780Z","birthtime":"2020-02-05T02:59:33.610Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-02-05 14:07:52,990 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 572968ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 28285
+hostname: shendeMBP.lan
+
+2020-02-05 14:10:03,645 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 90631ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 28285
+hostname: shendeMBP.lan
+
+2020-02-05 14:20:20,608 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 576948ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 28285
+hostname: shendeMBP.lan
+
+2020-02-05 14:31:45,678 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 576913ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 28285
+hostname: shendeMBP.lan
+
+2020-02-05 14:41:19,448 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 533745ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 28285
+hostname: shendeMBP.lan
+
+2020-02-05 14:51:36,407 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 576935ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 28285
+hostname: shendeMBP.lan
+
+2020-02-05 14:55:13,697 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 137248ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 28285
+hostname: shendeMBP.lan
+
+2020-02-05 15:05:30,650 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 576928ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 28285
+hostname: shendeMBP.lan
+
+2020-02-05 15:07:23,606 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 72946ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 28285
+hostname: shendeMBP.lan
+
+2020-02-05 16:28:37,909 INFO 31134 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 16:28:37,919 INFO 31134 [egg:core] dump config after load, 3ms
+2020-02-05 16:28:37,967 INFO 31134 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 16:28:37,967 INFO 31134 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 16:28:37,967 INFO 31134 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 16:28:37,968 INFO 31134 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 16:28:37,968 INFO 31134 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 16:28:37,968 INFO 31134 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 16:28:37,969 INFO 31134 [egg-watcher:agent] watcher start success
+2020-02-05 16:28:37,982 INFO 31134 [egg:core] dump config after ready, 4ms
