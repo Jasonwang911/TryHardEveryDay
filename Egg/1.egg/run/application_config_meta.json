@@ -15,6 +15,21 @@
   "cache": {
     "url": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js"
   },
+  "mysql": {
+    "client": {
+      "host": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js",
+      "user": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js",
+      "password": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js",
+      "port": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js",
+      "database": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js"
+    },
+    "app": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/config.default.js",
+    "default": {
+      "database": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mysql/config/config.default.js",
+      "connectionLimit": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mysql/config/config.default.js"
+    },
+    "agent": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mysql/config/config.default.js"
+  },
   "session": {
     "maxAge": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-session/config/config.default.js",
     "key": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-session/config/config.default.js",
@@ -182,6 +197,7 @@
     "license": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/config/config.default.js",
     "dependencies": {
       "egg": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/config/config.default.js",
+      "egg-mysql": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/config/config.default.js",
       "egg-view-nunjucks": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/config/config.default.js",
       "express": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/config/config.default.js",
       "mockjs": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/config/config.default.js"

@@ -148,6 +148,25 @@ module.exports = UpdateCacheSubscription
 
 ##数据库
 1. mysql： egg-mysql
+
 config/plugin.js
 ```
+exports.mysql = {
+  enable: true,
+  package: 'egg-mysql'
+}
+```
+config/config.default.js
+```
+  config.mysql = {
+    client: {
+      host: 'localhost',
+      user: 'root',
+      password: '123456',
+      port: '3306',
+      database: 'cms-development'
+    },
+    // 把mysql模块挂载到app对象 this.app.mysql this.app.mysql.query(``)来执行查询语句
+    app: true
+  }
 ```

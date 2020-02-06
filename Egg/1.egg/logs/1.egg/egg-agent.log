@@ -326,3 +326,183 @@ hostname: shendeMBP.lan
 2020-02-05 16:28:37,968 INFO 31134 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
 2020-02-05 16:28:37,969 INFO 31134 [egg-watcher:agent] watcher start success
 2020-02-05 16:28:37,982 INFO 31134 [egg:core] dump config after ready, 4ms
+2020-02-05 17:01:36,584 INFO 32136 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 17:01:36,594 INFO 32136 [egg:core] dump config after load, 4ms
+2020-02-05 17:01:36,641 INFO 32136 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 17:01:36,641 INFO 32136 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 17:01:36,642 INFO 32136 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 17:01:36,642 INFO 32136 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 17:01:36,642 INFO 32136 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 17:01:36,642 INFO 32136 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 17:01:36,643 INFO 32136 [egg-watcher:agent] watcher start success
+2020-02-05 17:01:36,653 INFO 32136 [egg:core] dump config after ready, 3ms
+2020-02-05 17:02:52,508 INFO 32212 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 17:02:52,519 INFO 32212 [egg:core] dump config after load, 5ms
+2020-02-05 17:02:52,568 INFO 32212 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 17:02:52,568 INFO 32212 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 17:02:52,569 INFO 32212 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 17:02:52,569 INFO 32212 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 17:02:52,569 INFO 32212 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 17:02:52,569 INFO 32212 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 17:02:52,570 INFO 32212 [egg-watcher:agent] watcher start success
+2020-02-05 17:02:52,579 INFO 32212 [egg:core] dump config after ready, 3ms
+2020-02-05 17:02:57,558 INFO 32265 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 17:02:57,567 INFO 32265 [egg:core] dump config after load, 4ms
+2020-02-05 17:02:57,597 INFO 32265 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 17:02:57,597 INFO 32265 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 17:02:57,598 INFO 32265 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 17:02:57,598 INFO 32265 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 17:02:57,598 INFO 32265 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 17:02:57,598 INFO 32265 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 17:02:57,599 INFO 32265 [egg-watcher:agent] watcher start success
+2020-02-05 17:02:57,608 INFO 32265 [egg:core] dump config after ready, 3ms
+2020-02-05 17:04:11,146 INFO 32328 [egg:logger] init all loggers with options: {"dir":"/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"1.egg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-02-05 17:04:11,157 INFO 32328 [egg:core] dump config after load, 5ms
+2020-02-05 17:04:11,204 INFO 32328 [egg-watcher] Start watching: ["/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy","/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"]
+2020-02-05 17:04:11,204 INFO 32328 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app"
+2020-02-05 17:04:11,206 INFO 32328 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config"
+2020-02-05 17:04:11,206 INFO 32328 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks"
+2020-02-05 17:04:11,206 INFO 32328 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/mocks_proxy"
+2020-02-05 17:04:11,206 INFO 32328 [egg-watcher] Start watching: "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app.js"
+2020-02-05 17:04:11,207 INFO 32328 [egg-watcher:agent] watcher start success
+2020-02-05 17:04:11,216 INFO 32328 [egg:core] dump config after ready, 3ms
+2020-02-05 18:11:30,848 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 85505ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 18:55:53,974 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 455943ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 19:16:11,078 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576960ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 19:24:21,040 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 469947ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 20:13:51,007 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 445741ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 20:47:40,260 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 428938ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 20:51:02,201 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 161933ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 21:12:19,291 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576907ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 21:22:36,227 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576923ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 21:41:29,175 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 1092932ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 21:51:26,115 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576924ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 22:01:42,457 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576332ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 22:11:59,416 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576942ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+
+2020-02-05 23:04:24,393 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 3104954ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 32328
+hostname: shendeMBP.lan
+

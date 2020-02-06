@@ -106,6 +106,7 @@
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-static/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-view/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-view-nunjucks/config/locales",
+        "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mysql/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/locales"
       ],
@@ -189,6 +190,21 @@
       "lstripBlocks": false,
       "cache": false
     },
+    "mysql": {
+      "default": {
+        "database": null,
+        "connectionLimit": 5
+      },
+      "app": true,
+      "agent": false,
+      "client": {
+        "host": "localhost",
+        "user": "root",
+        "password": "<String len: 14>",
+        "port": "3306",
+        "database": "cms-development"
+      }
+    },
     "env": "local",
     "name": "1.egg",
     "keys": "<String len: 15>",
@@ -213,6 +229,7 @@
       "license": "ISC",
       "dependencies": {
         "egg": "^2.26.0",
+        "egg-mysql": "^3.0.0",
         "egg-view-nunjucks": "^2.2.0",
         "express": "^4.17.1",
         "mockjs": "^1.1.0"
@@ -509,6 +526,17 @@
       "from": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/plugin.js",
       "path": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-view-nunjucks",
       "version": "2.2.0"
+    },
+    "mysql": {
+      "enable": true,
+      "package": "egg-mysql",
+      "name": "mysql",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/plugin.js",
+      "path": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mysql",
+      "version": "3.0.0"
     }
   }
 }

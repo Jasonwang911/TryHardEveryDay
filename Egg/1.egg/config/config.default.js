@@ -19,5 +19,16 @@ module.exports = app => {
   config.cache = {
     url: 'http://127.0.0.1:3000/cache'
   }
+  config.mysql = {
+    client: {
+      host: 'localhost',
+      user: 'root',
+      password: 'SHEN396689144@',
+      port: '3306',
+      database: 'cms-development'
+    },
+    // 把mysql模块挂载到app对象 this.app.mysql
+    app: true
+  }
   return config
 }

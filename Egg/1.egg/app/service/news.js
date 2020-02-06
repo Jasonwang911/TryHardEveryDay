@@ -10,26 +10,16 @@ class NewsService extends Service {
     } = this
     let url = this.config.news.url
     // {headers, data}
-    let result = await ctx.curl(url, {
-      methods: 'GET',
-      data: {
-        limit
-      },
-      dataType: 'json'
-    })
-    const {
-      code,
-      message,
-      data
-    } = result.data
-    if (code === 0) {
-      return data
-    } else {
-      return {
-        code,
-        message
-      }
-    }
+    // let result = await ctx.curl(url, {
+    //   methods: 'GET',
+    //   data: {
+    //     limit
+    //   },
+    //   dataType: 'json'
+    // })
+    let result = this.app.mysql.query(`SELECT * FROM news LIMIT ${limit}`)
+    // 调用数据库
+    return result
   }
 }
 
