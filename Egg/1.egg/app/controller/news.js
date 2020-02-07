@@ -11,12 +11,18 @@ class NewsController extends Controller {
     } = this
     let limit = ctx.query ? ctx.query.limit : 5
     const list = await this.service.news.list(limit)
-    console.log(list)
-    console.log('标题', this.app.cache.title)
     await ctx.render('news', {
       list,
       title: this.app.cache ? this.app.cache.title : '暂无标题'
     })
+  }
+
+  async users() {
+    const {
+      ctx
+    } = this
+    // 拿到 model 下user.js中 定义的模型 User， 这个模型下有多个方法
+    ctx.body = await ctx.model.User.findAll()
   }
 }
 

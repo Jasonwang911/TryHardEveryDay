@@ -101,13 +101,14 @@
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-watcher/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-schedule/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart/config/locales",
-        "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-development/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-logrotator/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-static/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-view/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-view-nunjucks/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mysql/config/locales",
+        "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mock/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/config/locales",
+        "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mock/lib/tmp/config/locales",
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/locales"
       ],
       "queryField": "locale",
@@ -148,13 +149,6 @@
         "cron": "0 30 4 * * *"
       }
     },
-    "development": {
-      "watchDirs": [],
-      "ignoreDirs": [],
-      "fastReady": false,
-      "reloadOnDebug": true,
-      "overrideDefault": false
-    },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
@@ -176,7 +170,7 @@
       "root": [
         "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/view"
       ],
-      "cache": false,
+      "cache": true,
       "defaultExtension": ".html",
       "defaultViewEngine": "nunjucks",
       "mapping": {
@@ -188,7 +182,7 @@
       "throwOnUndefined": false,
       "trimBlocks": false,
       "lstripBlocks": false,
-      "cache": false
+      "cache": true
     },
     "mysql": {
       "default": {
@@ -196,16 +190,9 @@
         "connectionLimit": 5
       },
       "app": true,
-      "agent": false,
-      "client": {
-        "host": "localhost",
-        "user": "root",
-        "password": "<String len: 14>",
-        "port": "3306",
-        "database": "cms-development"
-      }
+      "agent": false
     },
-    "env": "local",
+    "env": "unittest",
     "name": "1.egg",
     "keys": "<String len: 15>",
     "cookies": {},
@@ -221,7 +208,7 @@
       "description": "",
       "main": "index.js",
       "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "egg-bin test",
         "dev": "egg-bin dev"
       },
       "keywords": [],
@@ -235,7 +222,8 @@
         "mockjs": "^1.1.0"
       },
       "devDependencies": {
-        "egg-bin": "^4.14.1"
+        "egg-bin": "^4.14.1",
+        "egg-mock": "^3.25.1"
       }
     },
     "baseDir": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg",
@@ -274,19 +262,17 @@
     "logger": {
       "dir": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/logs/1.egg",
       "encoding": "utf8",
-      "env": "local",
+      "env": "unittest",
       "level": "INFO",
-      "consoleLevel": "INFO",
+      "consoleLevel": "WARN",
       "disableConsoleAfterReady": false,
       "outputJSON": false,
-      "buffer": true,
+      "buffer": false,
       "appLogName": "1.egg-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {
-        "consoleLevel": "WARN"
-      },
+      "coreLogger": {},
       "allowDebugAtProd": false,
       "type": "application"
     },
@@ -326,9 +312,9 @@
       "bodyParser",
       "overrideMethod",
       "session",
+      "clusterAppMock",
       "securities",
-      "i18n",
-      "eggLoaderTrace"
+      "i18n"
     ],
     "workerStartTimeout": 600000,
     "serverTimeout": null,
@@ -350,9 +336,17 @@
     "cache": {
       "url": "http://127.0.0.1:3000/cache"
     },
+    "middleware": [
+      "robot"
+    ],
+    "robot": {
+      "ua": [
+        {}
+      ]
+    },
     "coreMiddlewares": "~config~coreMiddleware",
-    "appMiddlewares": [],
-    "appMiddleware": "~config~appMiddlewares",
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware",
     "multipartParseOptions": {
       "autoFields": false,
       "defCharset": "utf8",
@@ -463,21 +457,6 @@
       "path": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-multipart",
       "version": "2.10.1"
     },
-    "development": {
-      "enable": true,
-      "package": "egg-development",
-      "name": "development",
-      "dependencies": [
-        "watcher"
-      ],
-      "optionalDependencies": [],
-      "env": [
-        "local"
-      ],
-      "from": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg/config/plugin.js",
-      "path": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-development",
-      "version": "2.4.3"
-    },
     "logrotator": {
       "enable": true,
       "package": "egg-logrotator",
@@ -537,6 +516,15 @@
       "from": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/config/plugin.js",
       "path": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mysql",
       "version": "3.0.0"
+    },
+    "egg-mock": {
+      "enable": true,
+      "path": "/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mock",
+      "name": "egg-mock",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "version": "3.25.1"
     }
   }
 }

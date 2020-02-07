@@ -19,16 +19,21 @@ module.exports = app => {
   config.cache = {
     url: 'http://127.0.0.1:3000/cache'
   }
-  config.mysql = {
-    client: {
-      host: 'localhost',
-      user: 'root',
-      password: 'SHEN396689144@',
-      port: '3306',
-      database: 'cms-development'
-    },
-    // 把mysql模块挂载到app对象 this.app.mysql
-    app: true
+  // config.mysql = {
+  //   client: {
+  //     host: 'localhost',
+  //     user: 'root',
+  //     password: 'SHEN396689144@',
+  //     port: '3306',
+  //     database: 'cms-development'
+  //   },
+  //   // 把mysql模块挂载到app对象 this.app.mysql
+  //   app: true
+  // }
+  // 中间件配置,middleware表示需要启动的中间件
+  config.middleware = ['robot']
+  config.robot = {
+    ua: [/chrome/]
   }
   return config
 }

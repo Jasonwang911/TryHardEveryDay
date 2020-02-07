@@ -170,3 +170,195 @@ config/config.default.js
     app: true
   }
 ```
+### 使用了ORM工具来管理数据库进行增删盖茶 sequelize  文档 https://sequelize.org/
+1. 建立一个配置文件 .sequelizerc 指定不同类型的文件存放的位置
+```
+const path = require('path');
+
+module.exports = {
+  // 数据库的链接
+  config: path.join(__dirname, 'database/config.json'),
+  // 建表表结构的定义
+  'migrations-path': path.join(__dirname, 'database/migrations'),
+  // 种子数据的存放位置
+  'seeders-path': path.join(__dirname, 'database/seeders'),
+  // 定义模型的模流
+  'models-path': path.join(__dirname, 'app/model')
+}
+```
+
+2. 修改数据库的配置
+修改 database/config.json 文件，不同的环境变量指向不同的开发环境，可以使用环境变量来切换  --env=环境变量
+```
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }, 
+  "test": {
+    ...
+  }
+}
+```
+
+3. 建表表结构的定义 database/migrations 
+
+- 根据牵引文件生成数据库表结构
+```
+// 读取database文件夹下的文件执行up和down操作，默认会插入到开发库，如果想插入其他环境添加参数 --env=test
+npx sequelize db:migrate
+```
+
+4. 创建种子文件
+```
+npx sequelize seed:create --name init-users
+// 生成以下信息
+module.exports = {
+  up: (queryInterface, sequelize) => {
+    return queryInterface.bulkInsert('表名',[
+      {}
+    ], {})
+  }, 
+  down: (queryInterface, sequelize) => {
+    return queryInterface
+  }
+}
+// 执行以下操作进行批量插入
+npx sequelize db:seed:all
+```
+
+5. model 模型
+```
+module.exports = app => {
+  // egg-sequelize插件会把Sequelize添加到app上
+  const {
+    INTEGER,
+    STRING,
+    DATE
+  } = app.Sequelize
+  // 定义模型
+  const User = app.model.define('User', {
+
+  })
+  return User
+}
+```
+ 
+## 国际化（I18n） 由 egg-i18n 插件提供
+1. 默认语言 
+config/config.default.js 
+```
+config.i18n = {
+  defaultLocale: 'zh-CN'
+}
+```
+2. 建立语言文件夹
+config下建立 locale 文件夹，并在其下建立 en-US.js （美国-英语） zh-CN.js
+```
+module.exports = {        班干部你不能 你班干部你换个突然 诺邦股份吧
+  Email: '邮箱',
+  // 传递变量
+  "Welcome, back,%s!": "你好 我是, %s!"
+}
+```
+3. 使用
+```
+ctx.__('Email')
+```
+
+## 扩展工具方法框架
+- 框架提供了一种快速扩展的方式，只需要在 app/extend 目录下提供扩展脚本即可
+- Helper 函数用来提供一些使用的 utility 函数
+- 访问方式，通过 ctx.helper 访问到helper对象
+
+## 中间件 middleware  洋葱式处理方式 
+app/middleware 文件夹
+
+
+## 单元测试
+
+### 测试框架
+- mochajs
+- power-assert
+
+1. 测试目录接口
+
+2. 测试运行工具
+使用egg-bin来运行测试脚本，自动将内置的Mocha、co-mochat、power-assert、nyc等模块组合引入到测试脚本中，让我们聚集经理在编写测试代码上，而不是纠结选择那些测试周边周边工具和模块
+```
+"script": {
+  "test": "egg-bin test",
+  "cov": "egg-bin cov"
+}
+```
+
+3. mock 测试辅助模块 egg-mock,可以非常快速的编写一个app的单元测试，并且还能快读创建一个ctx来测试它的属性、方法和Service
+```
+// 
+npm install egg-mock --save-dev
+```
+
+4. 钩子函数
+```
+// 钩子函数
+describe('test/order.test.js', function () {
+  before(() => console.log('before1  在所有测试用例之前执行的函数'))
+  before(() => console.log('before2  在所有测试用例之前执行的函数'))
+  beforeEach(() => console.log('beforeEach 测试用例开始'))
+  it('order1', () => console.log('测试用例1'))
+  it('order1', () => console.log('测试用例2'))
+  afterEach(() => console.log('afterEach 测试用例结束'))
+  after(() => console.log('after1 在所有测试用例执行之后执行的钩子'))
+  after(() => console.log('after2 在所有测试用例执行之后执行的钩子'))
+})
+```
+
+- 同步测试
+```
+const {
+  app,
+  mock,
+  assert
+} = require('egg-mock/bootstrap')
+
+describe('test/controller/news.test.js', function () {
+  it('get a ctx', () => {
+    // ctx.session.name= 'jason'
+    let ctx = app.mockContext({
+      session: {
+        name: 'jason'
+      }
+    })
+    // 断言内部房一个布尔表达式，如果为true,则什么都不做，如果为false抛异常让测试用例失败
+    assert(ctx.method === 'GET')
+    assert(ctx.url === '/')
+    assert(ctx.session.name === 'jason')
+  })
+})
+```
+
+- 异步测试 promise callback async/await
+```
+// async/await 
+  it('async/await', async () => {
+    await app.httpRequest().get('/news').expect(200)
+  })
+
+  // callback 接收一个done参数，然后测试用例执行到此的时候回等待调用done方法
+  it('callback', (done) => {
+    app.httpRequest().get('/news').expect(200, done)
+  })
+
+  // promise
+  it('promise', () => {
+    // app.httpRequest() 发送一个请求
+    return app.httpRequest().get('/news').expect(200)
+  })
+```
+
+## 测试顺序： 由外往内测试，即 1.controller 2.service 3.model 4.extend 5.middleware
+

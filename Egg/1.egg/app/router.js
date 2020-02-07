@@ -4,4 +4,5 @@ module.exports = (app) => {
     controller
   } = app;
   router.get('/news', controller.news.index)
+  router.get('/users', controller.news.users)
 }

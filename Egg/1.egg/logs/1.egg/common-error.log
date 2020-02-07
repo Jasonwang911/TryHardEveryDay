@@ -1,423 +1,108 @@
-2020-02-05 00:22:41,203 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 124711ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 24392
+2020-02-07 17:28:19,822 ERROR 45231 [-/127.0.0.1/-/5ms GET /news] nodejs.ReferenceError: u is not defined
+    at options.ua.some.uas (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/middleware/robot.js:6:44)
+    at Array.some (<anonymous>)
+    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/middleware/robot.js:6:30
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at i18n (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at dta (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at xframe (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at xssProtection (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/xssProtection.js:7:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at nosniff (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/nosniff.js:8:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at noopen (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/noopen.js:8:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at notAllow (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/methodnoallow.js:21:12)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at csrf (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/csrf.js:24:14)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at clusterAppMock (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mock/app/middleware/cluster_app_mock.js:9:58)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-override/index.js:13:70)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at bodyParser (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-bodyparser/index.js:86:11)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 45231
 hostname: shendeMBP.lan
 
-2020-02-05 00:32:58,151 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 576923ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 24392
+2020-02-07 17:28:19,837 ERROR 45231 [-/127.0.0.1/-/0ms GET /news] nodejs.ReferenceError: u is not defined
+    at options.ua.some.uas (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/middleware/robot.js:6:44)
+    at Array.some (<anonymous>)
+    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/middleware/robot.js:6:30
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at i18n (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at dta (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at xframe (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at xssProtection (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/xssProtection.js:7:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at nosniff (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/nosniff.js:8:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at noopen (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/noopen.js:8:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at notAllow (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/methodnoallow.js:21:12)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at csrf (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/csrf.js:24:14)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at clusterAppMock (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mock/app/middleware/cluster_app_mock.js:9:58)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-override/index.js:13:70)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at bodyParser (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-bodyparser/index.js:86:11)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+pid: 45231
 hostname: shendeMBP.lan
 
-2020-02-05 00:42:54,090 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 575840ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 24392
-hostname: shendeMBP.lan
+2020-02-07 17:28:19,845 ERROR 45231 [-/127.0.0.1/-/1ms GET /news] nodejs.ReferenceError: u is not defined
+    at options.ua.some.uas (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/middleware/robot.js:6:44)
+    at Array.some (<anonymous>)
+    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/app/middleware/robot.js:6:30
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at i18n (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at dta (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at xframe (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at xssProtection (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/xssProtection.js:7:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at nosniff (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/nosniff.js:8:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at noopen (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/noopen.js:8:11)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at notAllow (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/methodnoallow.js:21:12)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at csrf (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-security/lib/middlewares/csrf.js:24:14)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at clusterAppMock (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/egg-mock/app/middleware/cluster_app_mock.js:9:58)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-override/index.js:13:70)
+    at dispatch (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-compose/index.js:42:32)
+    at bodyParser (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/koa-bodyparser/index.js:86:11)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 
-2020-02-05 01:20:42,044 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 2227783ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 24392
-hostname: shendeMBP.lan
-
-2020-02-05 09:46:24,253 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 576460ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 24392
-hostname: shendeMBP.lan
-
-2020-02-05 09:56:41,186 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 576925ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 24392
-hostname: shendeMBP.lan
-
-2020-02-05 09:58:40,045 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 78843ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 24392
-hostname: shendeMBP.lan
-
-2020-02-05 10:00:17,001 ERROR 24392 nodejs.ClusterClientNoResponseError: client no response in 76945ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 24392
-hostname: shendeMBP.lan
-
-2020-02-05 12:04:16,191 ERROR 27255 [-/127.0.0.1/-/1ms GET /] nodejs.RequestError: connect ECONNREFUSED 127.0.0.1:3000, GET http://127.0.0.1:3000/cache -1 (connected: false, keepalive socket: false, agent status: {"createSocketCount":1,"createSocketErrorCount":0,"closeSocketCount":0,"errorSocketCount":1,"timeoutSocketCount":0,"requestCount":0,"freeSockets":{},"sockets":{"127.0.0.1:3000:":1},"requests":{}}, socketHandledRequests: 1, socketHandledResponses: 0)
-headers: {}
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
-errno: "ECONNREFUSED"
-code: "ECONNREFUSED"
-syscall: "connect"
-address: "127.0.0.1"
-port: 3000
-name: "RequestError"
-data: undefined
-path: "/cache"
-status: -1
-headers: {}
-res: {"status":-1,"statusCode":-1,"statusMessage":null,"headers":{},"size":0,"aborted":false,"rt":12,"keepAliveSocket":false,"requestUrls":["http://127.0.0.1:3000/cache"],"timing":null,"remoteAddress":"","remotePort":"","socketHandledRequests":1,"socketHandledResponses":0}
-pid: 27255
-hostname: shendeMBP.lan
-
-2020-02-05 14:07:52,990 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 572968ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 28285
-hostname: shendeMBP.lan
-
-2020-02-05 14:10:03,645 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 90631ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 28285
-hostname: shendeMBP.lan
-
-2020-02-05 14:20:20,607 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 576948ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 28285
-hostname: shendeMBP.lan
-
-2020-02-05 14:31:45,677 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 576913ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 28285
-hostname: shendeMBP.lan
-
-2020-02-05 14:41:19,448 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 533745ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 28285
-hostname: shendeMBP.lan
-
-2020-02-05 14:51:36,406 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 576935ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 28285
-hostname: shendeMBP.lan
-
-2020-02-05 14:55:13,696 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 137248ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 28285
-hostname: shendeMBP.lan
-
-2020-02-05 15:05:30,649 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 576928ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 28285
-hostname: shendeMBP.lan
-
-2020-02-05 15:07:23,606 ERROR 28285 nodejs.ClusterClientNoResponseError: client no response in 72946ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 28285
-hostname: shendeMBP.lan
-
-2020-02-05 17:01:37,561 ERROR 32137 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
-    at Handshake.Sequence._packetToError (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
-    at Handshake.ErrorPacket (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
-    at Protocol._parsePacket (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:291:23)
-    at Parser._parsePacket (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Parser.js:433:10)
-    at Parser.write (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Parser.js:43:10)
-    at Protocol.write (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:38:16)
-    at Socket.<anonymous> (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Connection.js:88:28)
-    at Socket.<anonymous> (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Connection.js:526:10)
-    at Socket.emit (events.js:198:13)
-    at addChunk (_stream_readable.js:288:12)
-    --------------------
-    at Protocol._enqueue (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:144:48)
-    at Protocol.handshake (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:51:23)
-    at PoolConnection.connect (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Connection.js:116:18)
-    at Pool.getConnection (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Pool.js:48:16)
-    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:29:7
-    at new Promise (<anonymous>)
-    at Pool.<anonymous> (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:12:10)
-    at Pool.ret [as getConnection] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:56:34)
-    at Pool.query (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Pool.js:202:8)
-    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:29:7
-    sql: select now() as currentTime;
-code: "ER_ACCESS_DENIED_ERROR"
-errno: 1045
-sqlMessage: "Access denied for user 'root'@'localhost' (using password: YES)"
-sqlState: "28000"
-fatal: true
-name: "ER_ACCESS_DENIED_ERRORError"
-pid: 32137
-hostname: shendeMBP.lan
-
-2020-02-05 17:02:53,466 ERROR 32213 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
-    at Handshake.Sequence._packetToError (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
-    at Handshake.ErrorPacket (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
-    at Protocol._parsePacket (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:291:23)
-    at Parser._parsePacket (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Parser.js:433:10)
-    at Parser.write (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Parser.js:43:10)
-    at Protocol.write (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:38:16)
-    at Socket.<anonymous> (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Connection.js:88:28)
-    at Socket.<anonymous> (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Connection.js:526:10)
-    at Socket.emit (events.js:198:13)
-    at addChunk (_stream_readable.js:288:12)
-    --------------------
-    at Protocol._enqueue (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:144:48)
-    at Protocol.handshake (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:51:23)
-    at PoolConnection.connect (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Connection.js:116:18)
-    at Pool.getConnection (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Pool.js:48:16)
-    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:29:7
-    at new Promise (<anonymous>)
-    at Pool.<anonymous> (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:12:10)
-    at Pool.ret [as getConnection] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:56:34)
-    at Pool.query (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Pool.js:202:8)
-    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:29:7
-    sql: select now() as currentTime;
-code: "ER_ACCESS_DENIED_ERROR"
-errno: 1045
-sqlMessage: "Access denied for user 'root'@'localhost' (using password: YES)"
-sqlState: "28000"
-fatal: true
-name: "ER_ACCESS_DENIED_ERRORError"
-pid: 32213
-hostname: shendeMBP.lan
-
-2020-02-05 17:02:58,319 ERROR 32266 [-/127.0.0.1/-/0ms GET /] nodejs.ER_ACCESS_DENIED_ERRORError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
-    at Handshake.Sequence._packetToError (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
-    at Handshake.ErrorPacket (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
-    at Protocol._parsePacket (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:291:23)
-    at Parser._parsePacket (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Parser.js:433:10)
-    at Parser.write (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Parser.js:43:10)
-    at Protocol.write (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:38:16)
-    at Socket.<anonymous> (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Connection.js:88:28)
-    at Socket.<anonymous> (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Connection.js:526:10)
-    at Socket.emit (events.js:198:13)
-    at addChunk (_stream_readable.js:288:12)
-    --------------------
-    at Protocol._enqueue (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:144:48)
-    at Protocol.handshake (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/protocol/Protocol.js:51:23)
-    at PoolConnection.connect (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Connection.js:116:18)
-    at Pool.getConnection (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Pool.js:48:16)
-    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:29:7
-    at new Promise (<anonymous>)
-    at Pool.<anonymous> (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:12:10)
-    at Pool.ret [as getConnection] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:56:34)
-    at Pool.query (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/mysql/lib/Pool.js:202:8)
-    at /Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/ali-rds/node_modules/pify/index.js:29:7
-    sql: select now() as currentTime;
-code: "ER_ACCESS_DENIED_ERROR"
-errno: 1045
-sqlMessage: "Access denied for user 'root'@'localhost' (using password: YES)"
-sqlState: "28000"
-fatal: true
-name: "ER_ACCESS_DENIED_ERRORError"
-pid: 32266
-hostname: shendeMBP.lan
-
-2020-02-05 18:11:30,846 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 85505ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 18:55:53,973 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 455943ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 19:16:11,077 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576960ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 19:24:21,040 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 469947ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 20:13:51,007 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 445741ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 20:47:40,259 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 428938ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 20:51:02,201 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 161933ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 21:12:19,291 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576907ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 21:22:36,227 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576923ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 21:41:29,175 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 1092932ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 21:51:26,115 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576924ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 22:01:42,457 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576332ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 22:11:59,415 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 576942ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
-hostname: shendeMBP.lan
-
-2020-02-05 23:04:24,393 ERROR 32328 nodejs.ClusterClientNoResponseError: client no response in 3104954ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
-    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/shenwang/Documents/myDoucuments/zhufeng/jiagou5/Egg/1.egg/node_modules/cluster-client/lib/leader.js:77:23)
-    at ontimeout (timers.js:436:11)
-    at tryOnTimeout (timers.js:300:5)
-    at listOnTimeout (timers.js:263:5)
-    at Timer.processTimers (timers.js:223:10)
-name: "ClusterClientNoResponseError"
-pid: 32328
+pid: 45231
 hostname: shendeMBP.lan
 
