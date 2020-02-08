@@ -302,6 +302,11 @@ app/middleware 文件夹
 npm install egg-mock --save-dev
 ```
 
+```
+// 模拟CSRF
+app.mockCsrf()
+```
+
 4. 钩子函数
 ```
 // 钩子函数
@@ -362,3 +367,4 @@ describe('test/controller/news.test.js', function () {
 
 ## 测试顺序： 由外往内测试，即 1.controller 2.service 3.model 4.extend 5.middleware
 
+### egg 表单强行添加csrf校验
