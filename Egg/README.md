@@ -368,3 +368,16 @@ describe('test/controller/news.test.js', function () {
 ## 测试顺序： 由外往内测试，即 1.controller 2.service 3.model 4.extend 5.middleware
 
 ### egg 表单强行添加csrf校验
+
+
+# RBAC （Role-Based Access Control）基于角色的权限访问控制，通过角色与权限进行关联
+- 一个用户拥有若干角色，每一个角色拥有若干权限。这样，就构造成了 用户-角色-权限 的授权模型
+- 这种模型中，用户与角色之间，角色与权限之间，一般是多对多的关系
+- 在RBAC中最重要的概念是： 用户（User)、角色(Role)、权限(Permission)
+
+## 生成服务端项目
+```
+mkdir server && cd server
+// 生成一个ts的egg项目
+npm init egg --type=ts
+```
