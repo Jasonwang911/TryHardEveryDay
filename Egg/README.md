@@ -368,6 +368,12 @@ describe('test/controller/news.test.js', function () {
 ## 测试顺序： 由外往内测试，即 1.controller 2.service 3.model 4.extend 5.middleware
 
 ### egg 表单强行添加csrf校验
+强制关闭csrf： config/config.default.ts
+```
+config.security = {
+  csrf: false
+}
+```
 
 
 # RBAC （Role-Based Access Control）基于角色的权限访问控制，通过角色与权限进行关联
@@ -380,4 +386,109 @@ describe('test/controller/news.test.js', function () {
 mkdir server && cd server
 // 生成一个ts的egg项目
 npm init egg --type=ts
+// 安装依赖
+yarn
+// 启动项目
+npm run dev
 ```
+###  安装相关依赖
+1. mysql 
+```
+// 安装mysql
+yarn add egg-mysql -S
+```
+- 配置mysql，config/plugin.js
+```
+import { EggPlugin } from 'egg';
+
+const plugin: EggPlugin = {
+  mysql: {
+    // 是否启用
+    enable: true,
+    // 包名
+    package: 'egg-mysql'
+  }
+};
+
+export default plugin;
+```
+- 配置数据源 
+config/config.default.ts
+```
+// mysql
+config.mysql = {
+  // 客户端
+  client: {
+    // 主机
+    host: '127.0.0.1',
+    // 端口
+    port: '3306',
+    // 用户名
+    user: 'root',
+    // 密码
+    password: 'SHEN396689144@',
+    // 数据库
+    database: 'cms2'
+  },
+  // 表示app就是egg应用,配置为true,会在app对象上添加一个属性 app.mysql 用来操作数据库
+  app: true,
+  agent: true
+}
+```
+配置ts：typings/index.d.ts
+```
+import 'egg';
+
+declare module 'egg' {
+  interface Application {
+    mysql: any
+  }
+}
+```
+2. passport 护照，用来做登录鉴权，包括账号密码登录和第三方统一登录(goole,github,QQ等基于OAuth的)  egg-passport插件
+- passport 的执行顺序如下： 
+用户访问页面  
+检查 Session  
+拦截跳鉴权登录页面  
+Strategy 鉴权 
+校验和存储用户信息  
+序列化用户信息到 Session  
+跳转到指定页面  
+- 安装依赖
+```
+yarn add egg-passport egg-passport-local -S
+```
+- 配置插件, 配置完成会在app上添加 app.passport属性
+```
+// passport
+passport: {
+  enable: true,
+  package: 'egg-passport'
+},
+// passport-local
+passportLocal: {
+  enable: true,
+  package: 'egg-passport-local'
+},
+```
+- 配置ts: typings/index.d.ts
+```
+passport: any
+```
+
+
+### 使用egg-passport登录注册的实现
+
+
+
+
+### RGBA前端框架的搭建
+```
+// 全局安装umi
+sudo yarn global add umi
+```
+
+
+#### 备注
+1. 接口测试工具，除了postman外还可以使用 insomnia
+
