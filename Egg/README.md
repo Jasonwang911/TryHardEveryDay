@@ -489,6 +489,34 @@ sudo yarn global add umi
 ```
 
 
+```
+// 拦截中间件
+module.exports = (_options, _app) => {
+  return async function (ctx, next) {
+    if (ctx.isAuthenticated()) {
+      let user = ctx.user
+      let url = ctx.url
+      let permissions = await ctx.app.mysql.query(`SELECT permission.key FROM role_user INNER JOIN role_permission ON role_user.role_id=role_permission.role_id INNER JOIN permission ON role_permission.permission_id=permission.id WHERE role_user.user_id=?;`, [user.id])
+      let allowed = permissions.map(item => item.key).includes(url)
+      if (allowed) {
+        await next()
+      } else {
+        ctx.body = {
+          success: false,
+          error: '无权限'
+        }
+      }
+    } else {
+      ctx.body = {
+        success: false,
+        error: '无权限'
+      }
+    }
+  }
+}
+```
+
+
 #### 备注
 1. 接口测试工具，除了postman外还可以使用 insomnia
 
