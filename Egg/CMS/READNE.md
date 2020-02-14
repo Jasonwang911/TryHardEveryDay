@@ -131,3 +131,18 @@ class UserController extends BaseController {
 module.exports = UserController;
 ```
 
+### 权限管理
+1. egg-mysql的事务
+```
+// 开启一个事务
+const conn = await this.app.mysql.beginTransaction()
+// 成功后提交，失败后回滚
+try{
+  await conn.query()
+  await conn.insert()
+  await conn.commit()
+}catch(e) {
+  await conn.rollback()
+}
+```
+
