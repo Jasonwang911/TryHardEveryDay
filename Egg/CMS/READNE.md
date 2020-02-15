@@ -131,8 +131,7 @@ class UserController extends BaseController {
 module.exports = UserController;
 ```
 
-### 权限管理
-1. egg-mysql的事务
+###. egg-mysql的事务
 ```
 // 开启一个事务
 const conn = await this.app.mysql.beginTransaction()
@@ -145,4 +144,54 @@ try{
   await conn.rollback()
 }
 ```
+### 分页
+```
+async select(pageNum, pageSize, where) {
+  // await this.app.mysql.query(`SELECT * FROM user WHERE username='zhangsan' ORDER BY id DESC, age ASC limit 3, 3;`)
+  const list = await this.app.mysql.select(this.entity, {
+    where,
+    orders: [
+      [ 'id', 'desc' ],
+    ],
+    limit: pageSize,
+    offset: (pageNum - 1) * pageSize,
+  });
+  const total = await this.app.mysql.count(this.entity, where);
+  const totalSize = Math.ceil(total / pageSize);
+  return {
+    list,
+    total,
+    totalSize,
+    pageSize,
+    pageNum,
+  };
+}
+```
 
+### 验证码  svg-captcha
+```
+yarn add svg-captcha -S
+```
+获取验证码
+```
+'use strict';
+
+const Controller = require('egg').Controller;
+const svgCaptcha = require('svg-captcha');
+
+class IndexController extends Controller {
+  // 获取验证码
+  async captcha() {
+    const {
+      ctx,
+    } = this;
+    const captcha = svgCaptcha.create({});
+    ctx.session.captcha = captcha.text;
+    ctx.set('Content-Type', 'image/svg+xml');
+    ctx.body = captcha.data;
+  }
+}
+
+module.exports = IndexController;
+
+```

@@ -28,8 +28,54 @@ class RoleService extends BaseService {
         });
       }
       await conn.commit();
+      console.log('添加成功了');
+      return true;
     } catch (e) {
+      console.log('回滚了', e);
       await conn.rollback();
+      return false;
+    }
+  }
+  // 获取所有的资源树
+  async getResource() {
+    const list = await this.app.mysql.select('resource');
+    const rootMenus = [];
+    const resourceMap = {};
+    list.forEach(item => {
+      item.children = [];
+      resourceMap[item.id] = item;
+      if (item.parent_id === 0) {
+        // 根节点
+        rootMenus.push(item);
+      } else {
+        resourceMap[item.parent_id] && resourceMap[item.parent_id].children.push(item);
+      }
+    });
+    return rootMenus;
+  }
+  // 设置角色对应的资源
+  async setResource(body) {
+    const {
+      roleId,
+      resourceIds,
+    } = body;
+    const conn = await this.app.mysql.beginTransaction();
+    try {
+      // 删除此角色关系的所有资源
+      await conn.query('DELETE FROM role_resource WHERE role_id=?', [ roleId ]);
+      for (let i = 0; i < resourceIds.length; i++) {
+        await conn.insert('role_user', {
+          role_id: roleId,
+          resource_id: resourceIds[i],
+        });
+      }
+      await conn.commit();
+      console.log('添加成功了');
+      return true;
+    } catch (e) {
+      console.log('回滚了', e);
+      await conn.rollback();
+      return false;
     }
   }
 }

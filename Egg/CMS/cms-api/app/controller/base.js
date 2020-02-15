@@ -15,13 +15,20 @@ class BaseController extends Controller {
       error,
     };
   }
-  // 查询用户
+  // 查询用户，支持查询和分页
   async index() {
     const {
       ctx,
       service,
     } = this;
-    const result = await service[this.entity].select();
+    const {
+      pageNum,
+      pageSize,
+      ...where
+    } = ctx.query;
+    const currentPageNum = isNaN(pageNum) ? 1 : parseInt(pageNum);
+    const currentPageSize = isNaN(pageSize) ? 3 : parseInt(pageSize);
+    const result = await service[this.entity].select(currentPageNum, currentPageSize, where);
     console.log(result);
     ctx.body = {
       code: 0,

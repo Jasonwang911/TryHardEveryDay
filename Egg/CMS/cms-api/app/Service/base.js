@@ -4,9 +4,25 @@ const Service = require('egg').Service;
 
 class BaseService extends Service {
   // 查询用户
-  async select() {
-    // await this.app.mysql.query(`SELECT * FROM user;`)
-    return await this.app.mysql.select(this.entity);
+  async select(pageNum, pageSize, where) {
+    // await this.app.mysql.query(`SELECT * FROM user WHERE username='zhangsan' ORDER BY id DESC, age ASC limit 3, 3;`)
+    const list = await this.app.mysql.select(this.entity, {
+      where,
+      orders: [
+        [ 'id', 'desc' ],
+      ],
+      limit: pageSize,
+      offset: (pageNum - 1) * pageSize,
+    });
+    const total = await this.app.mysql.count(this.entity, where);
+    const totalSize = Math.ceil(total / pageSize);
+    return {
+      list,
+      total,
+      totalSize,
+      pageSize,
+      pageNum,
+    };
   }
   // 添加用户
   async create(user) {

@@ -17,7 +17,11 @@ module.exports = app => {
   // 权限管理
   // 获取所有的用户
   router.get('/api/role/getUser', controller.role.getUser);
-  // router.post('/api/role/setUser', controller.role.setUser);
-  // router.get('/api/role/getResource', controller.role.getResource);
-  // router.post('/api/role/setResource', controller.role.setResource);
+  router.post('/api/role/setUser', controller.role.setUser);
+  router.get('/api/role/getResource', controller.role.getResource);
+  router.post('/api/role/setResource', controller.role.setResource);
+  // 验证码
+  router.get('/api/captcha', controller.index.captcha);
+  // 验证验证码
+  router.post('/api/checkCaptcha', controller.index.checkCaptcha);
 };
