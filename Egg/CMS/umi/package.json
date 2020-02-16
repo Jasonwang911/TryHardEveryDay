@@ -1,0 +1,14 @@
+{
+  "name": "umi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "test": "umi test"
+  },
+  "dependencies": {
+    "bootstrap": "3"
+  }
+}

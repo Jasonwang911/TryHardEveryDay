@@ -9,7 +9,7 @@ class IndexController extends Controller {
     const {
       ctx,
     } = this;
-    const captcha = svgCaptcha.create({
+    const captcha = svgCaptcha.createMathExpr({
       size: 4,
       background: '#ffffff',
       ignoreChars: '0o1i', // 过滤掉一些字符，例如0o1i

@@ -195,3 +195,142 @@ class IndexController extends Controller {
 module.exports = IndexController;
 
 ```
+
+## roadhog+umi
+antdesignPro使用了dva,使用了umi,umi使用了roadhog
+### roadhog 
+[roadhog](https://www.npmjs.com/package/roadhog)  
+由于 create-react-app 的默认配置不能满足需求，而他又不提供定制的功能，于是基于他实现了一个可配置版。所以如果既要 create-react-app 的优雅体验，又想定制配置，那么可以试试 roadhog 。   
+- roadhog 是基于 webpack 的封装工具，目的是简化 webpack 的配置
+- 提供 server、 build 和 test 三个命
+令，分别用于本地调试和构建
+- 提供了特别易用的 mock 功能
+- 命令行体验和 create-react-app 一致，配置略有不同，比如默认开启 css modules
+- 还提供了 JSON 格式的配置方式。
+```
+// 安装
+sudo npm install roadhog -g
+// 安装依赖
+npm i roadhog -g
+// 创建项目
+npm install react-dom -S
+// 打包
+roadhog build
+``` 
+
+#### HMR (热替换)
+CSS 在开发模式下会走 style-loader (被内嵌在 JavaScript 文件中)，所以只要保证 JavaScript 的热更新，即可实现 CSS 的热更新。     
+
+如果大家使用 dva ，配上 babel-plugin-dva-hmr 即可实现 routes 和 components 以及相关 CSS 修改的热更新，其他修改会自动刷新页面。 
+```
+"env": {
+  "development": {
+    "extraBabelPlugins": ["dva-hmr"]
+  }
+}
+```
+#### Mock
+roadhog server 支持 mock 功能，类似 dora-plugin-proxy，在 .roadhogrc.mock.js 中进行配置，支持基于 require 动态分析的实时刷新，支持 ES6 语法，以及友好的出错提示。
+```
+export default {
+  // 支持值为 Object 和 Array
+  'GET /api/users': { users: [1,2] },
+ 
+  // GET POST 可省略
+  '/api/users/1': { id: 1 },
+ 
+  // 支持自定义函数，API 参考 express@4
+  'POST /api/users/create': (req, res) => { res.end('OK'); },
+ 
+  // Forward 到另一个服务器
+  'GET /assets/*': 'https://assets.online/',
+ 
+  // Forward 到另一个服务器，并指定子路径
+  // 请求 /someDir/0.0.50/index.css 会被代理到 https://g.alicdn.com/tb-page/taobao-home, 实际返回 https://g.alicdn.com/tb-page/taobao-home/0.0.50/index.css
+  'GET /someDir/(.*)': 'https://g.alicdn.com/tb-page/taobao-home',
+};
+```
+
+#### 智能重启
+配置文件修改的修改会触发 roadhog server 的自动重启，会触发重启的文件有：    
+- .roadhogrc
+- .roadhogrc.js
+- .roadhogrc.mock.js
+- theme 配置指定的文件
+
+#### 默认配置
+```
+{
+  "entry": "src/index.js",
+  "disableCSSModules": false,
+  "publicPath": "/",
+  "outputPath": "./dist",
+  "extraBabelPlugins": [],
+  "extraPostCSSPlugins": [],
+  "autoprefixer": null,
+  "proxy": null,
+  "externals": null,
+  "library": null,
+  "libraryTarget": "var",
+  "multipage": false,
+  "define": null,
+  "env": null,
+  "theme": null,
+}
+```
+参数	含义
+entry	指定 webpack 入口文件，支持 glob 格式   
+outputPath	配置输出路径，默认是 ./dist   
+disableCSSModules	禁用 CSS Modules    
+publicPath	配置生产环境的 publicPath，开发环境下永远为 /     
+extraBabelPlugins	配置额外的 babel plugin。babel plugin 只能添加，不允许覆盖和删除      
+extraPostCSSPlugins	配置额外的 postcss 插件     
+autoprefixer	配置 autoprefixer 参数      
+proxy	配置代理      
+externals	配置 webpack 的 externals 属性      
+library	配置 webpack 的 library 属性    
+libraryTarget	配置 webpack 的 libraryTarget 属性      
+multipage	配置是否多页应用。多页应用会自动提取公共部分为 common.js 和 common.css      
+define	配置 webpack 的 DefinePlugin 插件，define 的值会自动做 JSON.stringify 处理      
+env	针对特定的环境进行配置。server 的环境变量是 development，build 的环境变量是 production      
+theme	配置主题，实际上是配 less 的 modifyVars     
+
+### umi 
+[umi官网](https://umijs.org/zh/guide/)    
+- UmiJS 是一个类 Next.JS 的 react 开发框架。
+- 他基于一个约定，即 pages 目录下的文件即路由，而文件则导出 react 组件
+- 然后打通从源码到产物的每个阶段，并配以完善的插件体系，让我们能把 umi 的产物部署到各种场景里。
+
+#### umi的命令
+```
+// 安装
+sudo npm install -g umi
+// 启动
+umi dev
+// 
+```
+#### umi目录
+```
+.
+├── dist/                          // 默认的 build 输出目录
+├── mock/                          // mock 文件所在目录，基于 express
+├── config/
+    ├── config.js                  // umi 配置，同 .umirc.js，二选一
+└── src/                           // 源码目录，可选
+    ├── layouts/index.js           // 全局布局
+    ├── pages/                     // 页面目录，里面的文件即路由
+        ├── .umi/                  // dev 临时目录，需添加到 .gitignore
+        ├── .umi-production/       // build 临时目录，会自动删除
+        ├── document.ejs           // HTML 模板
+        ├── 404.js                 // 404 页面
+        ├── page1.js               // 页面 1，任意命名，导出 react 组件
+        ├── page1.test.js          // 用例文件，umi test 会匹配所有 .test.js 和 .e2e.js 结尾的文件
+        └── page2.js               // 页面 2，任意命名
+    ├── global.css                 // 约定的全局样式文件，自动引入，也可以用 global.less
+    ├── global.js                  // 可以在这里加入 polyfill
+├── .umirc.js                      // umi 配置，同 config/config.js，二选一
+├── .env                           // 环境变量
+└── package.json
+```
+
+### 新建项目
