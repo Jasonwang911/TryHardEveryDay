@@ -17,14 +17,56 @@ const routes = [
     component: require('../../layouts/index.js').default,
     routes: [
       {
+        path: '/404',
+        exact: true,
+        component: require('../404.js').default,
+      },
+      {
         path: '/',
         exact: true,
         component: require('../index.js').default,
       },
       {
+        path: '/login',
+        exact: true,
+        component: require('../login.js').default,
+      },
+      {
         path: '/porfile',
         exact: true,
         component: require('../porfile.js').default,
+        title: '个人中心',
+        Routes: [require('../../PrivateRoute.js').default],
+      },
+      {
+        path: '/user',
+        exact: false,
+        component: require('../user/_layout.js').default,
+        routes: [
+          {
+            path: '/user/add',
+            exact: true,
+            component: require('../user/add.js').default,
+          },
+          {
+            path: '/user/detail/:id',
+            exact: true,
+            component: require('../user/detail/$id.js').default,
+          },
+          {
+            path: '/user/list',
+            exact: true,
+            component: require('../user/list.js').default,
+          },
+          {
+            component: () =>
+              React.createElement(
+                require('/usr/local/lib/node_modules/umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                  .default,
+                { pagesPath: 'pages', hasRoutesInConfig: false },
+              ),
+          },
+        ],
       },
       {
         component: () =>
@@ -85,6 +127,14 @@ export default class RouterWrapper extends React.Component {
 
   render() {
     const props = this.props || {};
-    return <Router history={history}>{renderRoutes(routes, props)}</Router>;
+    return (
+      <>
+        {__IS_BROWSER ? (
+          <Router history={history}>{renderRoutes(routes, props)}</Router>
+        ) : (
+          renderRoutes(routes, props)
+        )}
+      </>
+    );
   }
 }

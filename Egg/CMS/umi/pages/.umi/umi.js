@@ -189,7 +189,248 @@ if (!__IS_BROWSER) {
     const rootContainer = plugins.apply('rootContainer', {
       initialValue: App,
     });
-    const htmlTemplateMap = {};
+    const htmlTemplateMap = {
+      '/': (
+        <html>
+          <head>
+            <link rel="stylesheet" href="/umi.css" />
+
+            <meta charSet="utf-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+            />
+
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.g_useSSR=true;` }}
+            />
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.routerBase = "/";` }}
+            />
+          </head>
+          <body>
+            <div id="root">{rootContainer}</div>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.g_initialData = ${stringify(props)};`,
+              }}
+            />
+            <script src="/umi.js" />
+          </body>
+        </html>
+      ),
+      '/404': (
+        <html>
+          <head>
+            <link rel="stylesheet" href="/umi.css" />
+
+            <meta charSet="utf-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+            />
+
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.g_useSSR=true;` }}
+            />
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.routerBase = "/";` }}
+            />
+          </head>
+          <body>
+            <div id="root">{rootContainer}</div>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.g_initialData = ${stringify(props)};`,
+              }}
+            />
+            <script src="/umi.js" />
+          </body>
+        </html>
+      ),
+      '/login': (
+        <html>
+          <head>
+            <link rel="stylesheet" href="/umi.css" />
+
+            <meta charSet="utf-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+            />
+
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.g_useSSR=true;` }}
+            />
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.routerBase = "/";` }}
+            />
+          </head>
+          <body>
+            <div id="root">{rootContainer}</div>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.g_initialData = ${stringify(props)};`,
+              }}
+            />
+            <script src="/umi.js" />
+          </body>
+        </html>
+      ),
+      '/porfile': (
+        <html>
+          <head>
+            <link rel="stylesheet" href="/umi.css" />
+
+            <meta charSet="utf-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+            />
+
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.g_useSSR=true;` }}
+            />
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.routerBase = "/";` }}
+            />
+          </head>
+          <body>
+            <div id="root">{rootContainer}</div>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.g_initialData = ${stringify(props)};`,
+              }}
+            />
+            <script src="/umi.js" />
+          </body>
+        </html>
+      ),
+      '/user': (
+        <html>
+          <head>
+            <link rel="stylesheet" href="/umi.css" />
+
+            <meta charSet="utf-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+            />
+
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.g_useSSR=true;` }}
+            />
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.routerBase = "/";` }}
+            />
+          </head>
+          <body>
+            <div id="root">{rootContainer}</div>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.g_initialData = ${stringify(props)};`,
+              }}
+            />
+            <script src="/umi.js" />
+          </body>
+        </html>
+      ),
+      '/user/add': (
+        <html>
+          <head>
+            <link rel="stylesheet" href="/umi.css" />
+
+            <meta charSet="utf-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+            />
+
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.g_useSSR=true;` }}
+            />
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.routerBase = "/";` }}
+            />
+          </head>
+          <body>
+            <div id="root">{rootContainer}</div>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.g_initialData = ${stringify(props)};`,
+              }}
+            />
+            <script src="/umi.js" />
+          </body>
+        </html>
+      ),
+      '/user/detail/:id': (
+        <html>
+          <head>
+            <link rel="stylesheet" href="/umi.css" />
+
+            <meta charSet="utf-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+            />
+
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.g_useSSR=true;` }}
+            />
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.routerBase = "/";` }}
+            />
+          </head>
+          <body>
+            <div id="root">{rootContainer}</div>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.g_initialData = ${stringify(props)};`,
+              }}
+            />
+            <script src="/umi.js" />
+          </body>
+        </html>
+      ),
+      '/user/list': (
+        <html>
+          <head>
+            <link rel="stylesheet" href="/umi.css" />
+
+            <meta charSet="utf-8" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+            />
+
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.g_useSSR=true;` }}
+            />
+            <script
+              dangerouslySetInnerHTML={{ __html: `window.routerBase = "/";` }}
+            />
+          </head>
+          <body>
+            <div id="root">{rootContainer}</div>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.g_initialData = ${stringify(props)};`,
+              }}
+            />
+            <script src="/umi.js" />
+          </body>
+        </html>
+      ),
+    };
     const matchPath = activeRoute ? activeRoute.path : undefined;
     return {
       htmlElement: matchPath ? htmlTemplateMap[matchPath] : '',

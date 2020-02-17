@@ -333,4 +333,42 @@ umi dev
 └── package.json
 ```
 
-### 新建项目
+### 权限路由
+umi 的权限路由是通过配置路由的 Routes 属性来实现。约定式的通过 yaml 注释添加，配置式的直接配上即可。  
+PrivateRoute.js 的位置是相对于根目录的  
+```
+/**
+ * title: 个人中心
+ * Routes:
+ *   - ./PrivateRoute.js
+ */
+```
+PrivateRoute.js 
+```
+import React, { Component } from 'react'
+import Link from 'umi/link';
+import router from 'umi/router';
+
+export default class componentName extends Component {
+  login = ()=>{
+     localStorage.setItem('login','true');
+     if(this.props.location.state&&this.props.location.state.from){
+        router.push(this.props.location.state.from);
+     }
+  } 
+  render() {
+    return (
+     <button onClick={this.login}>登录</button>
+    )
+  }
+}
+``
+
+## redux-saga
+redux-sage是一个redux的中间件，而中间件的作用是为redux提供额外的功能。    
+在reducers中的所有操作都是同步的并且是纯粹的，即reducer都是纯函数，纯函数是指一个函数的返回结果只依赖它的参数，并且在执行过程中不会对外部产生副作用，即给他传什么，就吐出什么。   
+但在实际的应用开发中，我们希望做一些异步的且不纯粹的操作（比如改变外部的状态），这些在函数式编程凡是中被称为’副作用‘    
+- redux-saga就是用来处理上述副作用（异步任务）的一个中间件，它是一个接收事件，并可能触发新事件的过程管理者，为你的应用管理复杂的流程。    
+
+### redux-saga工作原理
+- 

@@ -1,0 +1,74 @@
+{
+  "/": {
+    "js": [
+      "umi.js"
+    ],
+    "css": [
+      "umi.css"
+    ]
+  },
+  "/404": {
+    "js": [
+      "umi.js"
+    ],
+    "css": [
+      "umi.css"
+    ]
+  },
+  "/login": {
+    "js": [
+      "umi.js"
+    ],
+    "css": [
+      "umi.css"
+    ]
+  },
+  "/porfile": {
+    "js": [
+      "umi.js"
+    ],
+    "css": [
+      "umi.css"
+    ]
+  },
+  "/user": {
+    "js": [
+      "umi.js"
+    ],
+    "css": [
+      "umi.css"
+    ]
+  },
+  "/user/add": {
+    "js": [
+      "umi.js"
+    ],
+    "css": [
+      "umi.css"
+    ]
+  },
+  "/user/detail/:id": {
+    "js": [
+      "umi.js"
+    ],
+    "css": [
+      "umi.css"
+    ]
+  },
+  "/user/list": {
+    "js": [
+      "umi.js"
+    ],
+    "css": [
+      "umi.css"
+    ]
+  },
+  "__404": {
+    "js": [
+      "umi.js"
+    ],
+    "css": [
+      "umi.css"
+    ]
+  }
+}
