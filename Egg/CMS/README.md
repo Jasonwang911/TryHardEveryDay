@@ -371,4 +371,23 @@ redux-sage是一个redux的中间件，而中间件的作用是为redux提供额
 - redux-saga就是用来处理上述副作用（异步任务）的一个中间件，它是一个接收事件，并可能触发新事件的过程管理者，为你的应用管理复杂的流程。    
 
 ### redux-saga工作原理
-- 
+
+
+### redux-saga分类
+- worker saga 做实际的工作，如调用API，进行一步请求，获取异步封装结果
+- watcher saga 监听被dispatch的actions，当接收到action或者知道其他被处罚时，调用worker执行任务
+- root saga 立即启动saga的唯一入口
+
+### 构建项目
+1. 初始化项目
+```
+// 安装cra
+npm install create-react-app -g
+// 创建cra项目
+create-react-app ProjectName
+// 安装中间件
+yarn add redux react-redux redux-saga type -S
+// 启动项目
+yarn start
+```
+
