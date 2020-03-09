@@ -1,4 +1,9 @@
 # JS基础
+
+### 堆栈（Stack）
+1. 栈是一组数据的存放方式,特点是先进后出，后进先出
+
+
 ### JS的原始类型（Primitive）
 JS中包含6种原始类型: boolean null undefined number string symbol  
 1. 原始类型存储的都是值，是没有函数可以调用 
