@@ -1,8 +1,27 @@
 # JS基础
 
-### 堆栈（Stack）
-1. 栈是一组数据的存放方式,特点是先进后出，后进先出
+### 堆（Heap）栈（Stack）
+- 程序运行的时候，需要内存空间存放数据。一般来说,系统会划分出两种不同的内存空间：一种叫做stack(栈)，另一种叫做heap(堆) 
+- stack是有结构的，每个区块按照一定次序存放，可以明确知道每个区块的大小
+- heap是没有结构的，数据可以任意存放。因此，stack的寻址速度要快于heap
+- 只要是局部的、占用空间确定的数据，一般都存放在stack里面，否则就放在heap里面,所有的对象都存放在heap
+- 栈是一组数据的存放方式,特点是先进后出，后进先出
 
+### 队列
+- 先进先出
+- 队列是一种操作受限制的线性表
+- 特殊之处在于它只允许在表的前端进行删除操作，而在表的后端进行插入操作
+- 进行插入操作的端称为队尾，进行删除操作的端称为队头
+- 因为队列只允许在一端插入,在另一端删除，所以只有最早进入队列的元素才能最先从队列中删除,故队列又称为先进先出线性表
+
+### 执行上下文  
+- 当函数运行时，会创建一个执行环境，这个执行环境就叫执行上下文(Execution Context)
+- 执行上下文中会创建一个对象叫作变量对象(Variable Object),基础数据类型都保存在变量对象中
+- 引用数据类型的值保存在堆里，我们通过操作对象的引用地址来操作对象
+
+1. 复制
+- 基本数据类型复制的是值本身
+- 引用数据类型复制的是引用地址指针
 
 ### JS的原始类型（Primitive）
 JS中包含6种原始类型: boolean null undefined number string symbol  
@@ -200,3 +219,33 @@ baby.setState('不开心')
 # 错误捕获
 1. 只有同步才能使用try catch捕获错误，异步不能使用try catch捕获错误
 2. 异步使用错误事件进行捕获
+
+
+### MessageChannel
+- 利用MessageChannel实现深拷贝
+```
+function structuralClone(obj) {
+  return new Promise(resolve => {
+    const { port1, port2 } = new MessageChannel()
+    port2.onmessage = ev => resolve(ev.data)
+    port1.postMessage(obj)
+  })
+}
+
+var obj = {
+  a: 1,
+  b: {
+    c: 2
+  }
+}
+
+obj.b.d = obj.b
+
+// 注意该方法是异步的
+// 可以处理 undefined 和循环引用对象
+const test = async () => {
+  const clone = await structuralClone(obj)
+  console.log(clone)
+}
+test()
+```
