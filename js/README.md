@@ -220,8 +220,39 @@ baby.setState('不开心')
 1. 只有同步才能使用try catch捕获错误，异步不能使用try catch捕获错误
 2. 异步使用错误事件进行捕获
 
+### 深拷贝
+```
+function deepClone(obj) {
+  function isObject(o) {
+    return (typeof o === 'object' || typeof o === 'function') && o !== null
+  }
 
-### MessageChannel
+  if (!isObject(obj)) {
+    throw new Error('非对象')
+  }
+
+  let isArray = Array.isArray(obj)
+  let newObj = isArray ? [...obj] : { ...obj }
+  Reflect.ownKeys(newObj).forEach(key => {
+    newObj[key] = isObject(obj[key]) ? deepClone(obj[key]) : obj[key]
+  })
+
+  return newObj
+}
+
+let obj = {
+  a: [1, 2, 3],
+  b: {
+    c: 2,
+    d: 3
+  }
+}
+let newObj = deepClone(obj)
+newObj.b.c = 1
+console.log(obj.b.c) // 2
+```
+
+### MessageChannel ?
 - 利用MessageChannel实现深拷贝
 ```
 function structuralClone(obj) {
@@ -248,4 +279,38 @@ const test = async () => {
   console.log(clone)
 }
 test()
+```
+
+### Reflect.ownKeys(newObj) ?
+
+
+### __proto__ 
+其实每个 JS 对象都有 __proto__ 属性，这个属性指向了原型。这个属性在现在来说已经不推荐直接去使用它了，这只是浏览器在早期为了让我们访问到内部属性 [[prototype]] 来实现的一个东西。   
+原型也是一个对象，并且这个对象中包含了很多函数，所以我们可以得出一个结论：对于 obj 来说，可以通过 __proto__ 找到一个原型对象，在该对象中定义了很多函数让我们来使用。   
+打开 constructor 属性我们又可以发现其中还有一个 prototype 属性，并且这个属性对应的值和先前我们在 __proto__ 中看到的一模一样。所以我们又可以得出一个结论：原型的 constructor 属性指向构造函数，构造函数又通过 prototype 属性指回原型，但是并不是所有函数都具有这个属性，Function.prototype.bind() 就没有这个属性。   
+原型链就是多个对象通过 __proto__ 的方式连接了起来。为什么 obj 可以访问到 valueOf 函数，就是因为 obj 通过原型链找到了 valueOf 函数。   
+- Object 是所有对象的爸爸，所有对象都可以通过 __proto__ 找到它
+- Function 是所有函数的爸爸，所有函数都可以通过 __proto__ 找到它
+- 函数的 prototype 是一个对象
+- 对象的 __proto__ 属性指向原型， __proto__ 将对象和原型连接起来组成了原型链
+
+
+### 继承
+1. 组合继承 
+```
+function Parent(value) {
+  this.val = value
+}
+Parent.prototype.getValue = function() {
+  console.log(this.val)
+}
+function Child(value) {
+  Parent.call(this, value)
+}
+Child.prototype = new Parent()
+
+const child = new Child(1)
+
+child.getValue() // 1
+child instanceof Parent // true
 ```
