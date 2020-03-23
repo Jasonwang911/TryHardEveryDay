@@ -23,7 +23,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('https://wadminwangshen.top/api/users').then(res => {
+    axios.get('https://walnuts.wangshen.top/api/users').then(res => {
       this.users = res.data
     })
   }
