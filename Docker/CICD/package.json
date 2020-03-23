@@ -1,0 +1,13 @@
+{
+  "name": "CICD",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.4.6"
+  },
+  "scripts": {
+    "start": "pm2 start ./webhook.js --name webhook --watch",
+    "stop": "pm2 stop webhook"
+  }
+}
