@@ -314,3 +314,141 @@ const child = new Child(1)
 child.getValue() // 1
 child instanceof Parent // true
 ```
+
+### call和apply 
+1. 定义： 每个函数都包含两个非继承而来的方法：call()方法和apply()方法。   
+2. call和apply可以用来重新定义函数的执行环境，也就是this的指向；call和apply都是为了改变某个函数运行时的context，即上下文而存在的，换句话说，就是为了改变函数体内部this的指向。  
+3. 语法： 
+- call(): 调用一个对象的方法，用另一个对象替换当前对象，可以继承另外一个对象的属性
+```
+Function.call(obj[, param1[, param2[, [,...paramN]]]]);
+```
+obj：这个对象将代替Function类里this对象   
+params：一串参数列表   
+说明：call方法可以用来代替另一个对象调用一个方法，call方法可以将一个函数的对象上下文从初始的上下文改变为obj指定的新对象，如果没有提供obj参数，那么Global对象被用于obj。  
+- apply()： 和call()方法一样，只是参数列表不同
+```
+Function.apply(obj[, argArray]);
+```
+obj：这个对象将代替Function类里this对象    
+argArray：这个是数组，它将作为参数传给Function   
+说明：如果argArray不是一个有效数组或不是arguments对象，那么将导致一个TypeError，如果没有提供argArray和obj任何一个参数，那么Global对象将用作obj。   
+4. 相同点： call()和apply()方法的相同点就是这两个方法的作用是一样的。都是在特定的作用域中调用函数，等于设置函数体内this对象的值，以扩充函数赖以运行的作用域。   
+5. 总结一句话就是call()可以让括号里的对象来继承括号外函数的属性。  
+
+
+### 模块化 
+####   为什么要使用模块化？都有哪几种方式可以实现模块化，各有什么特点？
+1. 立即执行函数
+```
+(function(globalVariable){
+   globalVariable.test = function() {}
+   // ... 声明各种变量、函数都不会污染全局作用域
+})(globalVariable)
+```
+2. AMD 和 CMD
+```
+// AMD
+define(['./a', './b'], function(a, b) {
+  // 加载模块完毕可以使用
+  a.do()
+  b.do()
+})
+// CMD
+define(function(require, exports, module) {
+  // 加载模块
+  // 可以把 require 写在函数体的任意地方实现延迟加载
+  var a = require('./a')
+  a.doSomething()
+})
+```
+3. CommonJS
+CommonJS 最早是 Node 在使用，目前也仍然广泛使用，比如在 Webpack 中你就能见到它，当然目前在 Node 中的模块管理已经和 CommonJS 有一些区别了。  
+```
+// a.js
+module.exports = {
+    a: 1
+}
+// or 
+exports.a = 1
+
+// b.js
+var module = require('./a.js')
+module.a // -> log 1
+```
+- require
+```
+var module = require('./a.js')
+module.a 
+// 这里其实就是包装了一层立即执行函数，这样就不会污染全局变量了，
+// 重要的是 module 这里，module 是 Node 独有的一个变量
+module.exports = {
+    a: 1
+}
+// module 基本实现
+var module = {
+  id: 'xxxx', // 我总得知道怎么去找到他吧
+  exports: {} // exports 就是个空对象
+}
+// 这个是为什么 exports 和 module.exports 用法相似的原因
+var exports = module.exports 
+var load = function (module) {
+    // 导出的东西
+    var a = 1
+    module.exports = a
+    return module.exports
+};
+// 然后当我 require 的时候去找到独特的
+// id，然后将要使用的东西用立即执行函数包装下，over
+```
+另外虽然 exports 和 module.exports 用法相似，但是不能对 exports 直接赋值。因为 var exports = module.exports 这句代码表明了 exports 和 module.exports 享有相同地址，通过改变对象的属性值会对两者都起效，但是如果直接对 exports 赋值就会导致两者不再指向同一个内存地址，修改并不会对 module.exports 起效。   
+
+4. ES Module
+- CommonJS 支持动态导入，也就是 require(${path}/xx.js)，后者目前不支持，但是已有提案
+- CommonJS 是同步导入，因为用于服务端，文件都在本地，同步导入即使卡住主线程影响也不大。而后者是异步导入，因为用于浏览器，需要下载文件，如果也采用同步导入会对渲染有很大影响
+- CommonJS 在导出时都是值拷贝，就算导出的值变了，导入的值也不会改变，所以如果想更新值，必须重新导入一次。但是 ES Module 采用实时绑定的方式，导入导出的值都指向同一个内存地址，所以导入值会跟随导出值变化
+- ES Module 会编译成 require/exports 来执行的
+```
+// 引入模块 API
+import XXX from './a.js'
+import { XXX } from './a.js'
+// 导出模块 API
+export function a() {}
+export default function() {}
+```
+
+5. Proxy: Proxy 是 ES6 中新增的功能，它可以用来自定义对象中的操作。
+```
+let p = new Proxy(target, handler)
+```
+target 代表需要添加代理的对象，handler 用来自定义对象中的操作，比如可以用来自定义 set 或者 get 函数。   
+使用Proxy来实现一组相应数据    
+```
+let onWatch = (obj, setBind, getLogger) => {
+  let handler = {
+    get(target, property, receiver) {
+      getLogger(target, property)
+      return Reflect.get(target, property, receiver)
+    },
+    set(target, property, value, receiver) {
+      setBind(value, property)
+      return Reflect.set(target, property, value)
+    }
+  }
+  return new Proxy(obj, handler)
+}
+
+let obj = { a: 1 }
+let p = onWatch(
+  obj,
+  (v, property) => {
+    console.log(`监听到属性${property}改变为${v}`)
+  },
+  (target, property) => {
+    console.log(`'${property}' = ${target[property]}`)
+  }
+)
+p.a = 2 // 监听到属性a改变
+p.a // 'a' = 2
+```
+
