@@ -127,7 +127,10 @@ node_modules
 docker pull imagesName
 // 查看所有的docker镜像 
 docker image ls
-// 
+// 查看所有容器
+docker container ps
+// 删除容器
+docker container rm containerId -f
 ```
 
 
