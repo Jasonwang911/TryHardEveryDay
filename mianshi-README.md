@@ -83,7 +83,92 @@
 13. Vue-router中导航守卫有哪些
   - 完整的导航解析流程
 
-##
+##  js的一些方法和属性
+
+1. 数组扁平化flat方法的多种实现？
+- arr.toString().split(',').map(item => Number(item)) 
+- JSON.stringify(arr).replace(/\[|\]/g, '').split(',').map(item => Number(item))
+- concat
+```
+while (arr.some(item => Array.isArray(item))) {
+    arr = [].concat(...arr);
+}
+```
+- prototype 
+```
+Array.prototype.flat = function () {
+    let result = [];
+    let _this = this;
+    function _flat(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            let item = arr[i];
+            if (Array.isArray(item)) {
+                _flat(item);
+            } else {
+                result.push(item);
+            }
+        }
+    }
+    _flat(_this);
+    return result;
+}
+```
+
+2. 实现一个不可变对象
+- 无论是不可扩展，密封，还是冻结，都是浅层控制的，即只控制对象本身属性的增删改。如果对象属性是一个引用类型，比如数组 subArr 或对象 subObj等，虽然subArr、subObj 的不可被删改，但subArr、subObj 的属性仍然可增删改
+- 由于每个对象都有一个属性__proto__,该属性的值是该对象的原型对象，也是引用类型，由于冻结是浅层的所以原型对象并不会被连着冻结，仍然可以通过给对象的原型对象加属性达到给当前对象新增属性的效果。所以如果想进一步冻结还需要把原型对象也冻结上
+
+- 不可扩展  Object.preventExtensions(obj)  检测是否可扩展 Object.isExtensible(obj)   不能添加属性，可以删除和修改原属性
+- 密封  Object.seal(obj)   检测是否可扩展 Object.isSealed(obj)   不能添加属性，也不能删除属性，但是可以修改原属性
+- 冻结  Object.freeze(obj)  检测是否冻结 Object.isFrozen(obj)    不能添加、修改、删除属性
+
+3. js的+运算
+- 两个操作数如果是number则直接相加出结果
+- 如果其中有一个操作数为string，则将另一个操作数隐式的转换为string，然后进行字符串拼接得出结果
+- 如果操作数为对象或者是数组这种复杂的数据类型，那么就将两个操作数都转换为字符串，进行拼接
+- 如果操作数是像boolean这种的简单数据类型，那么就将操作数转换为number相加得出结果
+- [ ] + { } 因为[]会被强制转换为"", 然后+运算符 链接一个{ }, { }强制转换为字符串就是"[object Object]"
+- { } 当作一个空代码块,+[]是强制将[]转换为number,转换的过程是 +[] => +"" =>0 最终的结果就是0
+```
+[]+{}  //"[object Object]"
+{}+[]  //0
+{}+0   //0
+[]+0   //"0"
+```
+
+4. 柯理化 
 
 
+### webpack 
+webpack的原理，Loader的原理，你有用那些优化措施  
+1. webpack 和 rollup 的区别和适用
 
+
+2. 说说你对webpack的理解
+- webpack是什么： webpack是把项目当做一个整体，通过一个给定的主体文件，从这个文件开始查找项目所有的依赖文件，用loaders处理他们，最后打包成一个或多个浏览器可识别的js文件。
+
+3. Loader
+- loader的作用： 实现对不同格式的文件的处理，比如讲scss转换为css,或者typescript转化为js。loader转化这些文件，从而使其能够被添加到依赖图中。通过使用不同的loader，从而能够调用外部的脚本或者工具，实现对不同格式文件的处理，loader需要在webpack.config.js里边单独用module进行配置。
+
+这里介绍几个常用的loader：
+- babel-loader： 让下一代的js文件转换成现代浏览器能够支持的JS文件。babel有些复杂，所以大多数都会新建一个.babelrc进行配置
+- css-loader,style-loader:两个建议配合使用，用来解析css文件，能够解释@import,url()如果需要解析less就在后面加一个
+- less-loaderfile-loader: 生成的文件名就是文件内容的MD5哈希值并会保留所引用资源的原始扩展名
+- url-loader: 功能类似 file-loader,但是文件大小低于指定的限制时，可以返回一个DataURL事实上，在使用less,scss,stylus这些的时候，npm会提示你差什么插件，差什么，你就安上就行了
+
+4. Plugins
+loaders负责的是处理源文件的如css、jsx，一次处理一个文件。而plugins并不是直接操作单个文件，它直接对整个构建过程起作用。
+
+- ExtractTextWebpackPlugin: 它会将入口中引用css文件，都打包都独立的css文件中，而不是内嵌在js打包文件中。
+- HtmlWebpackPlugin: 依据一个简单的index.html模版，生成一个自动引用你打包后的js文件的新index.html
+- HotModuleReplacementPlugin: 热更新HMR
+- OccurenceOrderPlugin: 为组件分配ID,通过这个插件webpack可以分析和优先考虑使用最多 的模块，然后为他们分配最小的ID
+- UglifyJsPlugin: 压缩代码
+
+
+####  Hot Module Replacement，简称 HMR
+刷新分为两种：一种是页面刷新，不保留页面状态，就是简单粗暴，直接window.location.reload()；另一种是基于 WDS（Webpack-dev-server）的模块热替换，只需要局部刷新页面上发生变化的模块，同时可以保留当前的页面状态，比如复选框的选中状态、输入框的输入等。
+1. Webpack Watch
+为什么代码的改动保存会自动编译，重新打包？这一系列的重新检测编译依赖于 Webpack 的文件监听：在项目启动之后，Webpack 会通过 Compiler 类的 Run 方法开启编译构建过程，编译完成后，调用 Watch 方法监听文件变更，当文件发生变化，重新编译，编译完成之后继续监听。
+2. webpack-dev-middleware
+页面的访问需要依赖 Web 服务器，那要如何将 Webpack 编译打包之后的文件传递给 Web 服务器呢？这就要看 Webpack-dev-middleware了。 Webpack-dev-middleware 是一个封装器（ wrapper ），它可以把 Webpack 处理过的文件发送到一个 Server（其中 Webpack-Dev-Server 就是内置了 Webpack-dev-middleware 和 Express 服务器）。上面有说到编译之后的文件会被写入到内存，而 Webpack-dev-middleware 插件通过 memory-fs 实现静态资源请求直接访问内存文件。

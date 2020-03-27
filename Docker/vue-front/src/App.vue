@@ -7,7 +7,7 @@
 <template>
   <div id="app">
     <ul>
-      <li v-for="item in users" :key="item.id">{{item.name}}</li>
+      <li v-for="item in users" :key="item.id">{{item.id}} : {{item.name}}</li>
     </ul>
   </div>
 </template>
@@ -17,12 +17,12 @@ import axios from 'axios'
 
 export default {
   name: 'App',
-  data() {
+  data () {
     return {
       users: []
     }
   },
-  mounted() {
+  mounted () {
     axios.get('https://walnuts.wangshen.top/api/users').then(res => {
       this.users = res.data
     })

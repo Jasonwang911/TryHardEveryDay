@@ -1,5 +1,5 @@
 #!/bin/bash
-WORK_PATH='/home/docker/vue-font'
+WORK_PATH='/home/docker/vue-front'
 cd $WORK_PATH
 echo "1.清除原有代码"
 git reset --hard origin/master
