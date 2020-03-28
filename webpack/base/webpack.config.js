@@ -20,6 +20,24 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env'
+            ],
+            plugins: [
+              ["@babel/plugin-proposal-decorators", { "legacy": true }],  //使用宽松模式
+              ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+              '@babel/plugin-transform-runtime'
+            ]
+          }
+        },
+        exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src')
+      },
+      {
         test: /\.css$/,
         use: [
         MiniCssExtractPlugin.loader,
