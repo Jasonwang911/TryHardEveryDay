@@ -184,7 +184,7 @@ let UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 ```
 
 ### babel: es6->es5  
-- 官网 
+- 官网[https://babeljs.io/]
 1. babel-loader 转化的下载器
 2. @babel/core  babel的核心模块，会调用transform方法进行转化
 3. @babel/preset-env  转化的具体模块，会把高级的语法转换为低级语法
@@ -259,5 +259,23 @@ yarn add @babel/polyfill -S
 ```
 
 ### ESLint  
+- 官网[]
+1. eslint 
+2. eslint-loader 
+
+
+- eslint-loader 
+```
+rules: [
+  {
+    enforce: 'pre',
+    test: /\.js$/,
+    use: {
+      loader: 'eslint-loader'
+    },
+    exclude: /node_modules/,
+  },
+]
+```
 
 
