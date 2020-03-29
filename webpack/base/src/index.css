@@ -8,5 +8,12 @@
 
 body {
   background: aqua;
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
+}
+
+.ico {
+  width: 100px;
+  height: 100px;
+  background: url('./favicon.ico');
+  background-size: 100% 100%;
 }

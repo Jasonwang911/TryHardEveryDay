@@ -314,3 +314,73 @@ module.exports = {
   ...
 }
 ```
+
+## webpack打包图片
+- 在js中创建图片来引入
+
+1. file-loader: 默认会在内部生成资源文件到出口文件目录下
+2. url-loader: 会在file-loader的基础上添加一些限制，如：
+- 当图片小于4k的时候用base64,如果大于则用file-loader进行转化
+```
+{
+  test: /\.(png|jpg|gif|ico)$/,
+  use: {
+    loader: 'url-loader',
+    options: {
+      limit: 200*1024
+    }
+  }
+}
+```
+- 对相关资源进行分类存储
+```
+...
+{
+  test: /\.(png|jpg|gif|ico)$/,
+  use: {
+    loader: 'url-loader',
+    options: {
+      limit: 200*1024,
+      outputPath: 'img/',   // 资源的分类存放
+    }
+  }
+}
+...
+// mini-css-extract-plugin 也可以对css文件分类存储
+new MiniCssExtractPlugin({
+  filename: 'css/main.css'
+}),
+```
+3. html-withimg-loader: 将html的中资源路径编译成打包后的正常路径 ? !尝试未成功
+```
+yarn add html-withimg-loader -D
+
+{
+  test: /\.(htm|html)$/i,
+  loader: 'html-withimg-loader'
+},
+```
+
+4. 添加通用路径
+- 给所有的资源添加 publicPath
+```
+output: {
+  filename: 'boundle.[hash:8].js',
+  path: path.resolve(__dirname, 'dist'),
+  // publicPath: 'http://www.wangshen.top'   // 给所有的资源添加发布路径前缀
+},
+```
+- 只给某一个类型的资源添加，例如只给图片添加
+```
+{
+  test: /\.(png|jpg|gif|ico)$/,
+  use: {
+    loader: 'url-loader',
+    options: {
+      limit: 1,
+      outputPath: '/img/',   // 资源的分类存放
+      publicPath: 'http://www.wangshen.top'
+    }
+  }
+}
+```

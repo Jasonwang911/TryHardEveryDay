@@ -10,8 +10,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'boundle.[hash:8].js',
-    path: path.resolve(__dirname, 'dist'),
-    // publicPath: 'http://www.wangshen.top'   // 给所有的资源添加发布路径前缀
+    path: path.resolve(__dirname, 'dist')
   },
   devServer: {
     port: 7900,
@@ -67,22 +66,6 @@ module.exports = {
           'postcss-loader',
           'less-loader'
         ]
-      },
-      {
-        test: /\.(htm|html)$/i,
-        loader: 'html-withimg-loader',
-        include: path.resolve(__dirname, 'public')
-      },
-      {
-        test: /\.(png|jpg|gif|ico)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 1,
-            outputPath: '/img/',   // 资源的分类存放
-            publicPath: 'http://www.wangshen.top'
-          }
-        }
       }
     ]
   },
