@@ -259,7 +259,7 @@ yarn add @babel/polyfill -S
 ```
 
 ### ESLint  
-- 官网[]
+- 官网[https://eslint.org/]
 1. eslint 
 2. eslint-loader 
 
@@ -278,4 +278,39 @@ rules: [
 ]
 ```
 
+### 第三方模块的处理  
+1. expose-loader: 内联loader(liader) 例如第三方模块 jquery 等，等挂载在window对象上的库，需要使用 expose-loader 暴露全局loader 
+```
+import $ from 'expose-loader?$!jquery'
 
+console.log(window.$)
+```
+或者 配置loader
+```
+{
+  test: require.resolve('jquery'),
+  use: 'expose-loader?$!juqeyr'
+},
+```
+
+2. webpack.providePlugin  使用三方插件入第三方插件,缺点是依旧不能直接暴露到window上，想使用window对象的话可以使用cdn   
+```
+let webpack = require('webpack')
+
+plugins: [
+  new webpack.providePlugin({
+    jquery: '$'
+  })
+]
+```
+
+3. externals 不从 bundle 中引用依赖的方式。解决的是，所创建的 bundle 依赖于那些存在于用户环境(consumer environment)中的依赖。
+```
+module.exports = {
+  ...
+  externals: {
+    jquery: '$'
+  }
+  ...
+}
+```

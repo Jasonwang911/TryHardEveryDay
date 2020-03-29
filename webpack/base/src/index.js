@@ -1,4 +1,8 @@
 let str = require('./a')
+// import $ from 'expose-loader?$!jquery'
+import $ from 'jquery'
+
+console.log('jquery======>', $)
 
 console.log(str)
 

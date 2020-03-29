@@ -3,6 +3,7 @@ let HtmlWebpckPlugin = require('html-webpack-plugin')
 let MiniCssExtractPlugin = require('mini-css-extract-plugin')
 let UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 let OptimizeCSSAssetsPlugin  = require('optimize-css-assets-webpack-plugin')
+let webpack = require('webpack')
 
 module.exports = {
   mode: 'production',
@@ -26,6 +27,10 @@ module.exports = {
       //     loader: 'eslint-loader'
       //   },
       //   exclude: /node_modules/,
+      // },
+      // {
+      //   test: require.resolve('jquery'),
+      //   use: 'expose-loader?$'
       // },
       {
         test: /\.js$/,
@@ -80,6 +85,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'main.css'
+    }),
+    new webpack.ProvidePlugin({
+      '$': 'jquery'
     })
   ],
   // 优化项
@@ -92,4 +100,7 @@ module.exports = {
       }), 
       new OptimizeCSSAssetsPlugin({})],
   },
+  externals: {
+    jquery: '$'
+  }
 }
