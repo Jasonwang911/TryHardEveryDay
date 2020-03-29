@@ -384,3 +384,108 @@ output: {
   }
 }
 ```
+
+### 打包多页面
+1. 多入口
+```
+entry: {
+  home: './src/index.js',
+  other: './src/other.js'
+}
+```
+
+2. 多出口
+```
+output: {
+  filename: '[name].[hash:8].bundle.js',
+  path: path.resolve(__dirname, 'dist')
+},
+```
+
+3. html-webpack-plugin 插件的 chunks，并分别new 不同的入口
+```
+plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: 'index.html',
+      chunks: ['home'],
+      hash: true
+    }),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: 'other.html',
+      chunks: ['other'],
+      hash: true
+    })
+  ]
+```
+
+#### SourceMap
+```
+// 需要babel相关依赖
+yarn add @babel/core @babel/preset-env babel-loader -D
+```
+
+1. 源码映射，会单独生成一个sourceMap文件，会将源码映射到打包后代码，报错会提示当前报错的行和列
+```
+devtool: 'source-map',
+```
+2. 不会产生单独的文件，但是会显示报错的行和列
+```
+devtool: 'eval-source-map',
+```
+3. 不会产生列，但是是一个单独的映射文件
+```
+devtool: 'cheap-module-source-map',
+```
+4. 不会产生文件，集成在打包后的文件中，也不会产生列
+```
+devtool: 'cheap-module-eval-source-map',
+```
+
+### webpack实时打包  watch 
+```
+module.exports = {
+  ...
+  watch: true,
+  // 监控的选项
+  watchOptions: {
+    poll: 100, // 每秒监控一次
+    aggregateTimeout: 500,  // 防抖： 
+    ignored: /node_modules/  // 忽略文件
+  },
+  ...
+}
+```
+
+### webpack 小插件的应用
+1. cleanWebpackPlugin
+每次打包后hash值不一致或者文件名不一致会导致打包后的的文件叠加在出口文件目录，这个插件会帮助我们清除打包出口文件然后再进行打包
+```
+yarn add clean-webpck-plugin -D
+
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
+new CleanWebpackPlugin()
+```
+
+2. copyWebpckPlugin 
+```
+yarn add copy-webpack-plugin -D
+
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
+new CopyWebpackPlugin([
+  {
+    from: './doc',
+    to: './doc'
+  }
+])
+```
+
+3. 内置插件 bannerPlugin:版权声明插件
+```
+const { BannerPlugin } = require('webpack')
+
+new BannerPlugin('make 2020 by Jason Wang')
+```
