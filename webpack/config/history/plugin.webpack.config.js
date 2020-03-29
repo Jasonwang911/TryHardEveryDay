@@ -17,22 +17,7 @@ module.exports = {
     port: 7900,
     progress: true,
     contentBase: './dist',
-    compress: true,
-    // 通过重写的方式，进行代理
-    // proxy: {
-    //   '/api': {
-    //     target: 'http://127.0.0.1:3000',
-    //     pathRewrite: {
-    //       '/api': ''
-    //     }
-    //   }
-    // },
-    // webpack-dev-server提供的钩子方法
-    before(app) {
-      app.get('/api/user', (req, res ) => {
-        res.json('hello mock')
-      })
-    }
+    compress: true
   },
   // watch: true,
   // // 监控的选项

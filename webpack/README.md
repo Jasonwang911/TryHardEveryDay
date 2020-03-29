@@ -489,3 +489,67 @@ const { BannerPlugin } = require('webpack')
 
 new BannerPlugin('make 2020 by Jason Wang')
 ```
+
+### webpack 跨域的配置: http-proxy 模块
+- 通过代理重写
+```
+devServer: {
+  port: 7900,
+  progress: true,
+  contentBase: './dist',
+  compress: true,
+  // 通过重写的方式，进行代理
+  proxy: {
+    '/api': {
+      target: 'http://127.0.0.1:3000',
+      pathRewrite: {
+        '/api': ''
+      }
+    }
+  }
+},
+```
+
+- 纯前端的模拟数据
+```
+devServer: {
+  port: 7900,
+  progress: true,
+  contentBase: './dist',
+  compress: true,
+  // webpack-dev-server提供的钩子方法
+  before(app) {
+    app.get('/api/user', (req, res ) => {
+      res.json('hello mock')
+    })
+  }
+},
+```
+- 有服务端，不用代理来处理，能不能在服务端中启动webpack，端口用服务端端口: 使用中间件 webpack-dev-middleware
+```
+yarn add webpack-dev-middleware -D
+```
+server.js
+```
+const express = require('express')
+const webpack = require('webpack')
+let app = express() 
+// 中间件
+const middle = require('webpack-dev-middleware')
+
+const config = require('./webpack.config.js')
+
+let comiler = webpack(config)
+
+app.use(middle(comiler))
+
+app.get('/api/user', (req, res ) => {
+  res.json('hello')
+})
+
+app.listen(3000, () => {
+  console.log('server is running at port 3000')
+})
+```
+
+### resolve属性的配置
