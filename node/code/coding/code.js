@@ -61,6 +61,7 @@ function encodeFiles(root) {
       });
     } else {
       encodeFiles(pathname);
+      console.log('成功')
     }
   });
 }

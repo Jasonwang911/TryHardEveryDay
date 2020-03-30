@@ -40,3 +40,7 @@
   ![IP头部](http://img.zhufengpeixun.cn/ipheader.png url)
 
   
+### HTTP协议面临的三大风险
+1. 窃听风险： 解决办法就是加密
+2. 密钥的共享问题： 非对称加密（加密解密特别慢）
+3. 可能被篡改
