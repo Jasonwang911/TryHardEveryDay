@@ -552,4 +552,58 @@ app.listen(3000, () => {
 })
 ```
 
-### resolve属性的配置
+### resolve属性的配置---解析
+当我们引用第三方包依赖的时候，会首先从当前目录的node_modules中查找，如果没有，会继续往上一级菜单的node_modules中查找，一直查找到根目录。   
+1. resolve中的modules可以配置只查找某个目录，减少不必要的查找  
+```
+module.exports = {
+  ...
+  // 解析
+  resolve: {
+    modules: [path.resolve(__dirname, 'node_modules')]
+  },
+  ...
+}
+```
+2. alias 设置别名
+```
+yarn add css-loader style-loader -D
+
+module.exports = {
+  ...
+  // 解析
+  resolve: {
+    modules: [path.resolve(__dirname, 'node_modules')],
+    // 别名  vue ==> vue.runtime
+    alias: {
+      bootstrap: 'bootstrap/dist/css/bootstrap.css'
+    }
+  },
+  ...
+}
+```
+3. 引入主入口的更改
+在package.json中可以设置多个入口标签，这样则可根据 resolve.mainFields来进行读取顺序的匹配
+```
+resolve: {
+  modules: [path.resolve(__dirname, 'node_modules')],
+  // 别名  vue ==> vue.runtime
+  // alias: {
+  //   bootstrap: 'bootstrap/dist/css/bootstrap.css'
+  // },
+  mainFields: ['style', 'main']
+},
+```
+4. 入口文件的名字可以通过 mainFiles进行指定
+5. 引入文件的扩展名配置 resolve.extensions
+```
+resolve: {
+  modules: [path.resolve(__dirname, 'node_modules')],
+  // 别名  vue ==> vue.runtime
+  // alias: {
+  //   bootstrap: 'bootstrap/dist/css/bootstrap.css'
+  // },
+  mainFields: ['style', 'main'],
+  extensions: ['.css', '.js']
+},
+```

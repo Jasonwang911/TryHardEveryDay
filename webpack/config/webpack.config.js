@@ -1,3 +1,9 @@
+/*
+ * @Author: Jason wang
+ * @Date: 2020-03-30 10:02:58
+ * @Descripttion: 
+ * @version: 
+ */
 let path = require('path')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
@@ -12,6 +18,16 @@ module.exports = {
   output: {
     filename: '[name].[hash:8].bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  // 解析
+  resolve: {
+    modules: [path.resolve(__dirname, 'node_modules')],
+    // 别名  vue ==> vue.runtime
+    // alias: {
+    //   bootstrap: 'bootstrap/dist/css/bootstrap.css'
+    // },
+    mainFields: ['style', 'main'],
+    extensions: ['.css', '.js']
   },
   devServer: {
     port: 7900,
@@ -51,6 +67,10 @@ module.exports = {
   // devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
       {
         test: /\.js$/,
         use: {
