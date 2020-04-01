@@ -633,4 +633,50 @@ yarn add webpack-merge -D
 npm run build -- --config webpack.prod.js
 ```
 
+## webpack的优化
+```
+yarn add webpack webpack-cli html-webpack-plugin @babel/core babel-loader @babel/preset-env @babel/preset-react -D
+```
+
+1. 第三方库的优化
+- 对于没有依赖的包可以设置禁止webpack进行依赖分析。
+```
+module.express = {
+  ...
+  module: {
+    noParse: /jquery/
+  }
+  ...
+}
+```
+2. loader的排除和包含
+```
+module: {
+  noParse: /jquery/,
+  rules: [
+    {
+      test: /\.js$/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react'
+          ]
+        }
+      },
+      exclude: /node_modules/,
+      include: path.resolve(__dirname, 'src')
+    }
+  ]
+},
+```
+3. 忽略插件内部自带的依赖引用，转为手动引用
+```
+const { IgnorePlugin } = require('webpack')
+
+plugins: [
+  new IgnorePlugin(/\.\/locale/, /moment/),
+]
+```
 
