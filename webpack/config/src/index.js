@@ -8,6 +8,15 @@ import './index.css'
 // import 'bootstrap'
 console.log('home')
 
+let url = ''
+
+if(DEV) {
+  url = 'http://127.0.0.1:3000'
+}else {
+  url = 'http://www.wangshen.top'
+}
+
+console.log(url, '=======================')
 
 class Log{
   constructor() {

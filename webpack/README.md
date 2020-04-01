@@ -613,9 +613,24 @@ resolve: {
   extensions: ['.css', '.js']
 },
 ```
-6. 关于webpack默认文件的混合
+
+### 环境变量和区分不同环境
+1. 环境变量：使用插件 webpack.DefinePlugin
+```
+const { DefinePlugin } = require('webpack')
+
+plugins: [
+  // 配置环境变量
+  new DefinePlugin({
+    DEV: JSON.stringify('dev')
+  }),
+]
+```
+2. 关于webpack默认文件的混合
 ```
 yarn add webpack-merge -D
 
 npm run build -- --config webpack.prod.js
 ```
+
+

@@ -1,5 +1,11 @@
 /*
  * @Author: Jason wang
+ * @Date: 2020-03-30 11:02:01
+ * @Descripttion: 
+ * @version: 
+ */
+/*
+ * @Author: Jason wang
  * @Date: 2020-03-30 10:02:58
  * @Descripttion: 
  * @version: 
@@ -8,9 +14,10 @@ let path = require('path')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const { BannerPlugin, DefinePlugin } = require('webpack')
+const { BannerPlugin } = require('webpack')
 
 module.exports = {
+  mode: 'production',
   entry: {
     home: './src/index.js',
   },
@@ -82,10 +89,6 @@ module.exports = {
     ]
   },
   plugins: [
-    // 配置环境变量
-    new DefinePlugin({
-      DEV: JSON.stringify('dev')
-    }),
     new HtmlWebpackPlugin({
       template: './index.html',
       filename: 'index.html',

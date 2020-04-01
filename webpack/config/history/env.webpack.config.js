@@ -11,6 +11,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { BannerPlugin, DefinePlugin } = require('webpack')
 
 module.exports = {
+  mode: 'production',
   entry: {
     home: './src/index.js',
   },
