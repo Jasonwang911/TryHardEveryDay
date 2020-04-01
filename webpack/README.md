@@ -595,6 +595,12 @@ resolve: {
 },
 ```
 4. 入口文件的名字可以通过 mainFiles进行指定
+```
+resolve: {
+  modules: [path.resolve(__dirname, 'node_modules')],
+  mainFields: ['style', 'main']
+},
+```
 5. 引入文件的扩展名配置 resolve.extensions
 ```
 resolve: {
@@ -606,4 +612,10 @@ resolve: {
   mainFields: ['style', 'main'],
   extensions: ['.css', '.js']
 },
+```
+6. 关于webpack默认文件的混合
+```
+yarn add webpack-merge -D
+
+npm run build -- --config webpack.prod.js
 ```
