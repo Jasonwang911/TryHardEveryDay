@@ -72,7 +72,7 @@ ref 可以用到dom元素上，获取的是dom节点
 ref 放到组件上，获取的是当前的组件  this.$refs.son.say()  父组件可以直接拿到子组件的实例然后直接调用组组件的方法
 
 eventBus 定义到了全局上，一个组件发射了事件，所有同名的事件都会触发   将 $bus.$on $bus.$emit 方法暴漏到Vue实例上，这样在任何实例上都能触发这两个方法  
-组件的挂在顺序：  父组件 => 子组件   由于组件挂在是有顺序的，所以在使用eventBus 需要注意发布和触发事件的顺序，必要的时候需要使用 this,$nextTick()   
+组件的挂在顺序：  父组件 => 子组件   由于组件挂在是有顺序的，所以在使用eventBus 需要注意发布和触发事件的顺序，必要的时候需要使用 this.$nextTick()   
 
 ## render 函数之 JSX 应用
 
@@ -158,3 +158,6 @@ Object.defineProperty  可以重新定义属性，给属性增加 getter 和 set
 判断是否是对象   typeof tatget !== 'object' || target == null 
 问题： 1.属性不存在，新增的属性不会被拦截观察； 2.不能拦截观察数组，需要对数组上的方法进行重写 push shift unshift pop push reverse   
 函数劫持，把函数进行重写，内部继续调用老方法
+
+
+

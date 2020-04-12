@@ -9,14 +9,14 @@
 ### 使用eslint 
 ```
 npm install eslint husky --save-dev # eslint是负责代码校验工作,husky提供了git钩子功能
-npx eslint --init # 初始化eslint配置文件  执行了 node_module/bin/eslint
+npx eslint --init # 初始化eslint配置文件  执行了 node_module/bin/eslint  
 ```
 
 ### bin/www 文件 是一个可执行功能
 ```
 #! /usr/bin/env node 
 ```
-表示通知系统使用 /usr/bin/env 中的node执行这个文件
+表示通知系统使用 /usr/bin/env 中的node执行这个文件  
 
 npm link     将package.json中的bin链接到全局    
 npm unlink   取消当前链接   

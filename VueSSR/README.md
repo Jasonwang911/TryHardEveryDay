@@ -41,7 +41,7 @@ webpack 启动： npx webpack-dev-server 会启动 node-modules/.bin/webpack-dev
 # step1
 
  使用 vue-server-renderer 的 createRenderer 方法创建一个渲染函数来提供一个渲染器；  
-渲染器接受的参数中可以指定一个模板，可以将服务端渲染完成的字符串插入这个模板中的一个指定的展位注注释（<!--vue-ssr-outlet-->）的位置；  
+渲染器接受的参数中可以指定一个模板，可以将服务端渲染完成的字符串插入这个模板中的一个指定的占位注注释（<!--vue-ssr-outlet-->）的位置；  
 在请求服务器路由的时候可以调用渲染器的 renderToString()的方法来返回一个异步 promise 的字符串，渲染器的 renderToString 方法可以接受一个 vue 的实例；  
 由于 vue 的实例是在服务端创建的，所以在创建 vue 实例的时候不能挂载元素。
 

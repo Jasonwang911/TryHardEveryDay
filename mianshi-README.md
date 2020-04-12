@@ -38,11 +38,11 @@
   vue在v-for时都会给每项元素绑定事件需要的代理   
   spa页面采用keep-alive缓存组件  
   拆分组件，提高复用性，增加代码的可维护性，减少不必要的渲染  
-  v-，if当值为false时内部指令不会执行，具有阻断功能，尽量使用v-if代替v-show  
+  v-if当值为false时内部指令不会执行，具有阻断功能，尽量使用v-if代替v-show  
   key保证唯一性，vue会才用就就地复用策略  
   Object.freeze冻结数据   
   合理使用路由懒加载、异步组件   
-  尽量才用runtime运行时版本  
+  尽量才用runtime运行时版本   
   数据持久化的问题（防抖、节流）   
 
 - vue加载性能优化
@@ -172,4 +172,53 @@ loaders负责的是处理源文件的如css、jsx，一次处理一个文件。�
 为什么代码的改动保存会自动编译，重新打包？这一系列的重新检测编译依赖于 Webpack 的文件监听：在项目启动之后，Webpack 会通过 Compiler 类的 Run 方法开启编译构建过程，编译完成后，调用 Watch 方法监听文件变更，当文件发生变化，重新编译，编译完成之后继续监听。
 2. webpack-dev-middleware
 页面的访问需要依赖 Web 服务器，那要如何将 Webpack 编译打包之后的文件传递给 Web 服务器呢？这就要看 Webpack-dev-middleware了。 Webpack-dev-middleware 是一个封装器（ wrapper ），它可以把 Webpack 处理过的文件发送到一个 Server（其中 Webpack-Dev-Server 就是内置了 Webpack-dev-middleware 和 Express 服务器）。上面有说到编译之后的文件会被写入到内存，而 Webpack-dev-middleware 插件通过 memory-fs 实现静态资源请求直接访问内存文件。
+
+
+
+
+### 数组的操作
+1. 数组的去重（ES6 和 ES5分别实现）
+- ES6  
+```
+let arr = [1,2,3,3,4,4]
+
+let set = new Set(arr)
+let result = Array.from(set)
+console.log(result)
+```
+
+- ES5
+```
+let arr = [1,2,3,3,4,4]
+
+function unique(arr) {
+  if(!Array.isArray(arr)) {
+    new Error('arg type error')
+    return
+  }
+  let result = []
+  let leng = arr.length
+  for(let i = 0; i < leng; i++) {
+    if(result.indexOf(arr[i]) === -1) {
+      result.push(arr[i])
+    }
+  }
+  return result
+}
+
+unique(arr)
+```
+
+2. 数组的交集和并集
+```
+let a = new Set([1, 2, 3]);
+let b = new Set([3, 5, 2]); 
+
+// 并集
+let unionSet = new Set([...a, ...b]);
+//[1,2,3,5]
+
+// 交集
+let intersectionSet = new Set([...a].filter(x => b.has(x)));
+```
 
