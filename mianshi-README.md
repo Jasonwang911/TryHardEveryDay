@@ -164,6 +164,7 @@ loaders负责的是处理源文件的如css、jsx，一次处理一个文件。�
 - HotModuleReplacementPlugin: 热更新HMR
 - OccurenceOrderPlugin: 为组件分配ID,通过这个插件webpack可以分析和优先考虑使用最多 的模块，然后为他们分配最小的ID
 - UglifyJsPlugin: 压缩代码
+- preload-webpck-plugin: 添加预加载
 
 
 ####  Hot Module Replacement，简称 HMR
@@ -222,3 +223,32 @@ let unionSet = new Set([...a, ...b]);
 let intersectionSet = new Set([...a].filter(x => b.has(x)));
 ```
 
+3. 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。    
+你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。    
+```
+给定 nums = [2, 7, 11, 15], target = 9
+
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+```   
+主要思路是通过差值来寻找。      
+1.用while循环从后往前遍历。     
+2.每次遍历先pop最后一个值，再通过indexOf来查找是否有对应的差，pop的好处是为了防止两个数相等。   
+3.如果有对应的值，索引就是indexOf和数组的长度。   
+```
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    let i = nums.length;
+    while(i > 1) {
+        let last = nums.pop();
+        if (nums.indexOf(target - last) > -1) {
+            return [nums.indexOf(target - last), nums.length]
+        }
+        i--
+    }
+};
+```

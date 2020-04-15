@@ -23,7 +23,6 @@ yarn add koa koa-router koa-static vue vue-router vuex vue-server-renderer
 yarn add webpack webpack-cli webpack-dev-server babel-loader @babel/preset-env @babel/core vue-style-loader css-loader vue-loader vue-template-compiler html-webpack-plugin webpack-merge
 
 ```
-
 webpack-cli webpack 的命令行解析工具
 webpack-dev-server 用来创建一个开发环境,webpack 开发服务  
 babel-loader 解析 js 语法，主要是进行转化操作  
