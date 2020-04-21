@@ -14,7 +14,7 @@
 
 5. Vue父子组件如何通信
 
-6. Vue中相同逻辑如何抽离
+6. Vue中相同逻辑如何抽离  
 - mixins
 - 先执行mixin的后执行组件的，组件的会覆盖mixin的
 
@@ -57,7 +57,7 @@
 
 - SEO优化  
   预渲染插件 prerender-spa-plugin  
-  服务端渲染ssr   
+  服务端渲染 ssr   
 
 - 打包优化
   使用cdn的方式加载第三方模块   

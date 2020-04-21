@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import JasonUi from './packages'
-
-Vue.use(JasonUi)
-
+import zfUi from "./packages/index"  
+Vue.use(zfUi) //install
 Vue.config.productionTip = false
 
 new Vue({

@@ -1,22 +1,10 @@
 <template>
-  <div>
-    button-group
-  </div>
+    <div>
+        buttonGroup
+    </div>
 </template>
-
 <script>
 export default {
-  name: 'ja-button-group',
-  data () {
-    return {
-
-    }
-  },
-  components: {
-
-  }
+    name:"zf-button-group"
 }
 </script>
-
-<style lang='scss' scoped>
-</style>

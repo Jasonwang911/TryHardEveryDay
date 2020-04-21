@@ -1,5 +1,50 @@
 # JS基础
 
+## JS的数据类型
+数据类型分类
+- 基本数据类型
+- 引用数据类型
+  + object
+  + function
+
+数据类型检测
+- typeof 检测数据类型的逻辑运算符
+  + typeof value  返回当前值的数据类型
+  + 返回的结果都是字符串
+  + 局限性，typeof null => 'object' ，不能检测对象类型
+- instanceof 检测是否为某个类的实例
+- constructor  检测构造函数
+- Object.prototype.toString.call()
+
+把其他数据类型转换为数字的方法
+  + 强转换（基于底层机制转换的） Number()
+    + 一些隐式类型转换都是基于Number完成的
+      + isNaN('12.5px')
+      + 数学运算  
+      + 字符串 == 数字  
+  + 弱转换 (基于一些额外的方法转化) parseInt()/parseFloat()
+```
+parseInt('')
+Number('')
+isNaN('')
+parseInt(null)
+Number(null)
+isNaN(null)
+parseInt('12px')
+Number('12px')
+isNaN('12px')
+parseFloat('1.6px') + parseInt('1.2px') + typeof parseInt(null)
+isNaN(Number(!!Number(parsetInt('0.8'))))  
+typeof !parseInt(null) + !isNaN(null)
+```
+
+```
+let result = 10 + false + undefined + [] + 'Tencent' + null + true + {}
+console.log(result)
+10 + undefined  => NaN    undefined是未赋值，是NaN
+10 + null => 10     null 是空对象，空指针，所以是 0 
+```
+
 ### 堆（Heap）栈（Stack）
 - 程序运行的时候，需要内存空间存放数据。一般来说,系统会划分出两种不同的内存空间：一种叫做stack(栈)，另一种叫做heap(堆) 
 - stack是有结构的，每个区块按照一定次序存放，可以明确知道每个区块的大小
