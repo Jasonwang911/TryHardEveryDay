@@ -2,6 +2,7 @@
 YAML 是专门用来写配置文件的语言，非常简洁和强大，远比 JSON 格式方便   
 [YAML to JS](https://nodeca.github.io/js-yaml/)   
 umi和docker中配置文件大量使用了YAML
+nodeca.github.io/js-yaml
 
 ## 基本规则
 - 大小写敏感
