@@ -178,8 +178,10 @@ loaders负责的是处理源文件的如css、jsx，一次处理一个文件。�
 
 
 ### 数组的操作
-1. 数组的去重（ES6 和 ES5分别实现）
+1. 数组的去重（ES6 和 ES5分别实现） [https://juejin.im/post/5eb7bcccf265da7bf93712e0]
 - ES6  
+  -- Array.from 将 类似数组的对象 和 可遍历的对象转化为真正的数组   
+  -- Set ES6 新的数据结构，set对象是值的集合,不会储存重复的元素，无法对{}和[]去重   
 ```
 let arr = [1,2,3,3,4,4]
 
@@ -208,6 +210,32 @@ function unique(arr) {
 }
 
 unique(arr)
+```
+- 嵌套循环去重(原始)
+嵌套循环，原始数组arrList和一个新的reasonList，判断arrList[i]和reasonList[j]是否相等，如果不相等，就说明元素是唯一的，循环执行完j的长度等于reasonList[j]的长度，把唯一的元素push到新的数组里。   
+```
+var list = [4, 4, "lalala", "lalala", true, true, undefined, 'true', 'true', undefined, undefined, null, null, 0, 0, {}, {}, [], [], NaN, NaN]
+
+function uni (arrList) {
+    // reasonList 用来储存去重后的数组
+    let reasonList = []
+    for(var i = 0; i < arrList.length; i++) {
+        for (var j = 0; j < reasonList.length; j++) {
+            // 当找到两个数组中有相同的就停止循环
+            if (arrList[i] === reasonList[j]) {
+                break
+            }
+        }
+        // 如果没有相同的，执行完循环j === reasonList.length
+        if (j === reasonList.length) {
+            reasonList.push(arrList[i])
+        }
+    }
+    return reasonList
+}
+console.log(uni(list))
+//[4, "lalala", true, undefined, "true", null, 0, {}, {}, [], [], NaN, NaN]
+//0.025146484375ms
 ```
 
 2. 数组的交集和并集
