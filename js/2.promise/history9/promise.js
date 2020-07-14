@@ -54,6 +54,9 @@ class Promise{
     this.onResolvedCallback = []
     this.onRejectedCallback = []
     let resolve = (value) => {
+      if(value instanceof Promise) {   // resolve的结果是一个promise,会将这个promise执行，并返回promise的结果
+        return value.then(resolve,reject)
+      }
       if(this.status === PENDING) {
         this.value = value
         this.status = SUCCESS
@@ -124,6 +127,10 @@ class Promise{
     })
     return promise2
   }
+
+  catch(errCallback) {  // 用来捕获错误
+    return this.then(null, errCallback)
+  }
 }
 
 Promise.defer = Promise.deferred = function() {
@@ -133,6 +140,74 @@ Promise.defer = Promise.deferred = function() {
     dfd.reject = reject
   })
   return dfd
+}
+
+Promise.resolve = function(value) {
+  return new Promise((resolve, reject) => {
+    resolve(value)
+  })
+}
+
+// callback 是一个异步函数，如果需要等待这个异步执行完成再继续下面的步骤，可以将callback放到promise中用resolve包一下。 koa的原理就是基于这个, resolve有等待的效果
+Promise.prototype.finally = function(callback) {
+  return this.then((data) => {
+    return Promise.resolve(callback()).then(() => data)
+    // return new Promise((resolve, reject) => {
+    //   resolve(callback())
+    // }).then(() => data)
+  }, (err) => {
+    return Promise.resolve(callback()).then(() => {throw err})
+    // return new Promise((resolve, reject) => {
+    //   resolve(callback())
+    // }).then(() => {throw err})
+  })
+}
+
+function isPromise(value) {
+  if(typeof value === 'function' || (typeof value === 'object' && value != null)) {
+    if(typeof value.then === 'function') {
+      return true
+    }
+  }
+  return false
+}
+
+Promise.all = function(values) {
+  return new Promise((resolve, reject) => {
+    let result = []
+    let i = 0
+    let processData = (key, value) => {
+      result[key] = value
+      if(++i === values.length) {
+        resolve(result)
+      }
+    }
+    for(let i = 0; i < values.length; i++) {
+      let current = values[i]
+      // 判断是否是 Promise ， 如果是获取then的结果，如果不是，直接返回
+      if(isPromise(current)) {
+        current.then(y => {
+          processData(i, y)
+        }, reject)
+      }else {
+        processData(i, current)
+      }
+    }
+  })
+}
+
+Promise.race = function(values) {
+  return new Promise((resolve, reject) => {
+    for(let i = 0; i < values.length; i++) {
+      let current = values[i]
+      // 判断是否是 Promise ， 如果是获取then的结果，如果不是，直接返回
+      if(isPromise(current)) {
+        current.then(resolve, reject)
+      }else {
+        resolve(current)
+      }
+    }
+  })
 }
 
 module.exports = Promise

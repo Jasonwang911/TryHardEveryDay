@@ -11,6 +11,11 @@
   - 详细实现过程在 history5
 6. 值的穿透
   判断then函数中是否传递了onFulfilled, onRejected函数，如果没有传递，直接返回相应的常量或者抛出对应的异常
+7. catch方法： 是then函数的一个语法糖,相当于 return this.then(null, errCallback)
+8. finnal方法，无论如何都执行，也是then的一个语法糖。callback 是一个异步函数，如果需要等待这个异步执行完成再继续下面的步骤，可以将callback放到promise中用resolve包一下。 koa的原理就是基于这个。 详见 history7    
+9. Promise.all 解决多个异步，同步的问题; 实现原理是计数器   
+10. Promise.race 一个成功就成功，一个失败就失败，并返回最快的一个的结果  
+11. 中断一个promise： 超过多久就中断一个promise： 使用Promise.race 来传入一个自定义的Promise，通过控制自定义的Promise来控制整个流程的继续或者中断  
 
 ### 测试是是否符合 Promise A+ 规范： promises-aplus-tests
 1. 需要添加一段代码：
@@ -24,3 +29,10 @@ Promise.defer = Promise.deferred = function() {
   return dfd
 }
 ```
+
+### generator 生成器 迭代器  
+- yield 产出
+- iterator  generator返回一个迭代器iterator {value: xxx, done: false }  
+- throw 抛出错误  
+
+1. 著名的co库

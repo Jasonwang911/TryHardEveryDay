@@ -8,6 +8,10 @@ cnpm i typescript -g
 tsc helloworld.ts
 ```
 
+## 对Ts支持比较友好
+- 前端  Ng  react Vue3.0
+- node express  nest  koa
+
 ## Vscode+TypeScript
 ```
 tsc --init
