@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="/dist/umd/vue.js"></script>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data() {
+        return {
+          name: 'jason',
+          age: 11, 
+          address: {
+            city: '保定'
+          },
+          tableData: [
+            {id: 1, name: 'xiaokui'},
+            {id: 2, name: 'xiaoming'}
+          ]
+        }
+      },
+      computed(){},
+      watch() {}
+    }) 
+
+    vm._data.tableData.push({id: 3})
+   
+  </script>
+</body>
+</html>
