@@ -70,5 +70,32 @@ let oldArrayMethods = Array.prototype
 // 这样延长了原型链，用户调用数组的方法，会通过  value.__proto__ = arrayMethods 查找 arrayMethods 上的7个方法，其他的方法在 arrayMethods 上面不能找到，便会通过原型链 __proto__ 继续向上查找到oldArrayMethods  从而得到调用
 export let arrayMethods = Object.create(oldArrayMethods)
 ```
-
-
+6. 模板编译： 如果用户传入了el属性，就要实现挂在流程
+- dom对象转换为render函数： _c: 创建元素  _v: 创建文本 _s: 创建取值对象
+```
+<div id="app">
+  <p>{{name}}</p>
+  <span>{{age}}</span>
+</div>
+```
+转化为render是： 
+```
+render() {
+  return _c('div', {id: 'app'}, _c('p', underfined, _v(_s(name))), _c('span', underfined, _v(age)))
+}
+```
+这个过程就是 template => AST语法树的过程
+- compiler文件夹 存放的是编译相关的源码
+- AST语法树和虚拟DOM
+  AST语法树使用对象来描述js语法的   
+  虚拟DOM使用对象来描述dom节点的
+- 解析标签内容是通过正则来截取的
+```
+const ncname = `[a-zA-Z_][\\-\\.0-9_a-zA-Z]*`;  
+const qnameCapture = `((?:${ncname}\\:)?${ncname})`;
+const startTagOpen = new RegExp(`^<${qnameCapture}`); // 标签开头的正则 捕获的内容是标签名
+const endTag = new RegExp(`^<\\/${qnameCapture}[^>]*>`); // 匹配标签结尾的 </div>
+const attribute = /^\s*([^\s"'<>\/=]+)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s"'=<>`]+)))?/; // 匹配属性的
+const startTagClose = /^\s*(\/?)>/; // 匹配标签结束的 >
+const defaultTagRE = /\{\{((?:.|\r?\n)+?)\}\}/g
+```

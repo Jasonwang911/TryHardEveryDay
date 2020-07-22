@@ -6,7 +6,10 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <p>{{name}}</p>
+    <span>{{age}}</span>
+  </div>
 
   <script src="/dist/umd/vue.js"></script>
   <script>
@@ -28,8 +31,6 @@
       computed(){},
       watch() {}
     }) 
-
-    vm._data.tableData.push({id: 3})
    
   </script>
 </body>
