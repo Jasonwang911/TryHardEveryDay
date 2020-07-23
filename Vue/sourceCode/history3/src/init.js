@@ -28,7 +28,6 @@ export function initMixin(Vue) {
       if(!template && el) {
         template = el.outerHTML
       }
-      console.log(template)
       // 需要将template转化为render函数；Vue1.0是使用正则替换字符串，性能低。Vue2.0引入了虚拟dom的概念，提升了性能
       const render = compileToFunction(template)
       options.render = render
