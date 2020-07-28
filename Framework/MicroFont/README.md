@@ -127,3 +127,42 @@ if(!window.singleSpaNavigate) {
   new Vue(appOptions).$mount('#app')
 }
 ```
+
+5. Css隔离方案 
+- 子应用之间样式隔离： Dynamic Stylesheet 动态样式表，当应用切换时移除老应用样式，添加新应用样式
+- 主应用和子应用之间的样式隔离
+BEM（Block Element Modifier） 约定项目前缀   
+Css-Modules 打包生成不冲突的选择器名（主流）   
+Shadow DOM 真正意义上的隔离   
+css-in-js 
+
+6. Js的隔离
+- 沙箱： 创造一个干净的环境给应用使用，当切换应用时，可以选择丢弃属性和恢复属性
+- 实现方式  
+快照沙箱： 前后比对，把却别保存起来   
+代理沙箱： 把不同的应用用不同的代理来处理，使用es6的proxy可以实现  
+
+#### qiankun 
+1. 基座的注册
+主应用中入口文件添加注册子应用 
+```
+import { registerMicroApps, start } from 'qiankun'
+
+const apps = [
+  {
+    name: 'vueApp',
+    entry: '//localhost: 10001',  // 默认会加载这个html，解析里面的js，动态的执行（子应用需要解决跨域） fetch来读取文件
+    container: '#vue',
+    activeRule: '/vue'
+  },
+  {
+    name: 'reactApp',
+    entry: '//localhost: 20001',  // 默认会加载这个html，解析里面的js，动态的执行（子应用需要解决跨域） fetch来读取文件
+    container: '#react',
+    activeRule: '/react'
+  }
+]
+
+registerMicroApps(apps)
+start()
+```
