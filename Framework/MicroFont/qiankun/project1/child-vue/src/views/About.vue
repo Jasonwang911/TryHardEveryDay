@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>vue应用的 About 页面</h1>
   </div>
 </template>

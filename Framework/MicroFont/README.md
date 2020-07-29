@@ -166,3 +166,94 @@ const apps = [
 registerMicroApps(apps)
 start()
 ```
+
+
+##### react应用
+1. 重写react的webpack配置
+```
+// 通过 react-app-rewired 改写react的webapck配置哦
+yarn add react-app-rewired -D
+```
+配置 scripts 命令， package.json 中
+```
+"scripts": {
+  "start": "react-app-rewired start",
+  "build": "react-app-rewired build",
+  "test": "react-app-rewired test",
+  "eject": "react-app-rewired eject"
+},
+```
+添加 config-overrides.js 文件为webpack配置文件
+```
+module.exports = {
+  webpack: (config) => {
+    config.output.library = 'reactApp'
+    config.output.libraryTarget = 'umd'
+    config.output.publicPath = 'http://localhost:20001/'
+    return config
+  },
+  devServer:(configFunction) => {
+    return function(proxy, allowedHost) {
+      const config = configFunction(proxy, allowedHost)
+      config.headers = {
+        'Access-Control-allow-Origin': '*' 
+      }
+      return config
+    }
+  }
+}
+```
+添加 .env 文件，规定默认启动端口和socket热更新端口
+```
+PORT=20001
+WDS_SOCKET_PORT=20001
+```
+
+2. 配置react子应用
+```
+function render(props) {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+}
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
+
+// 如果是基座调用的子应用，qiankun会动态的注入 publicPath
+// if(window.__POWERED_BY_QIANKUN__) {
+//   __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__
+// }
+
+// 如果没有基座，需要独立运行子应用，直接进行挂载
+if(!window.__POWERED_BY_QIANKUN__) {
+  render()
+}
+
+export async function bootstrap(props) {
+
+}
+
+export async function  mount(props) {
+  // mount的时候渲染实例
+  render(props)
+}
+
+export async function unmount(props) {
+  // unmount的时候卸载实例
+  ReactDOM.unmountComponentAtNode(document.getElementById('root'))
+}
+```
+
+3. 安装react-router-dom
+```
+yarn add react-router-dom -S
+```
+配置react-router的 basename="/react"
+
+

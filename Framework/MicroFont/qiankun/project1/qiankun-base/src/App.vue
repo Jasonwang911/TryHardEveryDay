@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <!-- 基座中可以放自己的路由，也可以引用其他子应用 -->
     <el-menu :router="true" mode="horizontal">
       <!-- 基座中的路由 -->
