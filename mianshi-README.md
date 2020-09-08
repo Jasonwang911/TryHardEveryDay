@@ -293,10 +293,11 @@ arr.slice()
 ```
 {...obj}
 Object.assign({}, obj)
-for in 只能遍历可枚举的属性，不可枚举的属性如Symbol不会被拷贝
+for in 只能遍历可枚举的属性，不可枚举的属性如Symbol不会被拷贝？
 ```
 
 2. merage合并
+- Object.assign(options, params)  
 
 3. 函数柯理化
 
