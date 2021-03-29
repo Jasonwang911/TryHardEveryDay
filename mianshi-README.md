@@ -280,3 +280,27 @@ var twoSum = function(nums, target) {
     }
 };
 ```
+
+### 前端面试必问
+1. 深拷贝
+- 数组的浅拷贝
+```
+[...arr]
+arr.concat([])
+arr.slice()
+```
+- 对象的浅拷贝
+```
+{...obj}
+Object.assign({}, obj)
+for in 只能遍历可枚举的属性，不可枚举的属性如Symbol不会被拷贝？
+```
+
+2. merage合并
+- Object.assign(options, params)  
+
+3. 函数柯理化
+
+4. AOP面向切片编程
+
+5. queryURLparams的实现

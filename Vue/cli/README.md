@@ -18,7 +18,7 @@ npx eslint --init # 初始化eslint配置文件  执行了 node_module/bin/eslin
 ```
 表示通知系统使用 /usr/bin/env 中的node执行这个文件  
 
-npm link     将package.json中的bin链接到全局    
+npm link     将package.json中的bin链接到全局   --force 强制链接，会将之前的链接覆盖掉   
 npm unlink   取消当前链接   
 
 ## 发布 
