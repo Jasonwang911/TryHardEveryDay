@@ -1,5 +1,51 @@
 ## VUE3.0
 
+## Vue-cli 升级到最新版本 4.5
+1. 安装脚手架
+```
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+
+```
+2. 升级脚手架
+```
+npm update -g @vue/cli
+
+# 或者
+yarn global upgrade --latest @vue/cli
+```
+3. 查看脚手架版本
+```
+vue --version
+```
+4. 快速原型开发，可以运行单个.vue文件，缺点事需要安装全局依赖，这使得在不同的机器上一致性不能得到保证
+https://cli.vuejs.org/zh/guide/prototyping.html
+```
+npm install -g @vue/cli-service-global
+## 运行
+serve [options] [entry]
+Options:
+
+  -o, --open  打开浏览器
+  -c, --copy  将本地 URL 复制到剪切板
+  -h, --help  输出用法信息
+
+## 或者在vue文件下运行
+vue serve
+```
+
+## Vue2.0 和 Vue3.0 对比
+- Vue2.0采用flow(类型检测器)进行编写，3.0源码采用TS进行开发，对Ts支持友好
+- 源码体积优化，移除部分api，便于tree-shaking（函数式api）
+- 数据劫持优化： 3.0采用Proxy，性能大大提高
+- 编译优化：3.0实现了静态模板分析，重写diff算法
+- CompositionAPI: 整合业务代码的逻辑，提取公用逻辑（2.0采用了mixin--命名冲突数据来源不清晰）
+- 自定义渲染器：可以用来创建自定义的渲染器，改写Vue底层渲染逻辑
+- 新增Fragment/Teleport/Suspense组件
+
+
+
 ## Vue3.0的提高
 1. performance  
 - 重写了虚拟Dom的实现（跳过动态节点，只处理动态节点）
