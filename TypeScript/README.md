@@ -80,8 +80,19 @@ tsc --init
 }
 ```
 
+## 工具
+如果想在vscode中右键运行代码，需要安装一个工具
+```
+npm install ts-node -g
+```
+
 ### 类型
-1. 元组（ Tuple ）表示一个已知数量和类型的数组
+1.1 数组
+```
+let arr1: number[] = [1,2,3]
+let arr2: Array<number> = [4,5,6]
+```
+1.2 . 元组（ Tuple ）表示一个已知数量和类型的数组
 ```
 let jason:[string,number] = ['jason',5];
 jason[0].length;
@@ -89,3 +100,5 @@ jason[1].toFixed(2);
 ```
 - 元组：每一项可以是不同的类型、有预定义的长度、用于表示一个结构
 - 数组：每一项都是同一种类型、没有长度限制、用于表示一个列表
+
+
