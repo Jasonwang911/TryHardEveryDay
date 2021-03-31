@@ -87,6 +87,7 @@ npm install ts-node -g
 ```
 
 ### 类型
+1. 数组
 1.1 数组
 ```
 let arr1: number[] = [1,2,3]
@@ -101,4 +102,36 @@ jason[1].toFixed(2);
 - 元组：每一项可以是不同的类型、有预定义的长度、用于表示一个结构
 - 数组：每一项都是同一种类型、没有长度限制、用于表示一个列表
 
+
+2. 普通枚举
+```
+enum Gender {
+  GIRL,
+  BOY
+}
+
+console.log(Gender.GIRL)
+console.log(Gender.BOY)
+// 输出
+var Gender;
+(function (Gender) {
+    Gender[Gender["GIRL"] = 0] = "GIRL";
+    Gender[Gender["BOY"] = 1] = "BOY";
+})(Gender || (Gender = {}));
+```
+
+3. 常量枚举: 常量是永远不会变的量，省略了定义，可以节省内存开销
+```
+const enum Colors {
+  RED,
+  YELLOW,
+  BLUE
+}
+
+let myColor = [Colors.RED, Colors.YELLOW, Colors.BLUE]
+console.log(myColor)
+// 转化为  var myColor = [0 /* RED */, 1 /* YELLOW */, 2 /* BLUE */];
+```
+
+4. 任意类型  any
 
