@@ -1,6 +1,6 @@
 ### let && const 
 - 尽量使用const，如果这个值需要更改才是用let
-- var 生命变量，生命到去厍，会污染全局变量
+- var 声明变量，声明到全局，会污染全局变量
 - 变量提升 可以在生命之前调用  function var import
 - let const 可以和 {} 方式来连用，产生块级作用域
 - var 能重复声明
