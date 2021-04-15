@@ -111,11 +111,25 @@ npm内置的.npmrc < 全局级的 .npmrc < 用户级的 .npmrc < 项目级的 .n
 3. npm镜像和依赖安装问题： 有条件的情况下从网络层面解决
 
 
+##### CI环境上的npm优化以及更多工程化相关问题
+1. CI环境上npm的优化: 在CI环境使用npm ci代替npm install一般会获得更加稳定、一致和迅速的安装体验   
+- npm ci要求项目中必须存在package-lock.json或npm-shrinkwrap.json   
+- npm ci完全根据package-lock.json安装依赖，可以保证整个开发团队保证使用完全一致的依赖  
+- npm ci在执行安装时，会先删除项目中现有的node_modules，然后全新安装   
+- npm ci只能一次安装整个项目所有依赖包，无法安装单个依赖包      
+- 如果package.json和package.json冲突，那么npm ci会直接报错，并非更新lockfiles  
+- npm ci永远不会改变package.json和package-lock.json  
+
+package-lock.json缓存了每个包的具体版本和下载链接，不需要再去远程仓库进行查询   
 
 
+##### 包管理工具中经常会遇到的问题
+1. 为什么要lockfiles，要不要提交lockfiles到仓库?
+  package-lock.json文件的作用是锁定依赖安装结构，目的是保证在任意机器上执行npm install都会得到完全相同的 node_modules 安装结果 
 
+2. 为什么单一的package.json不能确定唯一的依赖树
+  不同版本的npm的安装依赖策略和算法不同  
+  npm install 将根据 package.json 中的semver-range version更新依赖   
+  某些依赖项自上次安装依赖，可能已发布了新版本  
 
-
-
-
-1. 删除node_modules,重新npm install 解决依赖问题，有什么影响
+2. 删除node_modules,重新npm install 解决依赖问题，有什么影响
