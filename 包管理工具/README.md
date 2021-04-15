@@ -43,6 +43,45 @@ project1
 - 在project1项目文件夹中执行 npm link npm-package1 命令，这样就回去 /usr/loacl/lib/node_modules中检查是否有package1这个包，如果有就会在项目目录下建立软链接
 
 - npx  
+- npm 独有的命令是
+```
+npm rebuild 
+```
+
+#### yarn Facebook,Goole,Exponent和Tilde构建的新的js的包管理器
+- 为了解决npm对安装包的一致性/完整性的问题；以及npm安装过慢的问题  
+
+1. 特点
+- 确定性： 通过lock文件保证安装依赖关系的顺序性，既在不同的机器上安装的文件依赖一致
+- 采用模块扁平安装模式： 通过一定策略将依赖中的不同版本归结为单个版本，已避免创建多个副本造成冗余 
+- 网络性能更好： yarn采用了请求排队的理念，类似并发连接池。同时引入了更好链接失败的重试策略  
+- 采用了缓存机制，实现了离线模式
+- yarn.lock中子依赖版本号不是固定版本，不能单独固定node_modules文件，还需要和package.json进行配合
+- yarn和npm的互相切换： synp工具，可以将yarn.lock转换为package-lock.json
+- yarn查看缓存目录及内容: yarn优先使用网络数据，如果网络数据请求失败再使用缓存数据
+```
+yarn cache dir
+```
+- yarn 独有的命令
+```
+yarn import 
+yarn licenses
+yarn pack
+yarn why
+yarn autoclean
+```
+
+2. Yarn 安装机制
+检测包（checking） -- 解析包(Resolving Packages) -- 获取包(Fetching Packages) -- 链接包(Linking Packages) -- 构建包(Building Packages)   
+
+- 检测包（checking）: 检测项目中是否存在一些npm相关文件，检查系统OS,CPU等信息
+- 解析包(Resolving Packages): 获取当前项目中package.json定义的依赖为首层依赖，采用遍历首层依赖的方式获取依赖包的版本信息以及递归查找每层依赖包的版本和嵌套信息  
+  对于没有解析过的包A，首次尝试从yarn.lock中过去到版本信息，并标记为已解析   
+  如果在yarn.lock中没有找到包A，则向Registry发起请求获取满足版本范围的已知最高版本的包信息，获取后将当前包标记为已解析  
+- 获取包(Fetching Packages)：检查缓存中是否存在当前依赖包，将缓存中部存在的依赖包下载到缓存目录  
+  yarn根据cacheFolder+slug+node_modules+pkg.name生成一个path，判断系统中是否存在该path，如果存在证明已经有缓存，不用重新下载   
+- 链接包(Linking Packages): 将项目中的依赖复制到项目node_modules下，同时尊徐扁平化原则  
+- 构建包(Building Packages)： 依赖包中存在二进制包的进行编译   
 
 
 #### npm 多原镜像和企业级部署私服原理
