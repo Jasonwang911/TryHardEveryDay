@@ -18,6 +18,23 @@ module.exports = {
     compress: true, // 是否启用压缩
     open: true
   },
+  module: {
+    rules: [
+      {test: /\.css$/, use: ['style-loader', 'css-loader']},
+      {test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader']},
+      {test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']},
+      {test: /\.(jpg|png|gif|bmp|webp)$/, use: [
+        {
+          loader: 'url-loader',
+          options: {
+            name: '[hash:10].[ext]',
+            esModule: false,
+            limit: 8*1024
+          }
+        }
+      ]},
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
