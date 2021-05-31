@@ -1,7 +1,7 @@
 ## Promise 
 
 ### Promise的链式调用（如果是一个promise，就不是普通值）
-1. 如果then方法中的成功或者失败，至此那个的时候发生错误，就睡走下一个then的失败的回调
+1. 如果then方法中的成功或者失败，至此那个的时候发生错误，就走下一个then的失败的回调
 2. 如果then方法返回了一个失败的promise就会走外层then的失败的回调
 3. catch是then函数的一个语法糖，相当于then(null, err => {})，一个没有成功回调的then函数
 4. then方法返回了一个新的promise
