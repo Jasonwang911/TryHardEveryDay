@@ -11,3 +11,30 @@
 // 示例 2
 // 输入: s = "rat", t = "car"
 // 输出: false
+
+var isAnagram = function(s, t) {
+  const source = s.split('');
+  const map = {};
+  source.forEach(item =>  map[item] ?  map[item] ++ :  map[item] = 1)
+  for(let i = 0; i < t.length; i++) {
+      if(map[t[i]]) {
+        map[t[i]] = map[t[i]] - 1 
+          if(map[t[i]] < 0) {
+            console.log(map)
+              delete map[t[i]]
+              console.log(map)
+              return false
+          }
+      }else {
+        return false
+      }
+  }
+  console.log(map)
+  if(Object.keys(map).length ) {
+      return true
+  }else {
+      return false
+  }
+};
+
+console.log(isAnagram("anagram", "nagaram"))
