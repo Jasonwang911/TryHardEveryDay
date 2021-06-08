@@ -12,29 +12,36 @@
 // 输入: s = "rat", t = "car"
 // 输出: false
 
+// 思路  将一个字符串变为对象  key是出现的字母，value是该字母出现的次数，然后循环第二个字符串，对改对象对应的出现次数进行相减，出现次数为0后删除该key
 var isAnagram = function(s, t) {
+  if(s.length !== t.length) return false
   const source = s.split('');
   const map = {};
-  source.forEach(item =>  map[item] ?  map[item] ++ :  map[item] = 1)
-  for(let i = 0; i < t.length; i++) {
-      if(map[t[i]]) {
+  source.forEach(item =>  map.hasOwnProperty(item) ?  map[item] ++ :  map[item] = 0)
+  for(let i = 0; i < t.length ; i++) {
+      if(map.hasOwnProperty(t[i])) {
         map[t[i]] = map[t[i]] - 1 
           if(map[t[i]] < 0) {
-            console.log(map)
               delete map[t[i]]
-              console.log(map)
-              return false
           }
       }else {
         return false
       }
   }
-  console.log(map)
-  if(Object.keys(map).length ) {
-      return true
-  }else {
+  if(Object.keys(map).length) {
       return false
+  }else {
+      return true
   }
 };
+
+// console.log(isAnagram("anagram", "nagaram"))
+
+// 思路2： 将两个字符串排序后比较是否相同。
+var isAnagram = function(s, t) {
+  if(s.length !== t.length) return false
+  console.log([...s])
+  return [...s].sort().join('') === [...t].sort().join('')
+}
 
 console.log(isAnagram("anagram", "nagaram"))
