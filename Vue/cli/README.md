@@ -38,3 +38,7 @@ npm publish
 ```
 npm unpublish --force
 ```
+
+
+
+## 插件系统  cli.vuejs.org/zh/guide
