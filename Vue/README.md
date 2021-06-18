@@ -163,4 +163,25 @@ Object.defineProperty  可以重新定义属性，给属性增加 getter 和 set
 ## rollup的配置
 
 
+### Vue的优化
+1. Vue2.0的数据劫持方面的优化处理
+Vue2.0的数据劫持是Object.definedProtype()进行劫持，并且该方法只能劫持一层，如果想深层劫持的话需要递归劫持
+- 尽量保持数据的扁平化 
+- 一定要写key，key会启动就地复用策略
+- Object.freeze() 冻结只被展示而不会被操作的数据（不需要修改，不需要被双向绑定的数据）
+- Vue模板编译的时候会进行ast语法树解析，需要耗费时间和性能，如果是纯静态html结构可以用v-pre提升编译效率  
+- 虚拟列表渲染的处理方案 vue-virtual-scroller  vue-virtual-scroll-list 
+- 异步加载组件 
+```
+components: {
+  HelloWorld: () => ({
+    component: import('@/component/HelloWorld'),
+    loading: LoadingCom,
+    error: ErrorCom,
+    delay: 200,
+    timeout: 300
+  })
+}
+```
+
 
