@@ -1,0 +1,12 @@
+{
+  "name": "boya-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "boya-test": "bin/index.js"
+  },
+  "dependencies": {
+    "boya-test-lib": "^1.0.0"
+  }
+}

@@ -70,7 +70,61 @@ vue create vue-test-app --force -r https://registry.npm.taobao.org
 - echo $PATH  查看环境变量
 - ln -s 创建软连接
 
-### 脚手架的进阶
-
-
 ### 脚手架的开发流程
+
+#### 发布到npm 
+- 登录npm 
+```
+// 先切换为npm源
+npm config set registry https://registry.npmjs.org
+// 然后登录 输入账号密码和邮箱
+npm login
+```
+- 发布
+```
+npm publish
+```
+如果发布报403，修改package.json文件中的name，然后重新发布，说明包重名  
+- 卸载已发布的包
+```
+```
+
+#### 调试 
+1. 本地调试
+```
+npm link    // 将package.json中的bin链接到全局   --force    // 强制链接，会将之前的链接覆盖掉   
+npm unlink   // 取消当前链接 
+```
+2. 分包： 当项目较大时候，需要调试不同版本
+- 在包的同层目录再创建一个不同文件名的项目（ boya-test-lib），并进行初始化 yarn init -y
+- 在 boya-test-lib目录创建lib文件夹，并写入index.js文件, 在package.jason中制定入口文件为 lib/index.js
+- 进入包文件 boya-test 中，使用 npm link boya-test-lib ，这时会发现找不到lib包。
+- 进入 boya-test-lib中进行全局链接 npm link
+- 再次进入包文件 boya-test 中，使用 npm link boya-test-lib，安装成功
+- 因为 boya-test-lib 没有发布到npm，所以不会自动安装依赖到 package.json 文件的 dependencies 中，所以需要手动添加 dependencies
+```
+"dependencies": {
+    "boya-test-lib": "^1.0.0"
+  }
+```
+
+#### 注册命令
+注册命令 boya-test init 这个命令
+1. node 的命令库 process
+```
+require('process').argv 
+``` 
+罗列了这个库的所有参数
+```
+[
+  'C:\\Program Files\\nodejs\\node.exe',
+  'G:\\yabo\\TryHardEveryDay\\architect\\mk\\1.cli\\boya-test\\bin\\index.js'
+]
+```
+argv[0] 是node的执行文件， argv[1]是cli的可执行文件  argv[2]是运行时候执行的命令
+
+#### 参数解析
+实现参数解析 --version  和  init --name 
+
+
+### 脚手架的进阶

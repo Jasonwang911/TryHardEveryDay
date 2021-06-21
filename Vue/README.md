@@ -183,5 +183,9 @@ components: {
   })
 }
 ```
-
+2. 图片懒加载 vue-lazyload
+3. 按需架子啊
+4. keep-alive 是vue的内置组件，主要是用来缓存组件的
+- include exclude
+5. 
 
