@@ -85,3 +85,10 @@ lerna add <package> [loc] --dev
 - utils
 
 1. @boya-cli-dev/core  @符号后面的是组织名称，需要在npm上创建组织，为了防止包名重复 
+
+
+### Lerna 原理
+- 通过import-local来优先调用本地lerna命令
+- 通过Yargs初始化脚手架，然后注册全局属性，再注册命令，最后通过parse方法解析参数
+- lerna命令注册时需要传入build和handler两个函数，build用来注册命令专属的options，handler用来处理命令的业务逻辑
+- lerna通过配置npm本地依赖的方式进行本地开发，具体写法是在package.json中写入：- file:your-locale-module-path,在lerna publish的时候会自动替换路径

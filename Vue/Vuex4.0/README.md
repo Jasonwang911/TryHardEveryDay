@@ -5,4 +5,5 @@
 4. store._state = reactive({data: option.state})
 
 
+### Vuex 中的插件机制
 
