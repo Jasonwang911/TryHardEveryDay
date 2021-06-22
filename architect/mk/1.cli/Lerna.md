@@ -19,3 +19,69 @@ Lerna是一个优化基于 git + npm 的多package项目的管理工具
 
 ## Lerna开发脚手架流程
 ![Lerna开发脚手架流程](https://homework.imooc-lego.com/pages/%E5%85%AD%E7%8E%A5/images/%E7%AC%AC%E4%BA%8C%E5%91%A8lerna%E5%BC%80%E5%8F%91%E8%84%9A%E6%89%8B%E6%9E%B6%E6%B5%81%E7%A8%8B.png)
+
+## Lerna 的使用
+
+安装依赖
+```
+npm init -y
+
+npm install lerna -D
+
+// 初始化 执行过后会自动创建lerna.json、packages文件夹和git配置
+lerna init
+
+```
+
+1. 脚手架项目初始化
+- lerna init
+会自动完成git初始化，但不会创建.gitignore文件，这个必须要手动添加，否则会将node_modules目录都上传到git，如果node_modules已经加入到git stage，可使用：
+```
+git reset HEAD <file>
+```
+执行unstage操作，如果文件已经被git监听到变更，可使用：
+```
+git checkout -- <filename>
+```
+将变更作废，记得在执行操作之前将文件加入：.gitignore
+
+
+2. 创建 package 
+- lerna add
+> 第一个参数：添加npm包名
+> 第二个参数：本地package的路径
+> 选项：--dev：将依赖安装到devDependencies，不加时安装到dependencies
+```
+lerna add <package> [loc] --dev
+```
+
+
+3. 脚手架开发和测试
+- lerna link
+如果未发布上线，需要手动将依赖添加到package.json，再执行npm link
+
+- lerna clean
+只会删除node_modules，不会删除package.json中的依赖
+
+- erna exec和lerna run
+--scope属性后添加的是包名，而不是package的路径，这点和lerna add用法不同
+
+4. 脚手架发布上线
+- lerna publish
+-发布时会自动执行：git add package-lock.json，所以package-lock.json不要加入.gitignore文件
+-先创建远程仓库，并且同步一次master分支
+-执行lerna publish前先完成npm login
+-如果发布的npm包名为：@xxx/yyy的格式，需要先在npm注册名为：xxx的organization，否则可能会提交不成功
+-发布到npm group时默认为private，所以我们需要手动在package.json中添加如下设置
+```
+"publishConfig":{
+  "access":"public"
+}
+```
+
+
+### 项目所用的包
+- core
+- utils
+
+1. @boya-cli-dev/core  @符号后面的是组织名称，需要在npm上创建组织，为了防止包名重复 
