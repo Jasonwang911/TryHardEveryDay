@@ -11,7 +11,7 @@ console.log(options)
 
 if(command) {
   if(lib[command]) {
-    lib[command]()
+    lib[command]('vue')
   }else {
     console.log('无效的命令')
   }
