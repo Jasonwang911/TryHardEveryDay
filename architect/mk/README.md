@@ -188,3 +188,26 @@ C端还有缓存，防止频繁访问数据库
 - user-home   用户的主目录
 - dotenv   获取环境变量
 - root-check  root账户的检查和自动降级
+- semver 比对版本号
+- root-check 实现root用户的降级， 判断当前 process.geteuid === 0, 进行process.setuid() 和 process.setgid()  当前用户所在的分组
+- user-home 检查用户主目录
+  os-homedir 包来实现
+- path-exists 判断文件路径是否存在 fs
+
+
+#### 相关知识积累
+1. require 支持加载的文件包括： .js/.json/.node
+- 当加载 .js 文件的时候要求必须要使用 module.exports 或者 exports 导出 
+- 当加载 .json 文件的时候，会使用 JSON.parse 解析json文件
+- 当加载 .node 文件（c++的一个插件）的时候，会使用 process.dlopen 来打开这个插件
+- 当加载 其他格式文件 全部默认使用 .js 引擎来解析
+
+2. process.geteuid() 在windows上并不能检查当前用户
+- 0 表示 root 账户
+- 使用 root-check 来进行root用户的降级
+
+3. 获取当前操作系统 os 模块
+require('os').type()
+- Linux系统上'Linux'
+- macOS 系统上'Darwin'
+- Windows系统上'Windows_NT'
