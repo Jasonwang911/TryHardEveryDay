@@ -144,3 +144,47 @@ C端还有缓存，防止频繁访问数据库
 #### 画图工具推荐
 1. mac 
 - OmniGraffle
+
+
+### 脚手架拆包策略
+拆分原则
+- 核心模块 core
+- 命令模块 commands
+- 模型模块 models
+- 工具模块 utils
+
+1. 核心流程 core模块
+- 准备阶段
+检查版本号--检查node版本--检查root启动--检查用户目录--检查入参--检查环境变量--检查是否为最新版本--提示更新
+
+- 命令注册
+注册init命令--注册publish命令--注册clean命令--支持debug
+- 命令执行
+
+2. 命令
+- 初始化
+
+3. 模型层
+- Command命令
+- Git仓库
+
+4. 支撑模块
+- Git操作
+- 云构建
+- 工具方法
+- API请求
+- Git Api
+
+
+### 技术点
+- import-local
+- commander
+
+1. 工具库: 
+- npmlog  日志
+- fs-extra  文件操作
+- semver  版本比对
+- color  打印颜色
+- user-home   用户的主目录
+- dotenv   获取环境变量
+- root-check  root账户的检查和自动降级
