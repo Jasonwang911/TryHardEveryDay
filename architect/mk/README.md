@@ -193,6 +193,9 @@ C端还有缓存，防止频繁访问数据库
 - user-home 检查用户主目录
   os-homedir 包来实现
 - path-exists 判断文件路径是否存在 fs
+- minimist 参数解析
+- url-join 拼接url
+- commander 
 
 
 #### 相关知识积累

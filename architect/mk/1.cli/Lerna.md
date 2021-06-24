@@ -52,8 +52,10 @@ git checkout -- <filename>
 > 第二个参数：本地package的路径
 > 选项：--dev：将依赖安装到devDependencies，不加时安装到dependencies
 ```
-lerna add <package> [loc] --dev
+lerna add <package>[@version] [--dev] [--exact]
 ```
+--dev devDependencies 替代 dependencies   
+--exact 安装准确版本，就是安装的包版本前面不带^, Eg: "^2.20.0" ➜ "2.20.0"
 
 
 3. 脚手架开发和测试
@@ -79,8 +81,12 @@ lerna add <package> [loc] --dev
 }
 ```
 
+5. lerna bootstrap
+npm install  
+--ignore-scripts   不执行声明周期脚本命令
 
-### 项目所用的包
+
+### 项目所用的包:   为每个包安装依赖, 链接相互依赖的库到具体的目录,执行 npm run prepublish, 执行 npm run prepare
 - core
 - utils
 
