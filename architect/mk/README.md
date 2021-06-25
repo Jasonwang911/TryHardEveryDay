@@ -214,3 +214,5 @@ require('os').type()
 - Linux系统上'Linux'
 - macOS 系统上'Darwin'
 - Windows系统上'Windows_NT'
+
+4. Node多进程开发 child_process  spawn/exec/execFile/fork 的区别
