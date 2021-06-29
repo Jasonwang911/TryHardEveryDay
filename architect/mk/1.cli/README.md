@@ -128,7 +128,15 @@ argv[0] 是node的执行文件， argv[1]是cli的可执行文件  argv[2]是运
 
 
 ### 命令注册
-
+1. 每个项目单独存放在commands下，使用lerna create 
+@boya-cli-dev/init 的项目
+2. 脚手架动态加载命令
+见images 动态执行命令.png
+- 使用require() 来加载绝对路径 来实现缓存
+- 使用node来执行字符串
+```
+node -e "require('bin/index.js')"
+```
 
 ### 命令执行
 
