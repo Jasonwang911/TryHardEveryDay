@@ -137,6 +137,7 @@ argv[0] 是node的执行文件， argv[1]是cli的可执行文件  argv[2]是运
 ```
 node -e "require('bin/index.js')"
 ```
+- @boya-cli-dev/exec 动态执行命令的包
 
 ### 命令执行
 
