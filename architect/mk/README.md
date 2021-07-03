@@ -183,6 +183,10 @@ C端还有缓存，防止频繁访问数据库
 1. 工具库: 
 - npmlog  日志
 - fs-extra  文件操作
+```
+<!-- mkdir 创建目录  mkdirp 创建全部目录 mkdirpSync同步创建全部目录-->
+fse.mkdirpSync()  
+```
 - semver  版本比对
 - color  打印颜色
 - user-home   用户的主目录
@@ -216,3 +220,4 @@ require('os').type()
 - Windows系统上'Windows_NT'
 
 4. Node多进程开发 child_process  spawn/exec/execFile/fork 的区别
+- 中文文档： http://nodejs.cn/api/child_process.html
