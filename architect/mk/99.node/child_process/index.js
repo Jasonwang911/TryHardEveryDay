@@ -18,8 +18,22 @@ const path = require('path')
 //   console.log('stderr', stderr)
 // })
 
-cp.execFile(path.resolve(__dirname, 'node.sh'), function(err, stdout, stderr) {
-  console.log('err', err)
-  console.log('stdout', stdout)
-  console.log('stderr', stderr)
+// cp.execFile(path.resolve(__dirname, 'node.sh'), function(err, stdout, stderr) {
+//   console.log('err', err)
+//   console.log('stdout', stdout)
+//   console.log('stderr', stderr)
+// })
+
+
+// 流式执行，更适合耗时任务，需要不断输出日志
+const child = cp.spawn('lss', ['-al'], {
+  // cwd: path.resolve('..')
+})
+
+child.stdout.on('data', (chunk) => {
+  console.log(chunk.toString())
+})
+
+child.stderr.on('data', (chunk) => {
+  console.log('stderr', chunk.toString())
 })

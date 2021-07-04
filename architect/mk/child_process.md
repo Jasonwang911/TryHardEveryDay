@@ -38,6 +38,20 @@ cp.execFile('ls', ['-al'], function(err, stdout, stderr) {
 3. fork
 
 4. spawn
+```
+// 流式执行，更适合耗时任务，需要不断输出日志
+const child = cp.spawn('lss', ['-al'], {
+  // cwd: path.resolve('..')
+})
+
+child.stdout.on('data', (chunk) => {
+  console.log(chunk.toString())
+})
+
+child.stderr.on('data', (chunk) => {
+  console.log('stderr', chunk.toString())
+})
+```
 
 ##### 同步方法:
 1. execSync

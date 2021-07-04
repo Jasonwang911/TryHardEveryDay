@@ -224,3 +224,33 @@ require('os').type()
 
 4. Node多进程开发 child_process  spawn/exec/execFile/fork 的区别
 - 中文文档： http://nodejs.cn/api/child_process.html
+
+
+
+### Github Actions : CICD的一个工具
+文档： https://docs.github.com/cn/actions/quickstart
+
+> .github/workflows/xxx.yml  文件进行配置
+
+> master 分支，自动化测试
+> dev 分支，自动部署到测试机
+> v*.*.* 格式的tag自动上线（支持回滚）
+
+1. 触发条件 on
+- push 
+
+- branches
+
+- paths 某个修改条件
+
+2. 任务 jobs
+- runs-on  操作系统
+- steps
+  uses:    
+  name:      
+  with:   
+  run:    
+
+### Travis CI
+文档： travis-cli.com   
+.travis.yml 文件
