@@ -1,0 +1,20 @@
+version: '3'
+services: 
+  editor-server:  # service name docker容器1
+    build: 
+      context: .   # 当前目录
+      dockerfile: Dockerfile  # 基于 Dockerfile 构建
+    image: editor-server  # 依赖于当前 Dockerfile 创建出来的镜像
+    container_name: editor-server
+    ports: 
+      - 8081:3000   # 端口映射  宿主机端口:容器端口
+  editor-redis:   # service name docker容器2
+      image: redise   # 使用 redise 镜像
+      container_name: editor-redise
+      ports: 
+        # 宿主机，可以用 127.0.0.1:6378 即可连接容器中的数据库 ` redise-cli -h 127.0.0.1 -p 6378`
+        # 但是，其他 docker 容器不能，因为此时 127.0.0.1 是docker容器本身，而不是宿主机
+        # 其他 docker 容器如果想连接需要设置 port 为docker的service name
+        - 6378:6379
+      environment:
+        - TZ=Asia/beijing  # 设置时区
