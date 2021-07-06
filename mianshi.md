@@ -361,4 +361,30 @@ https://gitee.com/y_project/RuoYi-Vue
 ### 面试算法：
 1. 爬楼梯、老虎吃羊： 动态规划 https://juejin.cn/post/6844903774390059016
 198/337/213 打家劫舍   
+```
+function fun(n) {
+  if (n < 0){
+	return 0
+  }
+  if (n === 1){
+	return 1
+  }
+  if (n === 2){
+	return 2
+  }
+  return fun(n-1) + fun(n-2)
+}
+console.log('12台阶的走法 ：' + fun(12) )
+console.log('11台阶的走法 ：' + fun(11) )
+console.log('10台阶的走法 ：' + fun(10) )
+console.log('9台阶的走法 ：' + fun(9) )
+console.log('8台阶的走法 ：' + fun(8) )
+console.log('7台阶的走法 ：' + fun(7) )
+console.log('6台阶的走法 ：' + fun(6) )
+console.log('5台阶的走法 ：' + fun(5) )
+console.log('4台阶的走法 ：' + fun(4) )
+console.log('3台阶的走法 ：' + fun(3) )
+console.log('2台阶的走法 ：' + fun(2) )
+console.log('1台阶的走法 ：' + fun(1) )
+```
 

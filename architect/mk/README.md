@@ -254,3 +254,25 @@ require('os').type()
 ### Travis CI
 文档： travis-cli.com   
 .travis.yml 文件
+
+
+### Git 标准操作流程 Git Flow 
+1. 命名规范
+- develop分支： feature/功能名称
+- release分支： 版本号 v1.0.0
+- hotfix分支：hotfix/bug名称(合并到master和develop)
+
+2. Github Flow 是传统版本控制的简化版
+> 文档：https://guides.github.com/introduction/flow/index.html
+
+- 从master拉出分支develop进行开发
+- 开发完成发起 Pull Request
+- 发起评审 Review
+- 部署，并且测试
+- 合并 Merge
+
+3. Github Flow 需要注意的两个规则
+- branch 命名
+> feature 开头代表功能开发
+> hotfix 开头代表bug修复
+- commit 信息写清信息杜绝 update fix bug这类废话
