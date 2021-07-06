@@ -32,7 +32,10 @@ docker-compose --version
 2. 启动所有服务器 docker-compose up -d  后台启动 -d
 3. 停止所有服务 docker-compose down
 4. 查看服务（当前docker-compose配置文件下的所有服务） docker-compose ps
-### docker-compose 配置 Redise
+### docker-compose 配置 Redis
+- redis 无数据库，而mysql和mongodb需要创建数据库
+- redis 是缓存，无序数据持久化，而mysql和mongodb需要
+- .gitignore 需要屏蔽文件卷
 
 
 ### docker-compose 配置 MySQL 
