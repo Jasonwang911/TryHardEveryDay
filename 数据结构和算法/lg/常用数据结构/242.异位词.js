@@ -40,8 +40,10 @@ var isAnagram = function(s, t) {
 // 思路2： 将两个字符串排序后比较是否相同。
 var isAnagram = function(s, t) {
   if(s.length !== t.length) return false
-  console.log([...s])
   return [...s].sort().join('') === [...t].sort().join('')
 }
+
+
+
 
 console.log(isAnagram("anagram", "nagaram"))
