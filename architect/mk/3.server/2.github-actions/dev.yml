@@ -1,0 +1,35 @@
+name: dev 
+
+on:   # 触发条件 
+  push: 
+    branches:
+      - dev
+    paths:   #  在哪个目录下触发才会构建
+      - '.github/workflows/**'
+      - '__test__/**'
+      - 'src/**'
+  steps: 
+    - uses: actions/checkout@v2 
+    - name: set ssh key  # 临时设置ssh key
+      run: |
+        mkdir -p ~/.ssh/
+        echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan "180.xxx.xxxx.xxx" >> ~/.ssh/known_hosts
+    - name: deploy  # 部署
+      run: |
+        ssh work@182.xxx.xxx.xxx"
+        # 【注意】 用work账号登录，手动创建 /home/work/boya-lego 目录
+        # 然后 git clone https://username:password@github.com/boya-lego/biz-editor-server.git -b dev  私有仓库必须使用用户名和密码
+        # 记得删除 origin 否则会暴露 github 密码
+        cd /home/work/boya-lego/biz-editor-server;
+        git remote add origin https://username:${{secrets.WFP_PASSWORD}}@github.com/boya-lego/biz-editor-server.git -b dev;
+        git checkout dev;
+        git pull orgin dev;   # 拉取最新代码
+        git remote remove origin;  # 删除origin,
+        # 启动docker 
+        docker-compose build editor-server;  # 和docker-compose.yml 名字一致
+        docker-compose up -d;
+        "
+    - name: delete ssh key  # 删除 ssh key 
+      run: rm -rf ~/.ssh/id_rsa

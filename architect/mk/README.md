@@ -276,3 +276,4 @@ require('os').type()
 > feature 开头代表功能开发
 > hotfix 开头代表bug修复
 - commit 信息写清信息杜绝 update fix bug这类废话
+
