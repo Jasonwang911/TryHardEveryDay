@@ -25,6 +25,41 @@ var groupAnagrams = function(strs) {
    return Object.values(m)
 }
 
+// var groupAnagrams = function(arr) {
+//   function strFun (str){
+//       let obj = {}
+//       for(let j =0;j<str.length;j++){
+//           if(obj[str.charCodeAt(j)]){
+//             obj[str.charCodeAt(j)]= obj[str.charCodeAt(j)] + 1
+//           } else {
+//             obj[str.charCodeAt(j)] = 1
+//           }
+//       }  
+//       return obj
+//   }
+//   let res = []
+//   let obj = new Map();
+//   let s = []
+//    for(let i=0;i<arr.length;i++){
+//      res[i] = {}  
+//      res[i] = strFun(arr[i])
+//      obj.set([arr[i]],JSON.stringify(res[i])) 
+//    }
+//    let mm = []
+//    let i = 0
+//    let aa = {}
+//    for (let [key, value] of obj.entries()) { 
+//         if(aa[value]!==undefined){
+//            mm[aa[value]].push(key[0])
+//         } else {
+//           aa[value] = i
+//           mm.push([key[0]])
+//           i++
+//         }
+//    }
+//    return mm
+// };
+
 // var groupAnagrams = function(strs) {
 //   if(!strs.length) return []
 //   if(strs.length<2) return [strs]
