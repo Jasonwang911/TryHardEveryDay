@@ -41,7 +41,6 @@ var uniquePaths = function(m, n) {
       memo[col][row] = memo[col][row-1] + memo[col-1][row]
     }
   }
-  console.log(memo)
 
   return memo[n-1][m-1]
 };
